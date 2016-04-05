@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config/>
-  <x-data mixin="menu-item"/>
+  <config>
+    <field-set name="info">
+      <label>Info</label>
+      <items>
+        <input type="ImageSelector" name="logo">
+          <label>Logo</label>
+          <help-text/>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextArea" name="description">
+          <label>Description</label>
+          <help-text/>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextLine" name="company">
+          <label>Company</label>
+          <help-text/>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextLine" name="mail">
+          <label>E-mail</label>
+          <help-text/>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+    <field-set name="locations">
+      <label>Locations</label>
+      <items>
+        <item-set name="location">
+          <label>Location</label>
+          <custom-text/>
+          <help-text/>
+          <occurrences minimum="0" maximum="0"/>
+          <items>
+            <input type="TextLine" name="label">
+              <label>Label</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextLine" name="street">
+              <label>Street</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextLine" name="city">
+              <label>City</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextLine" name="state">
+              <label>State</label>
+              <indexed>true</indexed>
+              <custom-text/>
+              <help-text/>
+              <occurrences minimum="0" maximum="1"/>
+            </input>
+            <input type="TextLine" name="zip">
+              <label>Zip code</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextLine" name="country">
+              <label>Country</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextLine" name="phone">
+              <label>Phone</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+          </items>
+        </item-set>
+      </items>
+    </field-set>
+    <field-set name="social">
+      <label>Social</label>
+      <items>
+        <input type="TextLine" name="twitter">
+          <label>Twitter</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="facebook">
+          <label>Facebook</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="linkedin">
+          <label>LinkedIn</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="google">
+          <label>Google +</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="pintrest">
+          <label>Pintrest</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="youtube">
+          <label>Youtube</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+    <field-set name="banner">
+      <label>Banner settings</label>
+      <items>
+        <input type="ImageSelector" name="bannerBackground">
+          <label>Background image</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="textColor">
+          <label>Text color</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+    <input type="HtmlArea" name="copyrightMessage">
+      <label>Copyright message</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
+  </config>
   <x-data mixin="html-meta"/>
 </site>

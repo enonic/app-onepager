@@ -1,8 +1,7 @@
 var libs = {
     portal: require('/lib/xp/portal'),
     thymeleaf: require('/lib/xp/thymeleaf'),
-    content: require('/lib/xp/content'),
-    menu: require('/lib/enonic/menu')
+    content: require('/lib/xp/content')
 };
 
 // Handle GET request
@@ -22,7 +21,6 @@ function handleGet(req) {
         model.currentPath = content._path;
         model.pageTitle = getPageTitle();
         model.metaDescription = getMetaDescription();
-        model.menuItems = libs.menu.getMenuTree(3);
         model.siteName = site.displayName;
 
         return model;
