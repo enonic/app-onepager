@@ -4,4 +4,24 @@ Other software licenses used by this product:
     MIT License
     https://github.com/twbs/bootstrap/blob/master/LICENSE
 
+    Font Awesome
+    Font license applies to fonts - SIL OFL 1.1 http://scripts.sil.org/OFL
+    Code license applies to CSS, LESS, SCSS - MIT License http://opensource.org/licenses/mit-license.html
 
+    html5shiv Copyright (c) 2014 Alexander Farkas (aFarkas).
+    Dual GPLv2 or MIT
+    http://www.gnu.org/licenses/gpl-2.0.html
+    https://opensource.org/licenses/MIT
+
+    jQuery
+    MIT license
+    http://opensource.org/licenses/mit-license.html
+
+    prettyPhoto http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+    Dual license GPLv2 or Creative Commons 2.5
+    http://www.gnu.org/licenses/gpl-2.0.html
+    http://creativecommons.org/licenses/by/2.5/
+
+    Respond
+    MIT license
+    https://opensource.org/licenses/MIT

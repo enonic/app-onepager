@@ -3,6 +3,7 @@ var libs = {
 };
 
 // 404 page not found error
+/*
 exports.handle404 = function (err) {
     var view = resolve('page-not-found.html');
     var model = {};
@@ -32,4 +33,4 @@ exports.handleError = function (err) {
     return {
         body: libs.thymeleaf.render(view, model)
     };
-};
+};*/

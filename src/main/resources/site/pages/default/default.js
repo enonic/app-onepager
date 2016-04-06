@@ -1,15 +1,14 @@
-var libs = {
-    portal: require('/lib/xp/portal'),
-    thymeleaf: require('/lib/xp/thymeleaf'),
-    content: require('/lib/xp/content')
-};
+var portalLib = require('/lib/xp/portal');
+var thymeleaf = require('/lib/xp/thymeleaf');
+var contentLib = require('/lib/xp/content');
 
 // Handle GET request
 exports.get = handleGet;
 
 function handleGet(req) {
-    var site = libs.portal.getSite(); // Current site
-    var content = libs.portal.getContent(); // Current content
+    var site = portalLib.getSite(); // Current site
+    var siteConfig = portalLib.getSiteConfig(); //'com.enonic.app.onepager'
+    var content = portalLib.getContent(); // Current content
     var view = resolve('default.html'); // The view to render
     var model = createModel(); // The model to send to the view
 
@@ -22,12 +21,15 @@ function handleGet(req) {
         model.pageTitle = getPageTitle();
         model.metaDescription = getMetaDescription();
         model.siteName = site.displayName;
+        model.editMode = req.mode == 'edit' ? true : false;
+        model.content = portalLib.getContent();
+        model.logoUrl = getLogoUrl(siteConfig)
 
         return model;
     }
 
     function getPageTitle() {
-        return content['displayName'] + ' - ' + site['displayName'];
+        return content['displayName'];
     }
 
     function getMetaDescription() {
@@ -44,7 +46,22 @@ function handleGet(req) {
         return extraData;
     }
 
+    function getLogoUrl(moduleConfig) {
+        var logoContentId = moduleConfig['logo'];
+        if (logoContentId) {
+            return portalLib.imageUrl( {
+                id: logoContentId,
+                //scale: 'block(115,26)'
+                scale: 'width(115)'
+            });
+        } else {
+            return portalLib.assetUrl( {
+                path: 'images/logo.png'
+            });
+        }
+    }
+
     return {
-        body: libs.thymeleaf.render(view, model)
+        body: thymeleaf.render(view, model)
     };
 }
