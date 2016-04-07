@@ -87,7 +87,7 @@ public class DemoInitializer
     private void doInitialize()
         throws Exception
     {
-        final ContentPath demoSitePath = ContentPath.from( "/onepager" );
+        final ContentPath demoSitePath = ContentPath.from( "/one-pager" );
         if ( hasContent( demoSitePath ) )
         {
             return;
