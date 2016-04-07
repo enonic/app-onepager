@@ -9,7 +9,7 @@
     <meta name="author" content="Enonic USA"/>
     <meta name="generator" content="Enonic XP"/>
 
-    <title data-th-text="${pageTitle} ? ${pageTitle} : ${content.displayName}">One Pager Responsive Theme</title>
+    <title data-th-text="${pageTitle}">One Pager Responsive Theme</title>
 
     <!-- Bootstrap core CSS, theme CSS and Font Awesome-->
     <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -44,48 +44,164 @@
                     <img data-th-src="${logoUrl}" src="../images/logo.png"/>
                 </a>
             </div>
+            <div class="navbar-collapse collapse">
+                <!-- Hold off on this until the menu stuff is sorted out in the controller. -->
+                <!--<ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
+                    <li class="active" data-th-class="${editMode} ? 'active' : 'active view-mode'">
+                        <a href="#main-slider">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                    <li data-th-each="part : ${parts}" data-th-class="${editMode} ? 'none' : 'view-mode'">
+                        <a data-th-href="${part.hash}" data-th-text="${part.name}">Page</a>
+                    </li>
+                </ul>-->
+            </div><!--/.nav-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-            <!--<ul class="nav navbar-nav">
-                <li data-th-each="menuItem : ${menuItems}" data-th-classappend="${menuItem.path == currentPath ? 'active' : ''}" >
-
-                    &lt;!&ndash; Shows a dropdown menu for menuitem type "folder") &ndash;&gt;
-
-                    <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"></span> <span class="caret"></span></a>
-
-                    <ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
-                        <li data-th-each="submenuItem : ${menuItem.children}">
-                            <a href="#" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
-                               data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}">Page
-                                title</a>
-                        </li>
-                    </ul>
-
-                    <a data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
-                       data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}">Page
-                        title</a>
-                </li>
-            </ul>-->
-        </div><!--/.nav-collapse -->
     </div>
 </header>
 
+<section id="main-slider" class="carousel" data-th-if="${banner}"  data-th-style="${backgroundImage}">
+    <div class="carousel-inner">
+        <div class="item" data-th-each="slide, iterStat : ${slides}" data-th-class="${iterStat.index == 0}? 'item active' : 'item'">
+            <div class="container">
+                <div class="carousel-content">
+                    <h1 data-th-text="${slide.header}" data-th-style="${textColor}">Free Onepage Theme</h1>
 
-<div class="container theme-showcase" role="main" data-th-attr="data-portal-region=${mainRegion.name}">
+                    <p class="lead" data-th-text="${slide.subtitle}" data-th-style="${textColor}">
+                        Xeon is the best free onepage responsive theme
+                        available around the globe<br/>Download it right now for free</p>
+                </div>
+            </div>
+        </div>
+        <!--/.item-->
+    </div>
+    <!--/.carousel-inner-->
+    <a class="prev" href="#main-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+    <a class="next" href="#main-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+</section>
 
+<!-- main region -->
+<div class="region" role="main" data-portal-region="main">
     <div data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
         <div data-portal-component="${component.path}" data-th-remove="tag"></div>
     </div>
+</div>
 
+<section id="contact" data-th-if="${showContactForm}">
+    <div class="container">
+        <div class="box last">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 data-th-text="${formTitle}">Contact Form</h1>
 
+                    <p data-th-text="${formText}">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-</div> <!-- /container -->
+                    <div class="status alert alert-success" style="display: none"></div>
+                    <form id="main-contact-form" class="contact-form" name="contact-form" method="post" data-th-action="'http://localhost:8080' + ${formUrl}" action="sendemail.php" role="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" required="required" name="name" placeholder="Name" id="input-name"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" required="required" name="email" placeholder="Email address" id="input-email"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" id="message" required="required" class="form-control" rows="8"
+                                              placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--/.col-sm-6-->
+                <div class="col-sm-6">
+                    <h1>Our Address</h1>
 
+                    <div class="row">
+                        <div class="col-md-6" data-th-each="address, iterStat : ${addresses}">
+                            <address>
+                                <strong><span data-th-text="${company}">Twitter, Inc.</span> <span data-th-text="${address.label}"></span></strong><br/>
+                                <span data-th-text="${address.street}">795 Folsom Ave, Suite 600</span><br/>
+                                <div data-th-remove="tag" data-th-if="${address.usAddress}">
+                                    <span data-th-text="${address.city}">San Francisco</span>
+                                    <span data-th-if="${address.state}" data-th-text="', ' + ${address.state}">, CA</span> <span data-th-text="${address.zip}">94107</span> <br/>
+                                </div>
+                                <div data-th-remove="tag" data-th-if="${!address.usAddress}">
+                                    <span data-th-text="${address.zip}">94107</span> <span data-th-text="${address.city}">San Francisco</span><br/>
+                                </div>
+                                <abbr title="Phone">P:</abbr> <span data-th-text="${address.phone}">(123) 456-7890</span>
+                            </address>
+                        </div>
+                        <div class="col-md-6" data-th-remove="all">
+                            <address>
+                                <strong>Enonic USA</strong><br/>
+                                620 Folsom Ave, Suite 100<br/>
+                                San Francisco, CA 94107<br/>
+                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+                        </div>
+                    </div>
+                    <h1>Connect with us</h1>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="social">
+                                <li data-th-if="${social.facebook != ''}"><a data-th-href="${social.facebook}" href="#"><i class="fa fa-facebook icon-social"></i> Facebook</a></li>
+                                <li data-th-if="${social.google != ''}"><a data-th-href="${social.google}" href="#"><i class="fa fa-google-plus icon-social"></i> Google Plus</a></li>
+                                <li data-th-if="${social.pintrest != ''}"><a data-th-href="${social.pintrest}" href="#"><i class="fa fa-pinterest icon-social"></i> Pinterest</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="social">
+                                <li data-th-if="${social.linkedin != ''}"><a data-th-href="${social.linkedin}" href="#"><i class="fa fa-linkedin icon-social"></i> Linkedin</a></li>
+                                <li data-th-if="${social.twitter != ''}"><a data-th-href="${social.twitter}" href="#"><i class="fa fa-twitter icon-social"></i> Twitter</a></li>
+                                <li data-th-if="${social.youtube != ''}"><a data-th-href="${social.youtube}" href="#"><i class="fa fa-youtube icon-social"></i> Youtube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--/.col-sm-6-->
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.box-->
+    </div>
+    <!--/.container-->
+</section><!--/#contact-->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <span data-th-if="${copyright}" data-th-utext="${portal.processHtml({'_value=' + copyright})}">&copy; 2016</span>
+                <span data-th-if="${copyright == ''}">&copy; 2016 Enonic USA. All rights reserved.</span>
+            </div>
+            <div class="col-sm-6">
+                <img class="pull-right" data-th-src="${portal.assetUrl({'_path=images/enonic-experience-platform-logo-for-light-bg.png'})}"
+                     width="203" src="../images/enonic-experience-platform-logo-for-light-bg.png" alt="ShapeBootstrap" title="ShapeBootstrap"/>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script data-th-src="${portal.assetUrl({'_path=jquery/2.2.2/jquery.min.js'})}" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script data-th-src="${portal.assetUrl({'_path=bootstrap/3.3.6/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=isotope/2.2.2/isotope.pkgd.min.js'})}" src="../public/js/jquery.isotope.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=js/jquery.prettyPhoto.js'})}" src="../js/jquery.prettyPhoto.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=js/onepager.js'})}" src="../public/js/main.js"></script>
 </body>
 </html>

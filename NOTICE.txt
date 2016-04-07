@@ -13,6 +13,9 @@ Other software licenses used by this product:
     http://www.gnu.org/licenses/gpl-2.0.html
     https://opensource.org/licenses/MIT
 
+    Isotope Copyright 2015 Metafizzy
+    Licensed GPLv3 for open source use or Isotope Commercial License for commercial use
+
     jQuery
     MIT license
     http://opensource.org/licenses/mit-license.html

@@ -1,6 +1,7 @@
 var portalLib = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 var contentLib = require('/lib/xp/content');
+var util = require('/lib/enonic/util');
 
 // Handle GET request
 exports.get = handleGet;
@@ -10,9 +11,30 @@ function handleGet(req) {
     var siteConfig = portalLib.getSiteConfig(); //'com.enonic.app.onepager'
     var content = portalLib.getContent(); // Current content
     var view = resolve('default.html'); // The view to render
+
     var model = createModel(); // The model to send to the view
 
     function createModel() {
+
+        var page = content.page;
+        var slides = page ? page.config && page.config.slide : [];
+        // ensure it's an array, even if single element
+        slides = util.data.forceArray(slides);
+
+        // So the page knows if there is a banner or not
+        var banner = true;
+        if(!slides || (slides && slides[0] == null) || (slides[0].header == '')) {
+            banner = false;
+        }
+
+        var social = {
+            facebook: siteConfig.facebook,
+            twitter: siteConfig.twitter,
+            linkedin: siteConfig.linkedin,
+            google: siteConfig.google,
+            pintrest: siteConfig.pintrest,
+            youtube: siteConfig.youtube
+        };
 
         var model = {};
         model.mainRegion = content.page.regions['main'];
@@ -23,13 +45,24 @@ function handleGet(req) {
         model.siteName = site.displayName;
         model.editMode = req.mode == 'edit' ? true : false;
         model.content = portalLib.getContent();
-        model.logoUrl = getLogoUrl(siteConfig)
+        model.logoUrl = getLogoUrl(siteConfig);
+        model.copyright = siteConfig.copyrightMessage;
+        model.banner = banner;
+        model.slides = slides;
+        model.showContactForm = page.config.showContactForm;
+        model.social = social;
+        model.formTitle = page.config.formTitle || 'Contact Form';
+        model.formText = page.config.formText || 'CONFIGURE PART.';
+        model.formUrl = portalLib.serviceUrl({
+                  service: 'contact-form'
+              });
+
 
         return model;
     }
 
     function getPageTitle() {
-        return content['displayName'];
+        return content.displayName;
     }
 
     function getMetaDescription() {
