@@ -36,6 +36,12 @@ function handleGet(req) {
             youtube: siteConfig.youtube
         };
 
+        var addresses = util.data.forceArray(siteConfig.location);
+        for (var i = 0; i < addresses.length; i++) {
+            addresses[i].usAddress = (!addresses[i].state || addresses[i].state == '') ? false : true;
+        }
+        var addressCols = getAddressCols(addresses);
+
         var model = {};
         model.mainRegion = content.page.regions['main'];
         model.sitePath = site['_path'];
@@ -49,13 +55,9 @@ function handleGet(req) {
         model.copyright = siteConfig.copyrightMessage;
         model.banner = banner;
         model.slides = slides;
-        model.showContactForm = page.config.showContactForm;
         model.social = social;
-        model.formTitle = page.config.formTitle || 'Contact Form';
-        model.formText = page.config.formText || 'CONFIGURE PART.';
-        model.formUrl = portalLib.serviceUrl({
-                  service: 'contact-form'
-              });
+        model.addresses = addresses;
+        model.addressCols = addressCols;
 
 
         return model;
@@ -92,6 +94,12 @@ function handleGet(req) {
                 path: 'images/logo.png'
             });
         }
+    }
+
+    function getAddressCols(addresses) {
+        if(!addresses || (addresses && addresses.constructor != Array)) return 12;
+        var numAddresses = addresses.length < 1 ? 1 : addresses.length;
+        return (12 / addresses.length).toString();
     }
 
     return {

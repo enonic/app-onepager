@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Services</display-name>
+  <config>
+    <inline mixin="menu-item"/>
+    <field-set name="slides">
+      <label>Services</label>
+      <items>
+        <item-set name="service">
+          <label>Service</label>
+          <custom-text/>
+          <help-text/>
+          <occurrences minimum="0" maximum="0"/>
+          <items>
+            <input type="TextLine" name="header">
+              <label>Header</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextArea" name="description">
+              <label>Description</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="ComboBox" name="icon">
+              <label>Icon class</label>
+              <occurrences minimum="1" maximum="1"/>
+              <config>
+                <option value="fa-asterisk">Asterisk</option>
+                <option value="fa-plus">Plus</option>
+                <option value="fa-euro">Euro</option>
+                <option value="fa-eur">eur</option>
+                <option value="fa-minus">Minus</option>
+                <option value="fa-cloud">Cloud</option>
+                <option value="fa-envelope">Envelope</option>
+                <option value="fa-pencil">Pencil</option>
+                <option value="fa-glass">Glass</option>
+                <option value="fa-music">Music</option>
+                <option value="fa-Search">search</option>
+                <option value="fa-heart">Heart</option>
+                <option value="fa-star">Star</option>
+                <option value="fa-star-empty">Star empty</option>
+                <option value="fa-user">User</option>
+                <option value="fa-film">Film</option>
+                <option value="fa-th-large">TH large</option>
+                <option value="fa-th">TH</option>
+                <option value="fa-th-list">TH-list</option>
+                <option value="fa-ok">OK</option>
+                <option value="fa-remove">Remove</option>
+                <option value="fa-zoom-im">Zoom in</option>
+                <option value="fa-zoom-out">Zoom out</option>
+                <option value="fa-off">Off</option>
+                <option value="fa-signal">Signal</option>
+                <option value="fa-cog">cog</option>
+                <option value="fa-trash">Trash</option>
+                <option value="fa-home">Home</option>
+                <option value="fa-file">File</option>
+                <option value="fa-time">Time</option>
+                <option value="fa-road">Road</option>
+                <option value="fa-download-alt">Download alt</option>
+                <option value="fa-download">Download</option>
+                <option value="fa-upload">Upload</option>
+                <option value="fa-inbox">Inbox</option>
+                <option value="fa-play-circle">Play circle</option>
+                <option value="fa-repeat">Repeat</option>
+                <option value="fa-refresh">Refresh</option>
+                <option value="fa-list-alt">List alt</option>
+                <option value="fa-lock">Lock</option>
+                <option value="fa-flag">Flag</option>
+                <option value="fa-headphones">Headphones</option>
+                <option value="fa-volume-off">Volume off</option>
+                <option value="fa-volume-down">Volume down</option>
+                <option value="fa-volume-up">Volume up</option>
+                <option value="fa-qrcode">QR code</option>
+                <option value="fa-barcode">Barcode</option>
+                <option value="fa-tag">Tag</option>
+                <option value="fa-tags">Tags</option>
+                <option value="fa-book">Book</option>
+                <option value="fa-bookmark">Bookmark</option>
+                <option value="fa-print">Print</option>
+                <option value="fa-camera">Camera</option>
+                <option value="fa-font">Font</option>
+                <option value="fa-bold">Bold</option>
+                <option value="fa-italic">Italic</option>
+                <option value="fa-text-height">Text height</option>
+                <option value="fa-text-width">Text width</option>
+                <option value="fa-align-left">Align left</option>
+                <option value="fa-align-center">Align center</option>
+                <option value="fa-align-right">Align right</option>
+                <option value="fa-align-justify">Align justify</option>
+                <option value="fa-list">List</option>
+                <option value="fa-indent-left">Indent left</option>
+                <option value="fa-indent-right">Indent right</option>
+                <option value="fa-facetime-video">Facetime video</option>
+                <option value="fa-picture">Picture</option>
+                <option value="fa-map-marker">Map maker</option>
+                <option value="fa-adjust">Adjust</option>
+                <option value="fa-tint">Tint</option>
+                <option value="fa-edit">Edit</option>
+                <option value="fa-share">Share</option>
+                <option value="fa-check">Check</option>
+                <option value="fa-move">Move</option>
+                <option value="fa-step-backward">Step backward</option>
+                <option value="fa-fast-backward">Fast backward</option>
+                <option value="fa-backward">Backward</option>
+                <option value="fa-play">Play</option>
+                <option value="fa-pause">Pause</option>
+                <option value="fa-stop">Stop</option>
+                <option value="fa-forward">Forward</option>
+                <option value="fa-fast-forward">Fast forward</option>
+                <option value="fa-step-forward">Step forward</option>
+                <option value="fa-eject">Eject</option>
+                <option value="fa-chevron-left">Chevron left</option>
+                <option value="fa-chevron-right">Chevron right</option>
+                <option value="fa-plus-sign">Plus sign</option>
+                <option value="fa-minus-sign">Minus sign</option>
+                <option value="fa-remove-sign">Remove sign</option>
+                <option value="fa-ok-sign">OK sign</option>
+                <option value="fa-question-sign">Question sign</option>
+                <option value="fa-info-sign">Info sign</option>
+                <option value="fa-screenshot">Screenshot</option>
+                <option value="fa-remove-circle">Remove circle</option>
+                <option value="fa-ok-circle">OK circle</option>
+                <option value="fa-ban-circle">Ban circle</option>
+                <option value="fa-arrow-left">Arrow left</option>
+                <option value="fa-arrow-right">Arrow right</option>
+                <option value="fa-arrow-up">Arrow up</option>
+                <option value="fa-arrow-down">Arrow down</option>
+                <option value="fa-share-alt">Share alt</option>
+                <option value="fa-resize-full">Resize full</option>
+                <option value="fa-resize-small">Resize small</option>
+                <option value="fa-exclamation-sign">Exclamation sign</option>
+                <option value="fa-gift">Gift</option>
+                <option value="fa-leaf">Leaf</option>
+                <option value="fa-fire">Fire</option>
+                <option value="fa-eye-open">Eye open</option>
+                <option value="fa-eye-close">Eye close</option>
+                <option value="fa-warning-sign">Warning sign</option>
+                <option value="fa-plane">Plane</option>
+                <option value="fa-calendar">Calendar</option>
+                <option value="fa-random">Random</option>
+                <option value="fa-comment">Comment</option>
+                <option value="fa-magnet">Magnet</option>
+                <option value="fa-chevron-up">Chevron up</option>
+                <option value="fa-chevron-down">Chevron down</option>
+                <option value="fa-retweet">Retweet</option>
+                <option value="fa-shopping-cart">Shopping cart</option>
+                <option value="fa-folder-close">Folder close</option>
+                <option value="fa-folder-open">Folder open</option>
+                <option value="fa-resize-vertical">Resize vertical</option>
+                <option value="fa-resize-horizontal">Resize horizontal</option>
+                <option value="fa-hdd">HDD</option>
+                <option value="fa-bullhorn">Bullhorn</option>
+                <option value="fa-bell">Bell</option>
+                <option value="fa-certificate">Certificate</option>
+                <option value="fa-thumbs-up">Thumbs up</option>
+                <option value="fa-thumbs-down">Thumbs down</option>
+                <option value="fa-hand-right">Hand right</option>
+                <option value="fa-hand-left">Hand left</option>
+                <option value="fa-hand-up">Hand up</option>
+                <option value="fa-hand-down">Hand down</option>
+                <option value="fa-circle-arrow-right">Circle arrow right</option>
+                <option value="fa-circle-arrow-left">Circle arrow left</option>
+                <option value="fa-circle-arrow-up">Circle arrow up</option>
+                <option value="fa-circle-arrow-down">Circle arrow down</option>
+                <option value="fa-globe">Globe</option>
+                <option value="fa-wrench">Wrench</option>
+                <option value="fa-tasks">Tasks</option>
+                <option value="fa-filter">Filter</option>
+                <option value="fa-briefcase">Briefcase</option>
+                <option value="fa-fullscreen">Fullscreen</option>
+                <option value="fa-dashboard">Dashboard</option>
+                <option value="fa-paperclip">Paperclip</option>
+                <option value="fa-heard-empty">Heart empty</option>
+                <option value="fa-link">Link</option>
+                <option value="fa-phone">Phone</option>
+                <option value="fa-pushpin">Pushpin</option>
+                <option value="fa-usd">USD</option>
+                <option value="fa-gbp">GBP</option>
+                <option value="fa-sort">Sort</option>
+                <option value="fa-sort-by-alphabet">Sort by alphabet</option>
+                <option value="fa-sort-by-alphabet-alt">Sort by alphabet alt</option>
+                <option value="fa-sort-by-order">Sort by order</option>
+                <option value="fa-sort-by-order-alt">Sort by order alt</option>
+                <option value="fa-sort-by-attributes">Sort by attributes</option>
+                <option value="fa-sort-by-attributes-alt">Sort by attributes alt</option>
+                <option value="fa-unchecked">Unchecked</option>
+                <option value="fa-expand">Expand</option>
+                <option value="fa-collapse-down">Collapse down</option>
+                <option value="fa-collapse-up">Collapse up</option>
+                <option value="fa-log-in">Log in</option>
+                <option value="fa-flash">Flash</option>
+                <option value="fa-log-out">Log out</option>
+                <option value="fa-new-window">New window</option>
+                <option value="fa-record">Record</option>
+                <option value="fa-save">Save</option>
+                <option value="fa-open">Open</option>
+                <option value="fa-saved">Saved</option>
+                <option value="fa-import">Import</option>
+                <option value="fa-export">Export</option>
+                <option value="fa-send">Send</option>
+                <option value="fa-floppy-disk">Floppy disk</option>
+                <option value="fa-floppy-saved">Floppy saved</option>
+                <option value="fa-floppy-remove">Floppy remove</option>
+                <option value="fa-floppy-save">Floppy save</option>
+                <option value="fa-floppy-open">Floppy open</option>
+                <option value="fa-credit-card">Credit card</option>
+                <option value="fa-transfer">Transfer</option>
+                <option value="fa-cutlery">Cutlery</option>
+                <option value="fa-header">Header</option>
+                <option value="fa-compressed">Compressed</option>
+                <option value="fa-earphone">Earphone</option>
+                <option value="fa-phone-alt">Phone alt</option>
+                <option value="fa-tower">Tower</option>
+                <option value="fa-stats">Stats</option>
+                <option value="fa-sd-video">SD video</option>
+                <option value="fa-hd-video">HD video</option>
+                <option value="fa-subtitles">Subtitles</option>
+                <option value="fa-sound-stereo">Sound stereo</option>
+                <option value="fa-sound-dolby">Sound Dolby</option>
+                <option value="fa-sound-5-1">Sound 5.1</option>
+                <option value="fa-sound-6-1">Sound 6.1</option>
+                <option value="fa-sound-7-1">Sound 7.1</option>
+                <option value="fa-copyright-mark">Copyright mark</option>
+                <option value="fa-registration-mark">Registration mark</option>
+                <option value="fa-cloud-download">Cloud download</option>
+                <option value="fa-cloud-upload">Cloud upload</option>
+                <option value="fa-tree-conifer">Tree conifer</option>
+                <option value="fa-tree-deciduous">Tree deciduous</option>
+                <option value="fa-cd">CD</option>
+                <option value="fa-save-file">Save file</option>
+                <option value="fa-open-file">Open file</option>
+                <option value="fa-level-up">Level up</option>
+                <option value="fa-copy">Copy</option>
+                <option value="fa-paste">Paste</option>
+                <option value="fa-alert">Alert</option>
+                <option value="fa-equalizer">Equalizer</option>
+                <option value="fa-king">King</option>
+                <option value="fa-queen">Queen</option>
+                <option value="fa-pawn">Pawn</option>
+                <option value="fa-bishop">Bishop</option>
+                <option value="fa-knight">Knight</option>
+                <option value="fa-baby-formula">Baby formula</option>
+                <option value="fa-tent">Tent</option>
+                <option value="fa-blackboard">Blackboard</option>
+                <option value="fa-bed">Bed</option>
+                <option value="fa-apple">Apple</option>
+                <option value="fa-erase">Erase</option>
+                <option value="fa-hourglass">Hourglass</option>
+                <option value="fa-lamp">Lamp</option>
+                <option value="fa-duplicate">Duplicate</option>
+                <option value="fa-piggy-bank">Piggy bank</option>
+                <option value="fa-scissors">Scissors</option>
+                <option value="fa-bitcoin">Bitcoin</option>
+                <option value="fa-btc">BTC</option>
+                <option value="fa-xbt">XBT</option>
+                <option value="fa-yen">Yen</option>
+                <option value="fa-jpy">JPY</option>
+                <option value="fa-ruble">Ruble</option>
+                <option value="fa-rub">RUB</option>
+                <option value="fa-scale">Scale</option>
+                <option value="fa-ice-lolly">Ice lolly</option>
+                <option value="fa-ice-lolly-tasted">Ice lolly tasted</option>
+                <option value="fa-education">Education</option>
+                <option value="fa-option-horizontal">Option horizontal</option>
+                <option value="fa-option-vertical">Option vertical</option>
+                <option value="fa-menu-hamburger">Menu hamburger</option>
+                <option value="fa-modal-window">Modal window</option>
+                <option value="fa-oil">Oil</option>
+                <option value="fa-grain">Grain</option>
+                <option value="fa-sunglasses">Sunglasses</option>
+                <option value="fa-text-size">Text size</option>
+                <option value="fa-text-color">Text color</option>
+                <option value="fa-text-background">Text background</option>
+                <option value="fa-object-align-top">Object align top</option>
+                <option value="fa-object-align-bottom">Object align bottom</option>
+                <option value="fa-object-align-horizontal">Object align horizontal</option>
+                <option value="fa-object-align-left">Object align left</option>
+                <option value="fa-object-align-vertical">Object align vertical</option>
+                <option value="fa-object-align-right">Object align right</option>
+                <option value="fa-triangle-right">Triangle right</option>
+                <option value="fa-triangle-left">Triangle left</option>
+                <option value="fa-triangle-bottom">Triangle bottom</option>
+                <option value="fa-triangle-top">Triangle top</option>
+                <option value="fa-console">Console</option>
+                <option value="fa-superscript">Superscript</option>
+                <option value="fa-subscript">Subscript</option>
+                <option value="fa-menu-left">Menu left</option>
+                <option value="fa-menu-right">Menu right</option>
+                <option value="fa-menu-down">Menu down</option>
+                <option value="fa-menu-up">Menu up</option>
+              </config>
+            </input>
+            <input type="ComboBox" name="icon-color">
+              <label>Icon color</label>
+              <occurrences minimum="1" maximum="1"/>
+              <config>
+                <option value="color1">Red</option>
+                <option value="color2">Green</option>
+                <option value="color3">Blue</option>
+                <option value="color4">Purple</option>
+                <option value="color5">Teal</option>
+                <option value="color6">Dark blue</option>
+              </config>
+            </input>
+          </items>
+        </item-set>
+      </items>
+    </field-set>
+  </config>
+</part>

@@ -1,0 +1,63 @@
+<section class="p-services" data-th-id="${id}">
+    <div class="box">
+        <div class="center" data-th-if="${heading}">
+            <h2 data-th-text="${heading}">See our Pricings</h2>
+            <p class="lead" data-th-utext="${description}">Pellentesque habitant morbi tristique senectus et netus et <br />malesuada fames ac turpis egestas.</p>
+        </div><!--/.center-->
+        <div class="gap" data-th-if="${heading}"></div>
+        <div class="row" data-th-if="${services}">
+            <div data-th-each="service : ${services}" class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i data-th-class="${service.icon + ' fa icon-serv ' + service['icon-color']}"></i>
+                    <h4 data-th-text="${service.header}"></h4>
+                    <p data-th-text="${service.description}"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-th-if="${!services}">
+            <div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-thumbs-up icon-md icon-color1"></i>
+                    <h4>Bootstrap Glyphicons</h4>
+                    <p>Configure with glyphicons from <a href="http://getbootstrap.com/components/" target="_blank">Bootstrap components</a>. Use the icon class dropdown to select the icon image.</p>
+                </div>
+            </div><!--/.col-md-4-->
+            <!--<div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-android icon-md icon-color2"></i>
+                    <h4>Android development</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+            </div>&lt;!&ndash;/.col-md-4&ndash;&gt;
+            <div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-windows icon-md icon-color3"></i>
+                    <h4>Windows Phone development</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+            </div>&lt;!&ndash;/.col-md-4&ndash;&gt;
+            <div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-html5 icon-md icon-color4"></i>
+                    <h4>Ruby on Rails development</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+            </div>&lt;!&ndash;/.col-md-4&ndash;&gt;
+            <div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-css3 icon-md icon-color5"></i>
+                    <h4>Javascript development</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+            </div>&lt;!&ndash;/.col-md-4&ndash;&gt;
+            <div class="col-md-4 col-sm-6">
+                <div class="center">
+                    <i class="icon-thumbs-up icon-md icon-color6"></i>
+                    <h4>Responsive web design</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+            </div>--><!--/.col-md-4-->
+        </div><!--/.row-->
+    </div><!--/.box-->
+</section><!--/#services-->

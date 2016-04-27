@@ -1,6 +1,8 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
+  background-color: #DFDFDF;
+    color: #002454;
 }
 .row {
   margin-bottom: 20px;
@@ -12,4 +14,35 @@ body {
 [class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+
+header#header {
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.navbar-brand {
+    margin: 0 50px;
+}
+
+.navbar-default {
+    overflow: hidden;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #002454;
+}
+
+.center {
+    text-align: center;
+}
+
+.layout > .row {
+    background-color: #FFFFFF;
+    margin: auto 0;
 }

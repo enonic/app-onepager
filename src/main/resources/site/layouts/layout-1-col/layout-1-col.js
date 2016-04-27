@@ -1,4 +1,3 @@
-var xeon = require('xeon');
 var thymeleaf = require('/lib/xp/thymeleaf');
 var portal = require('/lib/xp/portal');
 
