@@ -7,26 +7,9 @@ jQuery(function($) {
 		});
 	});
 
-	//Ajax contact
-	var form = $('.contact-form');
-	form.submit(function () {
-		$this = $(this);
-
-		$.ajax({
-			type: 'POST',
-			url: $(this).attr('action'),
-			data: $(this).serialize(),
-			dataType: 'json',
-			encode: true
-		}).done(function(data) {
-			$this.prev().text(data.message).fadeIn().delay(2500).fadeOut();
-		});
-		return false;
-	});
-
 
 	// scroll
-	$('.navbar-nav.site-home > li.view-mode').click(function(e) {
+	$('.navbar-nav.site-home > li').click(function(e) {
 		e.preventDefault();
 		var target = $(this).find('>a').prop('hash');
 		//var offset = (target == '#services')? 85 : 0;
@@ -35,6 +18,15 @@ jQuery(function($) {
 			scrollTop: $(target).offset().top //- offset
 		}, 500);
 		window.location.hash = target;
+	});
+
+    // Make the home link scroll to the top.
+	$('.homeLink').click(function(e) {
+	    e.preventDefault();
+	    $('html, body').animate({
+            scrollTop: 0 //- offset
+        }, 500);
+        window.location.hash = '';
 	});
 
 

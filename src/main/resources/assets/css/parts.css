@@ -68,6 +68,33 @@ Services begin
 }
 
 .icon-serv {
-    font-size: 25px;
     margin: 10px;
+}
+@media (min-width: 768px) {
+    .col-sm-6:nth-child(2n + 1) {
+        clear: both;
+    }
+}
+@media (min-width: 992px) {
+    .col-sm-6:nth-child(2n + 1) {
+        clear: none;
+    }
+}
+
+
+/*
+Person list begin
+*/
+.carousel.scale .left-arrow, .carousel.scale .right-arrow {
+    top: 30%;
+    position: absolute;
+}
+.carousel.scale .right-arrow {
+    right: -5px;
+}
+.carousel.scale .left-arrow {
+    left: -5px;
+}
+.person {
+    margin: auto 30px;
 }

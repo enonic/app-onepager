@@ -22,7 +22,7 @@ header#header {
     width: 100%;
     z-index: 100;
     position: fixed;
-    top: 10px;
+    top: 0;
     left: 0;
 }
 
@@ -45,8 +45,18 @@ header#header {
 .layout > .row {
     background-color: #FFFFFF;
     margin: auto 0;
+    border-radius: 10px 10px 0 0;
 }
 
 body.edit header#header {
     position: relative;
 }
+
+.xp-part {
+    margin: 50px 0;
+}
+
+.site-home li {
+    font-size: 20px;
+}
+

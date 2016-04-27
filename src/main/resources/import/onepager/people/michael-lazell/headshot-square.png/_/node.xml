@@ -1,8 +1,8 @@
 <node>
-    <id>1b6d1da1-05fd-49df-9ad8-7b4dcdad0d9f</id>
+    <id>71018898-4ccb-4730-8834-b16e81dbc371</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-04-27T19:01:56.191Z</timestamp>
+    <timestamp>2016-04-27T20:14:42.701Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -44,16 +44,16 @@
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">enonic-main-logo-for-light-bg.png</string>
+        <string name="displayName">headshot-square.png</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-04-27T05:20:12.182Z</dateTime>
+        <dateTime name="createdTime">2016-04-27T20:14:15.174Z</dateTime>
         <string name="creator">user:system:su</string>
         <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T05:20:12.182Z</dateTime>
+        <dateTime name="modifiedTime">2016-04-27T20:14:15.174Z</dateTime>
         <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">
-                <string name="attachment">enonic-main-logo-for-light-bg.png</string>
+                <string name="attachment">headshot-square.png</string>
                 <property-set name="focalPoint">
                     <double name="x">0.5</double>
                     <double name="y">0.5</double>
@@ -67,20 +67,20 @@
         <property-set name="x">
             <property-set name="media">
                 <property-set name="imageInfo">
-                    <long name="imageHeight">768</long>
+                    <long name="imageHeight">1041</long>
+                    <long name="imageWidth">1130</long>
                     <string name="contentType">image/png</string>
-                    <long name="imageWidth">3660</long>
-                    <long name="pixelSize">2810880</long>
-                    <long name="byteSize">72621</long>
+                    <long name="pixelSize">1176330</long>
+                    <long name="byteSize">1671291</long>
                 </property-set>
             </property-set>
         </property-set>
         <property-set name="attachment">
-            <string name="name">enonic-main-logo-for-light-bg.png</string>
+            <string name="name">headshot-square.png</string>
             <string name="label">source</string>
-            <binaryReference name="binary">enonic-main-logo-for-light-bg.png</binaryReference>
+            <binaryReference name="binary">headshot-square.png</binaryReference>
             <string name="mimeType">image/png</string>
-            <long name="size">72621</long>
+            <long name="size">1671291</long>
         </property-set>
     </data>
     <indexConfigs>

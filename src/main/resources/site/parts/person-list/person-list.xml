@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Person list</display-name>
+  <config>
+    <inline mixin="menu-item"/>
+    <input type="ContentSelector" name="person">
+      <label>Person</label>
+      <occurrences minimum="0" maximum="0"/>
+      <config>
+        <allowType>person</allowType>
+      </config>
+    </input>
+  </config>
+</part>

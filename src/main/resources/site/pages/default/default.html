@@ -46,22 +46,22 @@
             </div>
             <div class="navbar-collapse collapse">
                 <!-- Hold off on this until the menu stuff is sorted out in the controller. -->
-                <!--<ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
-                    <li class="active" data-th-class="${editMode} ? 'active' : 'active view-mode'">
-                        <a href="#main-slider">
-                            <i class="icon-home"></i>
+                <ul class="nav navbar-nav site-home">
+                    <li class="active">
+                        <a href="#" class="homeLink">
+                            <i class="fa fa-home"></i>
                         </a>
                     </li>
-                    <li data-th-each="part : ${parts}" data-th-class="${editMode} ? 'none' : 'view-mode'">
+                    <li data-th-each="part : ${parts}">
                         <a data-th-href="${part.hash}" data-th-text="${part.name}">Page</a>
                     </li>
-                </ul>-->
+                </ul>
 
                 <!-- temporary example -->
-                <ul class="nav navbar-nav">
+                <!--<ul class="nav navbar-nav">
                     <li class="active">
                         <a href="#main-slider">
-                            <i class="fa fa-home"></i>
+                            <i class="fa fa-home fa-2x"></i>
                         </a>
                     </li>
                     <li>
@@ -70,7 +70,7 @@
                     <li>
                         <a href="#">Another</a>
                     </li>
-                </ul>
+                </ul>-->
 
             </div><!--/.nav-collapse -->
         </div>

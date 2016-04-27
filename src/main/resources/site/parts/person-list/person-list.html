@@ -1,0 +1,72 @@
+<section data-th-id="${id}" class="p-about-us xp-part">
+    <div class="box">
+        <div class="center">
+            <h2 data-th-text="${title}">Designer Title</h2>
+            <p data-th-utext="${text}" class="lead">Designer dummy text. This is the dummy text and it goes on and on and on until you don't want to read it no more.</p>
+        </div>
+        <div class="gap"></div>
+        <div class="carousel scale team-scroller" data-th-id="${scrollerId}"><!--had id="team-scroller"-->
+            <div class="carousel-inner">
+
+                <div class="item active" data-th-each="group, iterStat : ${persons}" data-th-class="${iterStat.first}? 'item active' : 'item'">
+                    <div class="row text-center">
+
+                        <div data-th-each="person : ${group}" class="col-sm-4">
+                            <div class="person">
+                                <!--<p>-->
+                                    <!--<a data-th-href="${person.pageUrl}">-->
+                                        <img class="img-responsive img-thumbnail img-circle" data-th-src="${person.imageUrl}" src="../../assets/images/team1.jpg" alt=""/>
+                                    <!--</a>-->
+                                <!--</p>-->
+                                <h3>
+                                    <div data-th-text="${person.name}">Person 1</div>
+                                    <!--<a data-th-href="${person.pageUrl}" data-th-text="${person.name}">Person 1</a>-->
+                                    <small data-th-text="${person.title}" class="designation">Dummy Work Title</small>
+                                </h3>
+                            </div>
+                        </div>
+                    </div><!-- End .row -->
+                </div>
+
+                <!-- begin designer content -->
+                <div class="item active" data-th-remove="all">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="member">
+                                <p>
+                                    <img class="img-responsive img-thumbnail img-circle"
+                                         src="../../assets/images/team2.jpg" alt=""/>
+                                </p>
+                                <h3><span>Person 2</span>
+                                    <small class="designation">Dummy Work Title</small>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div data-th-remove="all" class="col-sm-4">
+                            <div class="member">
+                                <p>
+                                    <img class="img-responsive img-thumbnail img-circle"
+                                         src="../../assets/images/team3.jpg" alt=""/>
+                                </p>
+                                <h3><span>Person 3</span>
+                                    <small class="designation">Dummy Work Title</small>
+                                </h3>
+                            </div>
+                        </div>
+                    </div><!-- End .row -->
+
+                </div><!-- End designer content -->
+            </div>
+
+            <a class="left-arrow" data-th-href="'#' + ${scrollerId}" href="#team-scroller" data-slide="prev">
+                <i class="fa fa-angle-left fa-4x"></i>
+            </a>
+            <a class="right-arrow" data-th-href="'#' + ${scrollerId}" href="#team-scroller" data-slide="next">
+                <i class="fa fa-angle-right fa-4x"></i>
+            </a>
+        </div>
+        <!--/.carousel-->
+    </div>
+    <!--/.box-->
+</section><!--/#about-us-->

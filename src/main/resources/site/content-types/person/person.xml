@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+  <display-name>Person</display-name>
+  <content-display-name-script>$('firstName') + ' ' + $('lastName')</content-display-name-script>
+  <super-type>base:structured</super-type>
+  <form>
+    <field-set name="basic">
+      <label>Person info</label>
+      <items>
+        <input type="TextLine" name="firstName">
+          <label>First name</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextLine" name="middleName">
+          <label>Middle name</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextLine" name="lastName">
+          <label>Last name</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="ImageSelector" name="image">
+          <label>Photo</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextLine" name="jobTitle">
+          <label>Job title</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+  </form>
+</content-type>

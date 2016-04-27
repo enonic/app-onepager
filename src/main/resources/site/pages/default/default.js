@@ -2,6 +2,7 @@ var portalLib = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 var contentLib = require('/lib/xp/content');
 var util = require('/lib/enonic/util');
+var onepager = require('onepager');
 
 // Handle GET request
 exports.get = handleGet;
@@ -44,6 +45,7 @@ function handleGet(req) {
             }
         }
 
+        //util.log(getMenuParts());
 
         var model = {};
         model.mainRegion = content.page.regions['main'];
@@ -61,10 +63,47 @@ function handleGet(req) {
         model.social = social;
         model.addresses = addresses;
         model.addressCols = addressCols;
+        model.parts = getMenuParts();
 
 
         return model;
     }
+
+    function getMenuParts() {
+        var components = content.page.regions.main.components;
+        components = util.data.forceArray(components);
+
+        var parts = [];
+        for (var i = 0; i < components.length; i++) {
+            if(components[i].type == 'layout') {
+                var regions = components[i].regions;
+                regions = util.data.forceArray(regions);
+                for(var j = 0; j < regions.length; j++) {
+
+                    for (var region in regions[j]) {
+
+                        var layoutRegionComponents = regions[j][region].components;
+
+                        for (var k = 0; k < layoutRegionComponents.length; k++) {
+                            var part = onepager.getMenuNames(layoutRegionComponents[k]);
+                            if(part) parts.push(part);
+                        }
+
+                    }
+
+                }
+
+            } else if (components[i].type == 'part') {
+                var part = onepager.getMenuNames(components[i]);
+                if(part) parts.push(part);
+            }
+
+        }
+        parts.push({hash: '#contact', name: 'Contact'});
+
+        return parts;
+    }
+
 
     function getPageTitle() {
         return content.displayName;

@@ -1,8 +1,8 @@
 <node>
-    <id>1b6d1da1-05fd-49df-9ad8-7b4dcdad0d9f</id>
+    <id>fac3be98-2e38-4a68-8b48-91505a216dfc</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-04-27T19:01:56.191Z</timestamp>
+    <timestamp>2016-04-27T20:18:14.310Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -44,16 +44,16 @@
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">enonic-main-logo-for-light-bg.png</string>
+        <string name="displayName">mer.jpg</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-04-27T05:20:12.182Z</dateTime>
+        <dateTime name="createdTime">2016-04-27T20:18:05.637Z</dateTime>
         <string name="creator">user:system:su</string>
         <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T05:20:12.182Z</dateTime>
+        <dateTime name="modifiedTime">2016-04-27T20:18:05.637Z</dateTime>
         <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">
-                <string name="attachment">enonic-main-logo-for-light-bg.png</string>
+                <string name="attachment">mer.jpg</string>
                 <property-set name="focalPoint">
                     <double name="x">0.5</double>
                     <double name="y">0.5</double>
@@ -67,20 +67,21 @@
         <property-set name="x">
             <property-set name="media">
                 <property-set name="imageInfo">
-                    <long name="imageHeight">768</long>
-                    <string name="contentType">image/png</string>
-                    <long name="imageWidth">3660</long>
-                    <long name="pixelSize">2810880</long>
-                    <long name="byteSize">72621</long>
+                    <long name="imageHeight">480</long>
+                    <string name="contentType">image/jpeg</string>
+                    <string name="colorSpace">RGB</string>
+                    <long name="imageWidth">640</long>
+                    <long name="pixelSize">307200</long>
+                    <long name="byteSize">43932</long>
                 </property-set>
             </property-set>
         </property-set>
         <property-set name="attachment">
-            <string name="name">enonic-main-logo-for-light-bg.png</string>
+            <string name="name">mer.jpg</string>
             <string name="label">source</string>
-            <binaryReference name="binary">enonic-main-logo-for-light-bg.png</binaryReference>
-            <string name="mimeType">image/png</string>
-            <long name="size">72621</long>
+            <binaryReference name="binary">mer.jpg</binaryReference>
+            <string name="mimeType">image/jpeg</string>
+            <long name="size">43932</long>
         </property-set>
     </data>
     <indexConfigs>
