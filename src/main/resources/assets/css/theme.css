@@ -21,7 +21,7 @@ header#header {
     height: 80px;
     width: 100%;
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 0;
 }
@@ -45,4 +45,8 @@ header#header {
 .layout > .row {
     background-color: #FFFFFF;
     margin: auto 0;
+}
+
+body.edit header#header {
+    position: relative;
 }

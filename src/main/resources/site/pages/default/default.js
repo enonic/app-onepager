@@ -37,10 +37,13 @@ function handleGet(req) {
         };
 
         var addresses = util.data.forceArray(siteConfig.location);
-        for (var i = 0; i < addresses.length; i++) {
-            addresses[i].usAddress = (!addresses[i].state || addresses[i].state == '') ? false : true;
-        }
         var addressCols = getAddressCols(addresses);
+        for (var i = 0; i < addresses.length; i++) {
+            if(addresses[i]) {
+                addresses[i].usAddress = (!addresses[i].state || addresses[i].state == '') ? false : true;
+            }
+        }
+
 
         var model = {};
         model.mainRegion = content.page.regions['main'];

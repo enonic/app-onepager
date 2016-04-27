@@ -1,8 +1,8 @@
 <node>
-    <id>9f2fd1df-bfbe-4762-9627-8e4be63e274e</id>
+    <id>01f89433-910e-447d-a5f6-5a95217edfbd</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-04-05T20:09:54.565Z</timestamp>
+    <timestamp>2016-04-27T06:05:55.660Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,33 +35,51 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">Default</string>
-        <string name="type">portal:page-template</string>
+        <string name="displayName">OnePager</string>
+        <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-05T20:09:23.931Z</dateTime>
+        <dateTime name="modifiedTime">2016-04-27T06:05:55.659Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-02-23T06:19:45.909Z</dateTime>
+        <dateTime name="createdTime">2016-04-27T05:18:45.892Z</dateTime>
         <property-set name="data">
-            <string name="supports">portal:site</string>
-        </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-app-onepager">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
+            <string name="description">One page site for Enonic XP</string>
+            <property-set name="siteConfig">
+                <string name="applicationKey">com.enonic.app.onepager</string>
+                <property-set name="config">
+                    <reference name="logo">1b6d1da1-05fd-49df-9ad8-7b4dcdad0d9f</reference>
+                    <string name="description">One pager site for Enonic XP.</string>
+                    <string name="company">Enonic USA</string>
+                    <string name="mail">mla@enonic.com</string>
+                    <property-set name="location">
+                        <string name="label">San Francisco office</string>
+                        <string name="street">620 Folsom St. STE 100</string>
+                        <string name="city">San Francisco</string>
+                        <string name="state">CA</string>
+                        <string name="zip">94107</string>
+                        <string name="country">USA</string>
+                        <string name="phone">+1 415 774-6090</string>
+                    </property-set>
+                    <property-set name="location">
+                        <string name="label">Oslo office</string>
+                        <string name="street">Kirkegata 1-3</string>
+                        <string name="city">Oslo</string>
+                        <string isNull="true" name="state"/>
+                        <string name="zip">0153</string>
+                        <string name="country">Norway</string>
+                        <string name="phone">+47 22 00 85 50</string>
+                    </property-set>
+                    <string name="twitter">https://twitter.com/enonichq</string>
+                    <string name="facebook">https://www.facebook.com/enonic.no</string>
+                    <string name="linkedin">https://www.linkedin.com/company/55102</string>
+                    <string name="google">https://plus.google.com/+EnonicCommunity/videos</string>
+                    <string name="pintrest">https://pinterest.com</string>
+                    <string name="youtube">https://www.youtube.com/channel/UCBPzQ6g6A11TKn1FDeByhYQ</string>
+                    <string isNull="true" name="textColor"/>
+                    <string name="copyrightMessage">&lt;p&gt;Copyright&amp;nbsp;&amp;copy;2016 &lt;a title="Enonic" href="https://enonic.com" target="_blank"&gt;Enonic USA&lt;/a&gt;&lt;/p&gt;</string>
                 </property-set>
             </property-set>
         </property-set>
@@ -70,9 +88,75 @@
             <reference isNull="true" name="template"/>
             <property-set name="region">
                 <string name="name">main</string>
+                <property-set name="component">
+                    <string name="type">LayoutComponent</string>
+                    <property-set name="LayoutComponent">
+                        <string name="name">1 column</string>
+                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
+                        <property-set name="config"/>
+                        <property-set name="region">
+                            <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">PartComponent</string>
+                                <property-set name="PartComponent">
+                                    <string name="name">Services</string>
+                                    <string name="template">com.enonic.app.onepager:services</string>
+                                    <property-set name="config">
+                                    <string name="heading">Services part</string>
+                                    <string name="description">This is the description of the Services section.</string>
+                                    <boolean name="menuItem">true</boolean>
+                                    <string name="menuName">Services</string>
+                                    <property-set name="service">
+                                    <string name="header">Red Flag</string>
+                                    <string name="description">This should be a red flag if I did it right.</string>
+                                    <string name="icon">fa-flag</string>
+                                    <string name="icon-color">color1</string>
+                                    </property-set>
+                                    <property-set name="service">
+                                    <string name="header">Green Play</string>
+                                    <string name="description">Lorem ipsum green play button or something.</string>
+                                    <string name="icon">fa-play-circle</string>
+                                    <string name="icon-color">color2</string>
+                                    </property-set>
+                                    <property-set name="service">
+                                    <string name="header">Cloud</string>
+                                    <string name="description">This should be a cloud if I did it right and it should be blue.</string>
+                                    <string name="icon">fa-cloud</string>
+                                    <string name="icon-color">color3</string>
+                                    </property-set>
+                                    <property-set name="service">
+                                    <string name="header">Purple text width</string>
+                                    <string name="description">More of that lorem ipsum stuff goes here.</string>
+                                    <string name="icon">fa-text-width</string>
+                                    <string name="icon-color">color4</string>
+                                    </property-set>
+                                    <property-set name="service">
+                                    <string name="header">Teal upload</string>
+                                    <string name="description">Some more text like lorem ipsum dolor sit amet.</string>
+                                    <string name="icon">fa-upload</string>
+                                    <string name="icon-color">color5</string>
+                                    </property-set>
+                                    <property-set name="service">
+                                    <string name="header">Dark blue</string>
+                                    <string name="description">Some tags here and more text just to fill things out and test.</string>
+                                    <string name="icon">fa-tags</string>
+                                    <string name="icon-color">color6</string>
+                                    </property-set>
+                                    </property-set>
+                                </property-set>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
             </property-set>
-            <property-set name="config"/>
-            <boolean name="customized">false</boolean>
+            <property-set name="config">
+                <string isNull="true" name="meta-keywords"/>
+                <string isNull="true" name="meta-description"/>
+                <boolean name="showContactForm">false</boolean>
+                <string isNull="true" name="formTitle"/>
+                <string isNull="true" name="formText"/>
+            </property-set>
+            <boolean name="customized">true</boolean>
         </property-set>
     </data>
     <indexConfigs>
