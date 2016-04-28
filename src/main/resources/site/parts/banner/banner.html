@@ -1,0 +1,13 @@
+<section data-th-id="${id}" class="xp-part">
+    <div class="box">
+        <div class="promotion-banner">
+            <div class="enonicarousel">
+                <ul class="enonicarousel__list promotion-banner__list">
+                    <li class="enonicarousel__slide" data-th-each="banner : ${banners}">
+                        <img data-th-src="${portal.imageUrl({'_id=' + banner.image, '_scale=block(1024,300)'})}"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

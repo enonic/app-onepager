@@ -2,7 +2,7 @@
     <id>01f89433-910e-447d-a5f6-5a95217edfbd</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-04-27T22:23:38.933Z</timestamp>
+    <timestamp>2016-04-28T07:05:37.214Z</timestamp>
     <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,7 +47,7 @@
         <string name="displayName">OnePager</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T22:23:38.932Z</dateTime>
+        <dateTime name="modifiedTime">2016-04-28T07:05:37.213Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-04-27T05:18:45.892Z</dateTime>
@@ -94,6 +94,24 @@
             <reference isNull="true" name="template"/>
             <property-set name="region">
                 <string name="name">main</string>
+                <property-set name="component">
+                    <string name="type">PartComponent</string>
+                    <property-set name="PartComponent">
+                        <string name="name">Banner</string>
+                        <string name="template">com.enonic.app.onepager:banner</string>
+                        <property-set name="config">
+                            <property-set name="banner">
+                                <reference name="image">0c797fcc-9287-4027-9f98-601e53051197</reference>
+                            </property-set>
+                            <property-set name="banner">
+                                <reference name="image">671a0fc7-1a4b-407f-96d9-27941fc50eea</reference>
+                            </property-set>
+                            <property-set name="banner">
+                                <reference name="image">ec044341-2840-4c06-801c-4b2d2c455a13</reference>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
                 <property-set name="component">
                     <string name="type">LayoutComponent</string>
                     <property-set name="LayoutComponent">

@@ -7,6 +7,11 @@ jQuery(function($) {
 		});
 	});
 
+    $('.enonicarousel').enoniCarousel({
+        slideNav: true,
+        animate: true,
+        startAnimated: false
+    });
 
 	// scroll
 	$('.navbar-nav.site-home > li').click(function(e) {

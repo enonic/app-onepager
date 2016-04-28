@@ -4,6 +4,9 @@ body {
   background-color: #DFDFDF;
     color: #002454;
 }
+* {
+    box-sizing: border-box;
+}
 .row {
   margin-bottom: 20px;
 }
