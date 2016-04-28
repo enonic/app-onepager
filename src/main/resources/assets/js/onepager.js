@@ -1,5 +1,24 @@
 jQuery(function($) {
 
+    // Parallax banner part
+    var parallax = document.querySelectorAll(".parallax"),
+        speed = 0.5;
+
+    window.onscroll = function(){
+        [].slice.call(parallax).forEach(function(el,i){
+
+            var windowYOffset = window.pageYOffset,
+                elPos = (windowYOffset * speed) + "px";
+
+            el.style.top = elPos;
+
+        });
+        console.log('Parallax');
+        console.log(parallax);
+    };
+
+
+
 	$(function(){
 		$('#main-slider.carousel').carousel({
 			interval: 10000,
@@ -13,7 +32,7 @@ jQuery(function($) {
         startAnimated: false
     });
 
-	// scroll
+	// scroll menu
 	$('.navbar-nav.site-home > li').click(function(e) {
 		e.preventDefault();
 		var target = $(this).find('>a').prop('hash');

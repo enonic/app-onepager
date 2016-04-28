@@ -1,10 +1,10 @@
-<section data-th-id="${id}" class="xp-part">
+<section data-th-id="${id}" class="xp-part p-banner">
     <div class="box">
         <div class="promotion-banner">
             <div class="enonicarousel">
-                <ul class="enonicarousel__list promotion-banner__list">
+                <ul class="enonicarousel__list promotion-banner__list parallax">
                     <li class="enonicarousel__slide" data-th-each="banner : ${banners}">
-                        <img data-th-src="${portal.imageUrl({'_id=' + banner.image, '_scale=block(1024,300)'})}"/>
+                        <img data-th-src="${portal.imageUrl({'_id=' + banner.image, '_scale=block(1024,300)'})}" alt=""/>
                     </li>
                 </ul>
             </div>

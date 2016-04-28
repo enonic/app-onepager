@@ -55,10 +55,12 @@ body.edit header#header {
     position: relative;
 }
 
-.xp-part {
+.layout .xp-part {
     margin: 50px 0;
 }
-
+.xp-part {
+    margin-bottom: 50px;
+}
 .site-home li {
     font-size: 20px;
 }

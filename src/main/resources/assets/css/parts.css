@@ -182,6 +182,7 @@ Banner begin
     right: 0;
     text-align: center;
     z-index: 4;
+    padding: 0;
 }
 .enonicarousel__nav-item {
     display: inline-block;
@@ -261,4 +262,10 @@ Banner begin
 }
 button {
     overflow: visible;
+}
+.parallax {
+    position: relative;
+}
+.p-banner {
+    overflow: hidden;
 }
