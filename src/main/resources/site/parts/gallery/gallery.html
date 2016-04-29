@@ -1,0 +1,167 @@
+<section class="p-gallery xp-part" data-th-id="${id}">
+    <div class="box">
+        <div class="center gap">
+            <h2 data-th-text="${heading}">Gallery</h2>
+            <p class="lead" data-th-utext="${description}">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac<br />turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+        </div>
+
+        <div data-th-if="${galleryItems}" data-th-remove="tag">
+
+            <ul class="gallery-filter">
+                <li><a class="btn btn-primary active" href="#" data-filter="*">All</a></li>
+
+                <li data-th-each="category : ${categories}">
+                    <a class="btn btn-primary" href="#" data-th-attr="data-filter='.' + ${category.key}" data-th-text="${category.tag}"></a>
+                </li>
+            </ul><!--/#portfolio-filter-->
+
+            <!--<ul class="gallery-items col-4">
+                <li data-th-each="galleryItem : ${galleryItems}" data-th-class="${galleryItem.liClass}">
+                    <div class="item-inner">
+                        <div class="gallery-image">
+                            <img data-th-src="${galleryItem.thumb}"/>
+                            <div class="overlay">
+                                <a data-th-href="${galleryItem.imgUrl}" class="preview btn btn-danger" data-th-title="${galleryItem.caption}">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5 data-th-text="${galleryItem.caption}"></h5>
+                    </div>
+                </li>
+            </ul>-->
+            <ul class="gallery-items col-4">
+                <li data-th-each="galleryItem : ${galleryItems}" data-th-class="${galleryItem.liClass}">
+                    <div class="item-inner">
+                        <div class="gallery-image">
+                            <a data-th-href="${galleryItem.imgUrl}" class="preview" data-th-title="${galleryItem.caption}">
+                                <img data-th-src="${galleryItem.thumb}"/>
+                            </a>
+                        </div>
+                        <h5 data-th-text="${galleryItem.caption}"></h5>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--<div data-th-if="${!galleryItems}" data-th-remove="tag">
+
+            <ul class="gallery-filter">
+                <li><a class="btn btn-primary active" href="#" data-filter="*">All</a></li>
+                <li><a class="btn btn-primary" href="#" data-filter=".bootstrap">Bootstrap</a></li>
+                <li><a class="btn btn-primary" href="#" data-filter=".html">HTML</a></li>
+                <li><a class="btn btn-primary" href="#" data-filter=".wordpress">Wordpress</a></li>
+            </ul>&lt;!&ndash;/#portfolio-filter&ndash;&gt;
+
+            <ul class="gallery-items col-4" data-th-if="${!galleryItems}">
+                <li class="gallery-item apps">
+                    <div class="item-inner">
+                        <div class="gallery-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item1.jpg'})}" src="../public/images/portfolio/thumb/item1.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item1.jpg'})}" href="../public/images/portfolio/full/item1.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item joomla bootstrap">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item2.jpg'})}" src="../public/images/portfolio/thumb/item2.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item2.jpg'})}" href="../public/images/portfolio/full/item2.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item bootstrap wordpress">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item3.jpg'})}" src="../public/images/portfolio/thumb/item3.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item3.jpg'})}" href="../public/images/portfolio/full/item3.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item joomla wordpress apps">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item4.jpg'})}" src="../public/images/portfolio/thumb/item4.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item4.jpg'})}" href="../public/images/portfolio/full/item4.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item joomla html">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item5.jpg'})}" src="../public/images/portfolio/thumb/item5.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item5.jpg'})}" href="../public/images/portfolio/full/item5.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item wordpress html">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item6.jpg'})}" src="../public/images/portfolio/thumb/item6.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item6.jpg'})}" href="../public/images/portfolio/full/item6.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item joomla html">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item5.jpg'})}" src="../public/images/portfolio/thumb/item5.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item5.jpg'})}" href="../public/images/portfolio/full/item5.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+                <li class="portfolio-item wordpress html">
+                    <div class="item-inner">
+                        <div class="portfolio-image">
+                            <img data-th-src="${portal.assetUrl({'_path=images/portfolio/thumb/item6.jpg'})}" src="../public/images/portfolio/thumb/item6.jpg" alt="" />
+                            <div class="overlay">
+                                <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" data-th-href="${portal.assetUrl({'_path=images/portfolio/full/item6.jpg'})}" href="../public/images/portfolio/full/item6.jpg">
+                                    <i class="icon-eye-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                    </div>
+                </li>&lt;!&ndash;/.portfolio-item&ndash;&gt;
+            </ul>
+
+        </div>&lt;!&ndash;/portfolio dummy content&ndash;&gt;-->
+
+    </div><!--/.box-->
+</section><!--/#portfolio-->

@@ -15,6 +15,8 @@
     <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap-theme.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link data-th-href="${portal.assetUrl({'_path=font-awesome/4.5.0/css/font-awesome.min.css'})}" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=css/prettyPhoto.css'})}" href="../css/prettyPhoto.css" rel="stylesheet"/>
+
 
     <!-- Custom styles for this template -->
     <link data-th-href="${portal.assetUrl({'_path=css/theme.css'})}" href="../assets/css/theme.css" rel="stylesheet"/>
@@ -111,7 +113,7 @@
                 <!--/.col-sm-12-->
                 <div class="col-sm-12 text-center">
 
-                    <h1>Locations</h1>
+                    <h2>Locations</h2>
                     <div class="row">
                         <div data-th-class="'col-md-' + ${addressCols}" data-th-each="address, iterStat : ${addresses}">
                             <address>
@@ -137,7 +139,7 @@
                         </div>
                     </div>
 
-                    <h1>Follow us</h1>
+                    <h2>Follow us</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="social">

@@ -14,11 +14,10 @@ body {
   margin-top: 10px;
   margin-bottom: 0;
 }
-[class*="col-"] {
+/*[class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
+}*/
 
 header#header {
     height: 80px;
@@ -46,9 +45,7 @@ header#header {
 }
 
 .layout > .row {
-    background-color: #FFFFFF;
-    margin: auto 0;
-    border-radius: 10px 10px 0 0;
+
 }
 
 body.edit header#header {
@@ -59,9 +56,14 @@ body.edit header#header {
     margin: 50px 0;
 }
 .xp-part {
-    margin-bottom: 50px;
+
 }
 .site-home li {
     font-size: 20px;
 }
 
+.box {
+    padding: 50px 30px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}

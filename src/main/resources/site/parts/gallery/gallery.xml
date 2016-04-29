@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Gallery</display-name>
+  <config>
+    <input type="ContentSelector" name="galleryItems">
+      <label>Gallery images</label>
+      <occurrences minimum="0" maximum="0"/>
+      <config>
+        <relationshipType>system:reference</relationshipType>
+        <allowType>gallery-img</allowType>
+      </config>
+    </input>
+    <inline mixin="menu-item"/>
+  </config>
+</part>

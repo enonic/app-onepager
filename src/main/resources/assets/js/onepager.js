@@ -13,8 +13,6 @@ jQuery(function($) {
             el.style.top = elPos;
 
         });
-        console.log('Parallax');
-        console.log(parallax);
     };
 
 
@@ -68,17 +66,17 @@ jQuery(function($) {
 
 	//Isotope
 	$(window).load(function(){
-		$portfolio = $('.portfolio-items');
-		$portfolio.isotope({
+		$gallery = $('.gallery-items');
+		$gallery.isotope({
 			itemSelector : 'li',
 			layoutMode : 'fitRows'
 		});
-		$portfolio_selectors = $('.portfolio-filter >li>a');
-		$portfolio_selectors.on('click', function(){
-			$portfolio_selectors.removeClass('active');
+		$gallery_selectors = $('.gallery-filter >li>a');
+		$gallery_selectors.on('click', function(){
+			$gallery_selectors.removeClass('active');
 			$(this).addClass('active');
 			var selector = $(this).attr('data-filter');
-			$portfolio.isotope({ filter: selector }, function() {
+			$gallery.isotope({ filter: selector }, function() {
 			    //Only resize AFTER the animation
                 $('[data-spy="scroll"]').each(function () {
                     var $spy = $(this).scrollspy('refresh');
