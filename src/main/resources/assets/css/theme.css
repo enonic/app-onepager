@@ -1,22 +1,31 @@
 body {
-  padding-top: 70px;
-  padding-bottom: 30px;
-  background-color: #DFDFDF;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: #DFDFDF;
+    color: #555555;
+}
+h1, h2, h3, h4, h5, h6 {
     color: #002454;
+    font-weight: 300;
+}
+@media (min-width: 768px) {
+    .lead {
+        font-size: 18px;
+    }
 }
 * {
     box-sizing: border-box;
 }
 .row {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .row .row {
-  margin-top: 10px;
-  margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 /*[class*="col-"] {
-  padding-top: 15px;
-  padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }*/
 
 header#header {
