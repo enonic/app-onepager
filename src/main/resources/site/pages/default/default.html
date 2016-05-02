@@ -47,57 +47,15 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <!-- Hold off on this until the menu stuff is sorted out in the controller. -->
                 <ul class="nav navbar-nav site-home">
-                    <li class="active">
-                        <a href="#" class="homeLink">
-                            <i class="fa fa-home"></i>
-                        </a>
-                    </li>
                     <li data-th-each="part : ${parts}">
                         <a data-th-href="${part.hash}" data-th-text="${part.name}">Page</a>
                     </li>
                 </ul>
-
-                <!-- temporary example -->
-                <!--<ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#main-slider">
-                            <i class="fa fa-home fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Page</a>
-                    </li>
-                    <li>
-                        <a href="#">Another</a>
-                    </li>
-                </ul>-->
-
             </div><!--/.nav-collapse -->
         </div>
     </div>
 </header>
-
-<!--<section id="main-slider" class="carousel" data-th-if="${banner}"  data-th-style="${backgroundImage}">
-    <div class="carousel-inner">
-        <div class="item" data-th-each="slide, iterStat : ${slides}" data-th-class="${iterStat.index == 0}? 'item active' : 'item'">
-            <div class="container">
-                <div class="carousel-content">
-                    <h1 data-th-text="${slide.header}" data-th-style="${textColor}">Free Onepage Theme</h1>
-
-                    <p class="lead" data-th-text="${slide.subtitle}" data-th-style="${textColor}">
-                        Xeon is the best free onepage responsive theme
-                        available around the globe<br/>Download it right now for free</p>
-                </div>
-            </div>
-        </div>
-        &lt;!&ndash;/.item&ndash;&gt;
-    </div>
-    &lt;!&ndash;/.carousel-inner&ndash;&gt;
-    <a class="prev" href="#main-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-    <a class="next" href="#main-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-</section>-->
 
 <!-- main region -->
 <div class="region" role="main" data-portal-region="main">
@@ -165,13 +123,8 @@
 <footer id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <span data-th-if="${copyright}" data-th-utext="${portal.processHtml({'_value=' + copyright})}">&copy; 2016</span>
-                <span data-th-if="${copyright == ''}">&copy; 2016 Enonic USA. All rights reserved.</span>
-            </div>
-            <div class="col-sm-6">
-                <img class="pull-right" data-th-src="${portal.assetUrl({'_path=images/enonic-experience-platform-logo-for-light-bg.png'})}"
-                     width="203" src="../images/enonic-experience-platform-logo-for-light-bg.png" alt="ShapeBootstrap" title="ShapeBootstrap"/>
             </div>
         </div>
     </div>
