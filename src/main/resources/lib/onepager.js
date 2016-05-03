@@ -13,37 +13,28 @@ exports.getId = function(id, component) {
 };
 
 exports.getIdName = function(config) {
-      var partName = '';
+      var layoutMenuName = '';
       if(config.menuItem && config.menuName && config.menuName.trim() != '') {
-          partName = config.menuName;
+          layoutMenuName = config.menuName.trim();
       } else {
-          partName = config.heading;
+          return null;
       }
-      if(partName && partName != ''){
-          partName = partName.trim().toLowerCase().split(' ').join('-');
+      if(layoutMenuName && layoutMenuName != ''){
+          return layoutMenuName.trim().toLowerCase().split(' ').join('-');
       }
-      return partName;
+      return null;
   };
 
-exports.getMenuNames = function(part, siteUrl) {
+exports.getMenuNames = function(layout, siteUrl) {
     siteUrl = siteUrl || '';
     var obj = {};
-    var name = '';
-    var config = part.config;
-    if (config.menuItem == true) {
-        var name = config.menuName;
-        if(!name || name.trim() == '') {
-            name = config.heading;
-        }
-        if(!name || name.trim() == '') {
-            return null;
-        } else {
-            obj.name = name.trim();
-            obj.hash = siteUrl + '#' + name.trim().toLowerCase().split(' ').join('-');
-        }
-    } else {
+    var config = layout.config;
+    if(!config || !config.menuItem || !config.menuName || config.menuName.trim() == '') {
         return null;
     }
+
+    obj.name = config.menuName.trim();
+    obj.hash = siteUrl + '#' + config.menuName.trim().toLowerCase().split(' ').join('-');
 
     return obj;
 };

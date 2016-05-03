@@ -23,7 +23,6 @@ function handleGet(req) {
         var component = portal.getComponent();
         var config = component.config;
 
-        var id = onepager.getIdName(config);
         var scrollerId = onepager.getId('team-scroller-', component);
 
         var persons = [];
@@ -88,7 +87,6 @@ function handleGet(req) {
             title: config.heading || 'Missing Heading',
             text: config.description || 'Missing description',
             persons: persons,
-            id: id,
             scrollerId: scrollerId
         };
         return model;

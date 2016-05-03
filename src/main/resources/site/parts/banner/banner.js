@@ -1,7 +1,6 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 var util = require('/lib/enonic/util');
-var onepager = require('onepager');
 
 
 // Handle GET request
@@ -17,7 +16,6 @@ function handleGet(req) {
 
         model.heading = component.config.heading;
         model.banners = getBanners();
-        model.id = onepager.getIdName(component.config);
 
         return model;
     }

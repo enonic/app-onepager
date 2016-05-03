@@ -52,7 +52,8 @@ function handleGet(req) {
         model.sitePath = site['_path'];
         model.currentPath = content._path;
         model.pageTitle = getPageTitle();
-        model.metaDescription = getMetaDescription();
+        model.metaDescription = page.config['meta-description'];
+        model.metaKeywords = getMetaKeywords(page);
         model.siteName = site.displayName;
         model.editMode = req.mode == 'edit' ? true : false;
         model.content = portalLib.getContent();
@@ -63,45 +64,41 @@ function handleGet(req) {
         model.social = social;
         model.addresses = addresses;
         model.addressCols = addressCols;
-        model.parts = getMenuParts();
+        model.layouts = getMenuLayouts();
 
 
         return model;
     }
 
-    function getMenuParts() {
+    function getMenuLayouts() {
         var components = content.page.regions.main.components;
         components = util.data.forceArray(components);
 
-        var parts = [];
+        var layouts = [];
         for (var i = 0; i < components.length; i++) {
             if(components[i].type == 'layout') {
-                var regions = components[i].regions;
-                regions = util.data.forceArray(regions);
-                for(var j = 0; j < regions.length; j++) {
-
-                    for (var region in regions[j]) {
-
-                        var layoutRegionComponents = regions[j][region].components;
-
-                        for (var k = 0; k < layoutRegionComponents.length; k++) {
-                            var part = onepager.getMenuNames(layoutRegionComponents[k]);
-                            if(part) parts.push(part);
-                        }
-
-                    }
-
-                }
-
-            } else if (components[i].type == 'part') {
-                var part = onepager.getMenuNames(components[i]);
-                if(part) parts.push(part);
+                var layout = onepager.getMenuNames(components[i]);
+                if(layout) layouts.push(layout);
             }
-
         }
-        parts.push({hash: '#contact', name: 'Contact'});
+        layouts.push({hash: '#contact', name: 'Contact'});
 
-        return parts;
+        return layouts;
+    }
+
+    function getMetaKeywords(page) {
+        var config = page.config;
+        var metaKeywords = config['meta-keywords'];
+        metaKeywords = util.data.forceArray(metaKeywords);
+        for (var i = 0; i < metaKeywords.length; i++) {
+            if(metaKeywords[i]) metaKeywords[i] = metaKeywords[i].trim();
+        }
+        metaKeywords = metaKeywords.join(',');
+        //Remove trailing comma if it ends in a comma.
+        while(metaKeywords.charAt(metaKeywords.length -1) == ',') {
+            metaKeywords = metaKeywords.substring(0, metaKeywords.length -1);
+        }
+        return metaKeywords;
     }
 
 
@@ -109,27 +106,13 @@ function handleGet(req) {
         return content.displayName;
     }
 
-    function getMetaDescription() {
-        var htmlMeta = getExtradata(content, 'html-meta');
-        var metaDescription = htmlMeta.htmlMetaDescription || '';
-        return metaDescription;
-    }
-
-    function getExtradata(content, property) {
-        var appNamePropertyName = app.name.replace(/\./g,'-');
-        // Short way of getting nested objects
-        // http://blog.osteele.com/posts/2007/12/cheap-monads/
-        var extraData = ((content.x || {})[appNamePropertyName] || {})[property] || {};
-        return extraData;
-    }
-
     function getLogoUrl(moduleConfig) {
-        var logoContentId = moduleConfig['logo'];
+        var logoContentId = moduleConfig.logo;
         if (logoContentId) {
             return portalLib.imageUrl( {
                 id: logoContentId,
                 //scale: 'block(115,26)'
-                scale: 'width(115)'
+                scale: 'height(25)'
             });
         } else {
             return portalLib.assetUrl( {

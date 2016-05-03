@@ -2,21 +2,6 @@
 <mixin>
   <display-name>Menu</display-name>
   <items>
-    <field-set name="heading">
-      <label>Heading</label>
-      <items>
-        <input type="TextLine" name="heading">
-          <label>Part heading</label>
-          <help-text>Heading to be used for the part. Optional</help-text>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
-        <input type="TextArea" name="description">
-          <label>Description</label>
-          <help-text>Description text below the heading for the part. Optional</help-text>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
-      </items>
-    </field-set>
     <field-set name="menu">
       <label>Menu</label>
       <items>

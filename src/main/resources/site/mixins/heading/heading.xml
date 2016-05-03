@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixin>
+  <display-name>Heading</display-name>
+  <items>
+    <field-set name="heading">
+      <label>Heading</label>
+      <items>
+        <input type="TextLine" name="heading">
+          <label>Part heading</label>
+          <helpText>Optional heading to be used for the part.</helpText>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="TextArea" name="description">
+          <label>Description</label>
+          <help-text>Optional text below the part heading.</help-text>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+  </items>
+</mixin>

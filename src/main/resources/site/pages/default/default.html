@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" data-th-content="${metaDescription}" content=""/>
+    <meta name="keywords" data-th-content="${metaKeywords}" content=""/>
     <meta name="author" content="Enonic USA"/>
     <meta name="generator" content="Enonic XP"/>
 
@@ -48,8 +49,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav site-home">
-                    <li data-th-each="part : ${parts}">
-                        <a data-th-href="${part.hash}" data-th-text="${part.name}">Page</a>
+                    <li data-th-each="layout : ${layouts}">
+                        <a data-th-href="${layout.hash}" data-th-text="${layout.name}">Page</a>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -75,7 +76,7 @@
                     <div class="row">
                         <div data-th-class="'col-md-' + ${addressCols}" data-th-each="address, iterStat : ${addresses}">
                             <address>
-                                <strong><span data-th-text="${company}">Twitter, Inc.</span> <span data-th-text="${address.label}"></span></strong><br/>
+                                <strong><span data-th-text="${address.label}">Twitter, Inc.</span></strong><br/>
                                 <span data-th-text="${address.street}">795 Folsom Ave, Suite 600</span><br/>
                                 <div data-th-remove="tag" data-th-if="${address.usAddress}">
                                     <span data-th-text="${address.city}">San Francisco</span>

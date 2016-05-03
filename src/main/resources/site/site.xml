@@ -9,21 +9,6 @@
           <help-text/>
           <occurrences minimum="1" maximum="1"/>
         </input>
-        <input type="TextArea" name="description">
-          <label>Description</label>
-          <help-text/>
-          <occurrences minimum="1" maximum="1"/>
-        </input>
-        <input type="TextLine" name="company">
-          <label>Company</label>
-          <help-text/>
-          <occurrences minimum="1" maximum="1"/>
-        </input>
-        <input type="TextLine" name="mail">
-          <label>E-mail</label>
-          <help-text/>
-          <occurrences minimum="1" maximum="1"/>
-        </input>
       </items>
     </field-set>
     <field-set name="locations">
@@ -95,19 +80,6 @@
         </input>
         <input type="TextLine" name="youtube">
           <label>Youtube</label>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
-      </items>
-    </field-set>
-    <field-set name="banner">
-      <label>Banner settings</label>
-      <items>
-        <input type="ImageSelector" name="bannerBackground">
-          <label>Background image</label>
-          <occurrences minimum="0" maximum="1"/>
-        </input>
-        <input type="TextLine" name="textColor">
-          <label>Text color</label>
           <occurrences minimum="0" maximum="1"/>
         </input>
       </items>

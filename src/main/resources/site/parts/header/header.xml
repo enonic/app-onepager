@@ -2,7 +2,7 @@
 <part>
   <display-name>Header</display-name>
   <config>
-    <inline mixin="menu-item"/>
+    <inline mixin="heading"/>
     <!--<input type="TextLine" name="heading">
       <label>Heading</label>
       <occurrences minimum="0" maximum="1"/>

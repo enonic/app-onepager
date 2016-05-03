@@ -2,7 +2,7 @@
 <part>
   <display-name>Person list</display-name>
   <config>
-    <inline mixin="menu-item"/>
+    <inline mixin="heading"/>
     <input type="ContentSelector" name="person">
       <label>Person</label>
       <occurrences minimum="0" maximum="0"/>

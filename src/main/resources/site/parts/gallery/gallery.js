@@ -1,4 +1,3 @@
-var onepager = require('onepager');
 var contentLib = require('/lib/xp/content');
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
@@ -42,9 +41,6 @@ function handleGet(req) {
             }
         });
         var contents = result.hits;
-
-        //Make the dynamic ID
-        model.id = onepager.getIdName(config);
 
         model.galleryItems = getGalleryItems(contents);
         model.categories = getCategories(result);

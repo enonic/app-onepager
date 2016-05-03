@@ -1,5 +1,6 @@
 var thymeleaf = require('/lib/xp/thymeleaf');
 var portal = require('/lib/xp/portal');
+var onepager = require('onepager');
 
 exports.get = function (req) {
     var component = portal.getComponent();
@@ -12,7 +13,8 @@ exports.get = function (req) {
     var view = resolve('layout-1-col.html');
     var model = {
         centerRegion: component.regions["center"],
-        layoutClass: layoutClass
+        layoutClass: layoutClass,
+        id: onepager.getIdName(component.config)
     };
 
     return {

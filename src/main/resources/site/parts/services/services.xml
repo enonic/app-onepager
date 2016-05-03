@@ -2,7 +2,7 @@
 <part>
   <display-name>Services</display-name>
   <config>
-    <inline mixin="menu-item"/>
+    <inline mixin="heading"/>
     <field-set name="slides">
       <label>Services</label>
       <items>

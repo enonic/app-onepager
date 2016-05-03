@@ -1,4 +1,3 @@
-var onepager = require('onepager');
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 
@@ -33,9 +32,6 @@ function handleGet(req) {
         if(!services[0] || (services[0].header == '' || services[0].header == null)) {
             services = null;
         }
-
-        //Make the dynamic ID
-        model.id = onepager.getIdName(config);
 
         model.services = services;
         model.heading = config.heading || null;

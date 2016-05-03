@@ -2,6 +2,7 @@
 <part>
   <display-name>Gallery</display-name>
   <config>
+    <inline mixin="heading"/>
     <input type="ContentSelector" name="galleryItems">
       <label>Gallery images</label>
       <occurrences minimum="0" maximum="0"/>
@@ -10,6 +11,5 @@
         <allowType>gallery-img</allowType>
       </config>
     </input>
-    <inline mixin="menu-item"/>
   </config>
 </part>
