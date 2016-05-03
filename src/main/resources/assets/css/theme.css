@@ -23,10 +23,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
     margin-bottom: 0;
 }
-/*[class*="col-"] {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}*/
+
+body.banner {
+    padding-top: 0px;
+    margin-top: -10px;
+}
 
 header#header {
     height: 80px;

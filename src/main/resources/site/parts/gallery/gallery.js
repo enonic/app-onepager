@@ -66,7 +66,6 @@ function handleGet(req) {
     }
 
     function getGalleryItems(contents) {
-        util.log(contents);
         var galleryItems = [];
 
         for (var i = 0; i < contents.length; i++) {

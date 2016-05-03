@@ -2,6 +2,17 @@
 <page>
   <display-name>Default</display-name>
   <config>
+
+    <field-set name="banner">
+      <label>Banner</label>
+      <items>
+        <input name="bannerTop" type="Checkbox">
+          <label>Banner on top?</label>
+          <occurrences minimum="0" maximum="0"/>
+        </input>
+      </items>
+    </field-set>
+
     <field-set name="meta">
       <label>Meta</label>
       <items>
@@ -17,7 +28,7 @@
     </field-set>
 
     <field-set name="contact">
-      <label>Contact form</label>
+      <label>Contact info</label>
       <items>
         <input type="Checkbox" name="showContactForm">
           <label>Show contact form</label>

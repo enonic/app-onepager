@@ -45,7 +45,7 @@ function handleGet(req) {
         model.metaDescription = page.config['meta-description'];
         model.metaKeywords = getMetaKeywords(page);
         model.siteName = site.displayName;
-        model.editMode = req.mode == 'edit' ? true : false;
+        model.editMode = req.mode == 'edit' ? 'edit' : '';
         model.content = portalLib.getContent();
         model.logoUrl = getLogoUrl(siteConfig);
         model.copyright = siteConfig.copyrightMessage;
@@ -53,7 +53,7 @@ function handleGet(req) {
         model.addresses = addresses;
         model.addressCols = addressCols;
         model.layouts = getMenuLayouts();
-
+        model.bannerTop = page.config.bannerTop ? 'banner' : null;
 
         return model;
     }
