@@ -14,8 +14,17 @@ exports.get = function (req) {
     var model = {
         centerRegion: component.regions["center"],
         layoutClass: layoutClass,
-        id: onepager.getIdName(component.config)
+        id: getIdName(component.config)
     };
+
+    function getIdName(config) {
+
+        if(!config.menuItem || !config.menuName || config.menuName.trim() == '') {
+            return null;
+        }
+
+        return config.menuName.trim().toLowerCase().split(' ').join('-');
+    }
 
     return {
         contentType: 'text/html',

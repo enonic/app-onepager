@@ -2,7 +2,6 @@ var portalLib = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
 var contentLib = require('/lib/xp/content');
 var util = require('/lib/enonic/util');
-var onepager = require('onepager');
 
 // Handle GET request
 exports.get = handleGet;
@@ -18,22 +17,13 @@ function handleGet(req) {
     function createModel() {
 
         var page = content.page;
-        var slides = page ? page.config && page.config.slide : [];
-        // ensure it's an array, even if single element
-        slides = util.data.forceArray(slides);
-
-        // So the page knows if there is a banner or not
-        var banner = true;
-        if(!slides || (slides && slides[0] == null) || (slides[0].header == '')) {
-            banner = false;
-        }
 
         var social = {
             facebook: siteConfig.facebook,
             twitter: siteConfig.twitter,
             linkedin: siteConfig.linkedin,
             google: siteConfig.google,
-            pintrest: siteConfig.pintrest,
+            pinterest: siteConfig.pinterest,
             youtube: siteConfig.youtube
         };
 
@@ -59,8 +49,6 @@ function handleGet(req) {
         model.content = portalLib.getContent();
         model.logoUrl = getLogoUrl(siteConfig);
         model.copyright = siteConfig.copyrightMessage;
-        model.banner = banner;
-        model.slides = slides;
         model.social = social;
         model.addresses = addresses;
         model.addressCols = addressCols;
@@ -77,7 +65,7 @@ function handleGet(req) {
         var layouts = [];
         for (var i = 0; i < components.length; i++) {
             if(components[i].type == 'layout') {
-                var layout = onepager.getMenuNames(components[i]);
+                var layout = getMenuNames(components[i]);
                 if(layout) layouts.push(layout);
             }
         }
@@ -125,6 +113,20 @@ function handleGet(req) {
         if(!addresses || (addresses && addresses.constructor != Array)) return 12;
         var numAddresses = addresses.length < 1 ? 1 : addresses.length;
         return (12 / addresses.length).toString();
+    }
+
+    function getMenuNames(layout, siteUrl) {
+        siteUrl = siteUrl || '';
+        var obj = {};
+        var config = layout.config;
+        if(!config || !config.menuItem || !config.menuName || config.menuName.trim() == '') {
+            return null;
+        }
+
+        obj.name = config.menuName.trim();
+        obj.hash = siteUrl + '#' + config.menuName.trim().toLowerCase().split(' ').join('-');
+
+        return obj;
     }
 
     return {

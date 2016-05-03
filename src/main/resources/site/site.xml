@@ -74,8 +74,8 @@
           <label>Google +</label>
           <occurrences minimum="0" maximum="1"/>
         </input>
-        <input type="TextLine" name="pintrest">
-          <label>Pintrest</label>
+        <input type="TextLine" name="pinterest">
+          <label>Pinterest</label>
           <occurrences minimum="0" maximum="1"/>
         </input>
         <input type="TextLine" name="youtube">

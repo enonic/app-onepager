@@ -5,7 +5,7 @@
             <p data-th-utext="${text}" class="lead">Designer dummy text. This is the dummy text and it goes on and on and on until you don't want to read it no more.</p>
         </div>
         <div class="gap"></div>
-        <div class="carousel scale team-scroller" data-th-id="${scrollerId}"><!--had id="team-scroller"-->
+        <div class="carousel scale team-scroller" data-th-id="${scrollerId}">
             <div class="carousel-inner">
 
                 <div class="item active" data-th-each="group, iterStat : ${persons}" data-th-class="${iterStat.first}? 'item active' : 'item'">
@@ -13,14 +13,11 @@
 
                         <div data-th-each="person : ${group}" class="col-sm-4">
                             <div class="person">
-                                <!--<p>-->
-                                    <!--<a data-th-href="${person.pageUrl}">-->
-                                        <img class="img-responsive img-thumbnail img-circle" data-th-src="${person.imageUrl}" src="../../assets/images/team1.jpg" alt=""/>
-                                    <!--</a>-->
-                                <!--</p>-->
+                                <img class="img-responsive img-thumbnail img-circle" data-th-src="${person.imageUrl}" src="../../assets/images/team1.jpg" alt=""/>
+
                                 <h3>
                                     <div data-th-text="${person.name}">Person 1</div>
-                                    <!--<a data-th-href="${person.pageUrl}" data-th-text="${person.name}">Person 1</a>-->
+
                                     <small data-th-text="${person.title}" class="designation">Dummy Work Title</small>
                                 </h3>
                             </div>
