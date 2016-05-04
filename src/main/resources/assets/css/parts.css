@@ -48,7 +48,7 @@ Contact footer begin
     background-color: #1DA1BC;
 }
 section#contact {
-    margin-bottom: 20px;
+    background-color: inherit;
 }
 
 /*
@@ -108,7 +108,13 @@ Person list begin
 /*
 Banner begin
 */
-
+body.banner .p-banner {
+    margin-bottom: -40px;
+}
+.layout {
+    z-index: 3;
+    position: relative;
+}
 .enonicarousel {
     width: 100%;
     position: relative;
@@ -179,7 +185,9 @@ Banner begin
 .enonicarousel__ctrl-btn--next:after {
     background-image: url('../images/enonicarousel__ctrl-btn-next.svg');
 }
-
+body.banner .enonicarousel__nav {
+    bottom: 3em;
+}
 .enonicarousel__nav {
     position: absolute;
     bottom: 1em;
@@ -273,14 +281,18 @@ button {
 }
 .p-banner {
     overflow: hidden;
+    margin-bottom: 20px;
+}
+.layout .p-banner {
+
 }
 
 /*
 Gallery begin
 */
-.p-gallery .box {
+/*.p-gallery .box {
     background-color: #EEEEEE;
-}
+}*/
 .p-gallery ul {
     list-style: none;
     padding: 0;

@@ -1,9 +1,9 @@
 <node>
-    <id>01f89433-910e-447d-a5f6-5a95217edfbd</id>
+    <id>4117fd4a-7142-446c-a714-120a50ea1e5d</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-04-28T07:05:37.214Z</timestamp>
-    <inheritPermissions>false</inheritPermissions>
+    <timestamp>2016-05-03T23:56:05.109Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,31 +35,25 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">OnePager</string>
+        <string name="displayName">Onepager</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-28T07:05:37.213Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-03T23:56:05.108Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-27T05:18:45.892Z</dateTime>
+        <dateTime name="createdTime">2016-05-03T02:11:00.569Z</dateTime>
         <property-set name="data">
-            <string name="description">One page site for Enonic XP</string>
+            <string name="description">One pager site for Enonic XP</string>
             <property-set name="siteConfig">
                 <string name="applicationKey">com.enonic.app.onepager</string>
                 <property-set name="config">
                     <reference name="logo">1b6d1da1-05fd-49df-9ad8-7b4dcdad0d9f</reference>
-                    <string name="description">One pager site for Enonic XP.</string>
-                    <string name="company">Enonic USA</string>
-                    <string name="mail">mla@enonic.com</string>
+                    <string isNull="true" name="description"/>
+                    <string name="company">Enonic</string>
+                    <string name="mail">info@enonic.com</string>
                     <property-set name="location">
                         <string name="label">San Francisco office</string>
                         <string name="street">620 Folsom St. STE 100</string>
@@ -82,10 +76,10 @@
                     <string name="facebook">https://www.facebook.com/enonic.no</string>
                     <string name="linkedin">https://www.linkedin.com/company/55102</string>
                     <string name="google">https://plus.google.com/+EnonicCommunity/videos</string>
-                    <string name="pintrest">https://pinterest.com</string>
+                    <string name="pintrest">https://pinterest.com/</string>
                     <string name="youtube">https://www.youtube.com/channel/UCBPzQ6g6A11TKn1FDeByhYQ</string>
-                    <string isNull="true" name="textColor"/>
-                    <string name="copyrightMessage">&lt;p&gt;Copyright&amp;nbsp;&amp;copy;2016 &lt;a title="Enonic" href="https://enonic.com" target="_blank"&gt;Enonic USA&lt;/a&gt;&lt;/p&gt;</string>
+                    <string name="copyrightMessage">&lt;p style="text-align: center;"&gt;Free to use for everyone. Copyright &amp;copy;2016 &lt;a title="Enonic Experience Platform" href="https://enonic.com" target="_blank"&gt;Enonic USA&lt;/a&gt;&lt;/p&gt;</string>
+                    <string isNull="true" name="pinterest"/>
                 </property-set>
             </property-set>
         </property-set>
@@ -101,13 +95,13 @@
                         <string name="template">com.enonic.app.onepager:banner</string>
                         <property-set name="config">
                             <property-set name="banner">
+                                <reference name="image">ec044341-2840-4c06-801c-4b2d2c455a13</reference>
+                            </property-set>
+                            <property-set name="banner">
                                 <reference name="image">0c797fcc-9287-4027-9f98-601e53051197</reference>
                             </property-set>
                             <property-set name="banner">
                                 <reference name="image">671a0fc7-1a4b-407f-96d9-27941fc50eea</reference>
-                            </property-set>
-                            <property-set name="banner">
-                                <reference name="image">ec044341-2840-4c06-801c-4b2d2c455a13</reference>
                             </property-set>
                         </property-set>
                     </property-set>
@@ -117,7 +111,67 @@
                     <property-set name="LayoutComponent">
                         <string name="name">1 column</string>
                         <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config"/>
+                        <property-set name="config">
+                            <boolean name="menuItem">true</boolean>
+                            <string name="menuName">Gallery</string>
+                        </property-set>
+                        <property-set name="region">
+                            <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">PartComponent</string>
+                                <property-set name="PartComponent">
+                                    <string name="name">Gallery</string>
+                                    <string name="template">com.enonic.app.onepager:gallery</string>
+                                    <property-set name="config">
+                                    <string name="heading">Gallery</string>
+                                    <string name="description">Some pictures from around the world.</string>
+                                    <reference name="galleryItems">95ed3778-be4c-454e-bfe1-fa557a69beac</reference>
+                                    <reference name="galleryItems">f6e695a9-9783-48b5-a590-22530291ab7b</reference>
+                                    <reference name="galleryItems">0271e75b-29ba-4f89-9c21-af5d01b305ad</reference>
+                                    <reference name="galleryItems">b2c724e3-0549-486f-b284-d90c0c4d99f3</reference>
+                                    <reference name="galleryItems">9b3c94d6-6635-427a-83b5-37237aee0a49</reference>
+                                    <reference name="galleryItems">03892b48-0bcb-4a8b-85d6-b3ceed9f4d1a</reference>
+                                    <reference name="galleryItems">8cca9dfc-0db7-477f-9bc7-712885373f04</reference>
+                                    <reference name="galleryItems">040cb498-3942-4c48-8dd2-166b338a487b</reference>
+                                    <reference name="galleryItems">795fc8b3-e869-498c-8f4a-bab89b612e58</reference>
+                                    <reference name="galleryItems">7e52023b-a539-4610-8c25-fd170e937109</reference>
+                                    </property-set>
+                                </property-set>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">LayoutComponent</string>
+                    <property-set name="LayoutComponent">
+                        <string name="name">1 column</string>
+                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
+                        <property-set name="config">
+                            <boolean name="menuItem">true</boolean>
+                            <string name="menuName">Text Component</string>
+                        </property-set>
+                        <property-set name="region">
+                            <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">TextComponent</string>
+                                <property-set name="TextComponent">
+                                    <string name="name">Text</string>
+                                    <string name="text">&lt;h2 style="text-align: center;"&gt;Text Component&lt;/h2&gt;
+&lt;p class="lead" style="text-align: center;"&gt;This text is inside of a text component. It can be styled with the editor.&lt;/p&gt;</string>
+                                </property-set>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">LayoutComponent</string>
+                    <property-set name="LayoutComponent">
+                        <string name="name">1 column</string>
+                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
+                        <property-set name="config">
+                            <boolean name="menuItem">true</boolean>
+                            <string name="menuName">Services</string>
+                        </property-set>
                         <property-set name="region">
                             <string name="name">center</string>
                             <property-set name="component">
@@ -126,59 +180,26 @@
                                     <string name="name">Services</string>
                                     <string name="template">com.enonic.app.onepager:services</string>
                                     <property-set name="config">
-                                    <string name="heading">Services part</string>
-                                    <string name="description">This is the description of the Services section.</string>
-                                    <boolean name="menuItem">true</boolean>
-                                    <string name="menuName">Services</string>
+                                    <string name="heading">Services</string>
+                                    <string name="description">This is a part that has some services or something.</string>
                                     <property-set name="service">
-                                    <string name="header">Red Flag</string>
-                                    <string name="description">This should be a red flag if I did it right.</string>
-                                    <string name="icon">fa-flag</string>
+                                    <string name="header">Red plus</string>
+                                    <string name="description">This is a red plus sign. These are made with Font Awesome.</string>
+                                    <string name="icon">fa-plus</string>
                                     <string name="icon-color">color1</string>
                                     </property-set>
                                     <property-set name="service">
-                                    <string name="header">Green Play</string>
-                                    <string name="description">Lorem ipsum green play button or something.</string>
-                                    <string name="icon">fa-play-circle</string>
+                                    <string name="header">Green Cog</string>
+                                    <string name="description">This looks like a cog in a machine. It's like a wheel with teeth.</string>
+                                    <string name="icon">fa-cog</string>
                                     <string name="icon-color">color2</string>
                                     </property-set>
                                     <property-set name="service">
-                                    <string name="header">Cloud</string>
-                                    <string name="description">This should be a cloud if I did it right and it should be blue.</string>
+                                    <string name="header">Blue Cloud</string>
+                                    <string name="description">This is an icon of a blue cloud. Clouds are in the sky.</string>
                                     <string name="icon">fa-cloud</string>
                                     <string name="icon-color">color3</string>
                                     </property-set>
-                                    <property-set name="service">
-                                    <string name="header">Purple text width</string>
-                                    <string name="description">More of that lorem ipsum stuff goes here.</string>
-                                    <string name="icon">fa-text-width</string>
-                                    <string name="icon-color">color4</string>
-                                    </property-set>
-                                    <property-set name="service">
-                                    <string name="header">Teal upload</string>
-                                    <string name="description">Some more text like lorem ipsum dolor sit amet.</string>
-                                    <string name="icon">fa-upload</string>
-                                    <string name="icon-color">color5</string>
-                                    </property-set>
-                                    <property-set name="service">
-                                    <string name="header">Dark blue</string>
-                                    <string name="description">Some tags here and more text just to fill things out and test.</string>
-                                    <string name="icon">fa-tags</string>
-                                    <string name="icon-color">color6</string>
-                                    </property-set>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Header</string>
-                                    <string name="template">com.enonic.app.onepager:header</string>
-                                    <property-set name="config">
-                                    <string name="heading">Heading part</string>
-                                    <string name="description">This is the description of a heading part. It can show in the menu if it's configured to do so.</string>
-                                    <boolean name="menuItem">true</boolean>
-                                    <string name="menuName">Heading</string>
                                     </property-set>
                                 </property-set>
                             </property-set>
@@ -188,10 +209,8 @@
                                     <string name="name">Person list</string>
                                     <string name="template">com.enonic.app.onepager:person-list</string>
                                     <property-set name="config">
-                                    <string name="heading">Our people</string>
-                                    <string name="description">This is the optional subtitle.</string>
-                                    <boolean name="menuItem">true</boolean>
-                                    <string name="menuName">People</string>
+                                    <string name="heading">People</string>
+                                    <string name="description">These are some people at Enonic.</string>
                                     <reference name="person">5f953fde-e6be-4698-a472-0b3027c80a38</reference>
                                     <reference name="person">b4292760-65ce-432f-9404-2931288b71a0</reference>
                                     <reference name="person">209d45f4-32ac-49fc-b7d2-181d13a7607e</reference>
@@ -204,11 +223,12 @@
                 </property-set>
             </property-set>
             <property-set name="config">
-                <string isNull="true" name="meta-keywords"/>
-                <string isNull="true" name="meta-description"/>
-                <boolean name="showContactForm">false</boolean>
-                <string isNull="true" name="formTitle"/>
-                <string isNull="true" name="formText"/>
+                <boolean name="bannerTop">true</boolean>
+                <string name="meta-keywords">Enonic</string>
+                <string name="meta-keywords">Enonic XP</string>
+                <string name="meta-keywords">Onepager</string>
+                <string name="meta-description">One-pager site built for Enonic XP.</string>
+                <boolean name="showContactForm">true</boolean>
             </property-set>
             <boolean name="customized">true</boolean>
         </property-set>
