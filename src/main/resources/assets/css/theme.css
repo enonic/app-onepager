@@ -61,10 +61,19 @@ header#header {
 }
 
 .layout section {
-    background-color: #fff;
+    background-color: #DFDFDF;
     padding: 20px 0;
     border-radius: 5px;
-    border-bottom: 1px solid #EEEEEE;
+}
+
+.layout.bg-light section {
+    background-color: #EEEEEE;
+}
+.layout.bg-dark section {
+    background-color: #CCCCCC;
+}
+.layout.bg-none section {
+    background-color: #DFDFDF;
 }
 
 body.edit header#header {
