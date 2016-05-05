@@ -1,16 +1,16 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
+var util = require('/lib/enonic/util');
 
 exports.get = handleGet;
 
 function handleGet(req) {
 
     function renderView() {
-        var view = resolve('services.html');
+        var view = resolve('features.html');
         var model = createModel();
 
         return {
-            status: 200,
             contentType: 'text/html',
             body: thymeleaf.render(view, model)
         };
@@ -21,19 +21,20 @@ function handleGet(req) {
 
         var component = portal.getComponent();
         var config = component.config;
-        var services = config.service;
+        //var features = config.feature;
+        var features = util.data.forceArray(config.feature);
 
-        // Make it an array when there is only one service.
-        if(!(services instanceof Array)) {
-            services = [services];
-        }
+        // Make it an array when there is only one feature.
+        /*if(!(features instanceof Array)) {
+            features = [features];
+        }*/
 
         // Make it show the sample data when nothing is entered.
-        if(!services[0] || (services[0].header == '' || services[0].header == null)) {
-            services = null;
+        if(!features[0] || (features[0].header == '' || features[0].header == null)) {
+            features = null;
         }
 
-        model.services = services;
+        model.features = features;
         model.heading = config.heading || null;
         model.description = config.description || null;
 

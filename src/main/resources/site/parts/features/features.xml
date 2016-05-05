@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Features</display-name>
+  <config>
+    <inline mixin="heading"/>
+    <field-set name="features">
+      <label>Features</label>
+      <items>
+        <item-set name="feature">
+          <label>Feature</label>
+          <custom-text/>
+          <help-text/>
+          <occurrences minimum="0" maximum="0"/>
+          <items>
+            <input type="TextLine" name="header">
+              <label>Header</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="TextArea" name="description">
+              <label>Description</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+            <input type="ImageSelector" name="image">
+              <label>Icon image</label>
+              <occurrences minimum="1" maximum="1"/>
+            </input>
+          </items>
+        </item-set>
+      </items>
+    </field-set>
+  </config>
+</part>
