@@ -30,8 +30,8 @@
     <field-set name="contact">
       <label>Contact info</label>
       <items>
-        <input type="Checkbox" name="showContactForm">
-          <label>Show contact form</label>
+        <input type="Checkbox" name="hideContactInfo">
+          <label>Hide contact footer</label>
           <occurrences minimum="0" maximum="1"/>
         </input>
       </items>

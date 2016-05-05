@@ -52,13 +52,15 @@ function handleGet(req) {
         model.social = social;
         model.addresses = addresses;
         model.addressCols = addressCols;
-        model.layouts = getMenuLayouts();
-        model.bannerTop = page.config.bannerTop ? 'banner' : null;
+        model.layouts = getMenuLayouts(content);
+        model.bannerTop = page.config.bannerTop ? 'banner' : '';
+        model.hideContactInfo = page.config.hideContactInfo;
+
 
         return model;
     }
 
-    function getMenuLayouts() {
+    function getMenuLayouts(content) {
         var components = content.page.regions.main.components;
         components = util.data.forceArray(components);
 
@@ -69,7 +71,9 @@ function handleGet(req) {
                 if(layout) layouts.push(layout);
             }
         }
-        layouts.push({hash: '#contact', name: 'Contact'});
+        if(!content.page.config.hideContactInfo) {
+            layouts.push({hash: '#contact', name: 'Contact'});
+        }
 
         return layouts;
     }

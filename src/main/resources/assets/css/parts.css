@@ -113,6 +113,7 @@ body.banner .p-banner {
 }
 .layout {
     position: relative;
+    z-index: 3;
 }
 body.edit .layout {
     position: inherit; /*Prevent part selector dropdown from being hidden in page editor*/
