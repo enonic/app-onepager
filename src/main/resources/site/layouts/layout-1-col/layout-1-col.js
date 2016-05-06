@@ -1,6 +1,5 @@
 var thymeleaf = require('/lib/xp/thymeleaf');
 var portal = require('/lib/xp/portal');
-var onepager = require('onepager');
 
 exports.get = function (req) {
     var component = portal.getComponent();
