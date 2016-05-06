@@ -23,7 +23,7 @@ exports.get = function (req) {
     }
 
     function getLayoutClass(config) {
-        var layoutClass = 'container layout layout-1-col';
+        var layoutClass = 'layout layout-1-col';
         if(component.path == 'main/0') {
             layoutClass += ' first-layout';
         }

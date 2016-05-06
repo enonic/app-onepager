@@ -1,8 +1,8 @@
 <node>
-    <id>671a0fc7-1a4b-407f-96d9-27941fc50eea</id>
+    <id>5b8e4878-b7e2-43b3-969c-fec366bb09c4</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.214Z</timestamp>
+    <timestamp>2016-05-06T04:33:08.090Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -44,75 +44,14 @@
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">legion.JPG</string>
-        <string name="type">media:image</string>
+        <string name="displayName">Icons</string>
+        <string name="type">base:folder</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-02T23:12:28.985Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-06T04:33:08.084Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-28T07:04:11.770Z</dateTime>
-        <property-set name="data">
-            <property-set name="media">
-                <string name="attachment">IMG_4666.JPG</string>
-                <property-set name="focalPoint">
-                    <double name="x">0.5</double>
-                    <double name="y">0.5</double>
-                </property-set>
-            </property-set>
-            <string isNull="true" name="caption"/>
-            <string isNull="true" name="artist"/>
-            <string isNull="true" name="copyright"/>
-            <string isNull="true" name="tags"/>
-        </property-set>
-        <property-set name="x">
-            <property-set name="media">
-                <property-set name="imageInfo">
-                    <long name="imageHeight">2448</long>
-                    <string name="colorSpace">sRGB</string>
-                    <string name="contentType">image/jpeg</string>
-                    <long name="imageWidth">3264</long>
-                    <long name="pixelSize">7990272</long>
-                    <long name="byteSize">1735198</long>
-                    <string isNull="true" name="description"/>
-                    <string isNull="true" name="fileSource"/>
-                </property-set>
-                <property-set name="cameraInfo">
-                    <localDateTime name="date">2015-08-01T13:31:09.000Z</localDateTime>
-                    <string name="focalLength">4.15 mm</string>
-                    <string name="aperture">F2.2</string>
-                    <string name="focalLength35">29mm</string>
-                    <string name="exposureProgram">Program normal</string>
-                    <string name="shutterTime">1/3165 sec</string>
-                    <string name="iso">32</string>
-                    <string name="make">Apple</string>
-                    <string name="meteringMode">Multi-segment</string>
-                    <string name="orientation">Top, left side (Horizontal / normal)</string>
-                    <string name="flash">Flash did not fire, auto</string>
-                    <string name="exposureBias">0 EV</string>
-                    <string name="exposureMode">Auto exposure</string>
-                    <string name="model">iPhone 5s</string>
-                    <string name="whiteBalance">Auto white balance</string>
-                    <string isNull="true" name="lens"/>
-                    <string isNull="true" name="autoFlashCompensation"/>
-                    <string isNull="true" name="shootingMode"/>
-                    <string isNull="true" name="focusDistance"/>
-                </property-set>
-            </property-set>
-            <property-set name="base">
-                <property-set name="gpsInfo">
-                    <geoPoint isNull="true" name="geoPoint"/>
-                    <string isNull="true" name="altitude"/>
-                    <string isNull="true" name="direction"/>
-                </property-set>
-            </property-set>
-        </property-set>
-        <property-set name="attachment">
-            <string name="name">IMG_4666.JPG</string>
-            <string name="label">source</string>
-            <binaryReference name="binary">IMG_4666.JPG</binaryReference>
-            <string name="mimeType">image/jpeg</string>
-            <long name="size">1735198</long>
-        </property-set>
+        <dateTime name="createdTime">2016-05-06T04:33:00.458Z</dateTime>
+        <property-set name="data"/>
     </data>
     <indexConfigs>
         <analyzer>document_index_default</analyzer>

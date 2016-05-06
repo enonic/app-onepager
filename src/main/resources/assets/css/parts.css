@@ -117,6 +117,8 @@ body.banner .p-banner {
 }
 body.edit .layout {
     position: inherit; /*Prevent part selector dropdown from being hidden in page editor*/
+    margin-bottom: 40px; /*Testing for edit to move layouts around.*/
+    paddong-bottom: 40px;
 }
 .enonicarousel {
     width: 100%;
