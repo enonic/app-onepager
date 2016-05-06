@@ -1,8 +1,8 @@
 <node>
-    <id>612609d3-67d2-4cec-ad83-27f6535b162a</id>
+    <id>7ecf4294-f9ee-41ab-b8de-1ca8218a1935</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.198Z</timestamp>
+    <timestamp>2016-05-06T22:25:04.250Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -44,74 +44,43 @@
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">bogota.JPG</string>
+        <string name="displayName">bogota.jpg</string>
         <string name="type">media:image</string>
-        <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-02T23:42:24.130Z</dateTime>
-        <string name="modifier">user:system:su</string>
+        <dateTime name="createdTime">2016-05-06T22:25:04.247Z</dateTime>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-05-02T23:24:38.996Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <dateTime name="modifiedTime">2016-05-06T22:25:04.247Z</dateTime>
+        <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">
-                <string name="attachment">IMG_4824.JPG</string>
+                <string name="attachment">bogota.jpg</string>
                 <property-set name="focalPoint">
                     <double name="x">0.5</double>
                     <double name="y">0.5</double>
                 </property-set>
             </property-set>
-            <string isNull="true" name="caption"/>
-            <string isNull="true" name="artist"/>
-            <string isNull="true" name="copyright"/>
-            <string isNull="true" name="tags"/>
+            <string name="caption"/>
+            <string name="artist"/>
+            <string name="copyright"/>
+            <string name="tags"/>
         </property-set>
         <property-set name="x">
             <property-set name="media">
                 <property-set name="imageInfo">
-                    <long name="imageHeight">2448</long>
-                    <string name="colorSpace">sRGB</string>
+                    <long name="imageHeight">552</long>
+                    <long name="imageWidth">736</long>
                     <string name="contentType">image/jpeg</string>
-                    <long name="imageWidth">3264</long>
-                    <long name="pixelSize">7990272</long>
-                    <long name="byteSize">2503812</long>
-                    <string isNull="true" name="description"/>
-                    <string isNull="true" name="fileSource"/>
-                </property-set>
-                <property-set name="cameraInfo">
-                    <localDateTime name="date">2015-09-19T13:16:40.000Z</localDateTime>
-                    <string name="focalLength">4.15 mm</string>
-                    <string name="aperture">F2.2</string>
-                    <string name="focalLength35">29mm</string>
-                    <string name="exposureProgram">Program normal</string>
-                    <string name="shutterTime">1/3425 sec</string>
-                    <string name="iso">32</string>
-                    <string name="make">Apple</string>
-                    <string name="meteringMode">Multi-segment</string>
-                    <string name="orientation">Top, left side (Horizontal / normal)</string>
-                    <string name="flash">Flash did not fire, auto</string>
-                    <string name="exposureBias">0 EV</string>
-                    <string name="exposureMode">Auto exposure</string>
-                    <string name="model">iPhone 5s</string>
-                    <string name="whiteBalance">Auto white balance</string>
-                    <string isNull="true" name="lens"/>
-                    <string isNull="true" name="autoFlashCompensation"/>
-                    <string isNull="true" name="shootingMode"/>
-                    <string isNull="true" name="focusDistance"/>
-                </property-set>
-            </property-set>
-            <property-set name="base">
-                <property-set name="gpsInfo">
-                    <string name="altitude">2736 metres</string>
-                    <string name="direction">66 degrees</string>
-                    <geoPoint name="geoPoint">4.606325,-74.063806</geoPoint>
+                    <long name="pixelSize">406272</long>
+                    <long name="byteSize">95791</long>
                 </property-set>
             </property-set>
         </property-set>
         <property-set name="attachment">
-            <string name="name">IMG_4824.JPG</string>
+            <string name="name">bogota.jpg</string>
             <string name="label">source</string>
-            <binaryReference name="binary">IMG_4824.JPG</binaryReference>
+            <binaryReference name="binary">bogota.jpg</binaryReference>
             <string name="mimeType">image/jpeg</string>
-            <long name="size">2503812</long>
+            <long name="size">95791</long>
         </property-set>
     </data>
     <indexConfigs>
@@ -146,36 +115,6 @@
                     </indexValueProcessors>
                 </indexConfig>
                 <path>data.htmlarea_text</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>creator</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>createdTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifiedTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -256,6 +195,36 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>creator</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
             </pathIndexConfig>
         </pathIndexConfigs>
     </indexConfigs>

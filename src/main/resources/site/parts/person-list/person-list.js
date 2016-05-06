@@ -1,7 +1,6 @@
 var contentLib = require('/lib/xp/content');
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
-var onepager = require('onepager');
 var util = require('/lib/enonic/util');
 
 exports.get = handleGet;
@@ -23,7 +22,7 @@ function handleGet(req) {
         var component = portal.getComponent();
         var config = component.config;
 
-        var scrollerId = onepager.getId('team-scroller-', component);
+        var scrollerId = getId('people-scroller-', component);
 
         var persons = [];
         var personContent = config.person || [];
@@ -64,7 +63,7 @@ function handleGet(req) {
                     persons[j].push({
                         name: personName || 'Missing Name',
                         title: personTitle || 'Missing Title',
-                        imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/team1.jpg'}),
+                        imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/mer.jpg'}),
                         pageUrl: pageUrl
                     });
                 } else {
@@ -73,7 +72,7 @@ function handleGet(req) {
                     persons[j].push({
                         name: personName || 'Missing Name',
                         title: personTitle || 'Missing Title',
-                        imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/team1.jpg'}),
+                        imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/mer.jpg'}),
                         pageUrl: pageUrl
                     });
                 }
@@ -90,6 +89,13 @@ function handleGet(req) {
             scrollerId: scrollerId
         };
         return model;
+    }
+
+    function getId(id, component) {
+        var path = component.path;
+        id += path.replace(/\//g, '-');
+
+        return id;
     }
 
     // Return

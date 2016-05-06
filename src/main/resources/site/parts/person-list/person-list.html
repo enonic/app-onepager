@@ -5,7 +5,7 @@
             <div data-th-utext="${text}" class="lead">Designer dummy text. This is the dummy text and it goes on and on and on until you don't want to read it no more.</div>
         </div>
         <div class="gap"></div>
-        <div class="carousel scale team-scroller" data-th-id="${scrollerId}">
+        <div class="carousel scale people-scroller" data-th-id="${scrollerId}">
             <div class="carousel-inner">
 
                 <div class="item active" data-th-each="group, iterStat : ${persons}" data-th-class="${iterStat.first}? 'item active' : 'item'">
@@ -25,41 +25,12 @@
                     </div><!-- End .row -->
                 </div>
 
-                <!-- begin designer content -->
-                <div class="item active" data-th-remove="all">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="member">
-                                <p>
-                                    <img class="img-responsive img-thumbnail img-circle"
-                                         src="../../assets/images/team2.jpg" alt=""/>
-                                </p>
-                                <h3><span>Person 2</span>
-                                    <small class="designation">Dummy Work Title</small>
-                                </h3>
-                            </div>
-                        </div>
-
-                        <div data-th-remove="all" class="col-sm-4">
-                            <div class="member">
-                                <p>
-                                    <img class="img-responsive img-thumbnail img-circle"
-                                         src="../../assets/images/team3.jpg" alt=""/>
-                                </p>
-                                <h3><span>Person 3</span>
-                                    <small class="designation">Dummy Work Title</small>
-                                </h3>
-                            </div>
-                        </div>
-                    </div><!-- End .row -->
-
-                </div><!-- End designer content -->
             </div>
 
-            <a class="left-arrow" data-th-href="'#' + ${scrollerId}" href="#team-scroller" data-slide="prev">
+            <a class="left-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="prev">
                 <i class="fa fa-angle-left fa-4x"></i>
             </a>
-            <a class="right-arrow" data-th-href="'#' + ${scrollerId}" href="#team-scroller" data-slide="next">
+            <a class="right-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="next">
                 <i class="fa fa-angle-right fa-4x"></i>
             </a>
         </div>

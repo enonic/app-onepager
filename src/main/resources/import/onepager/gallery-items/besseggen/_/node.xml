@@ -2,7 +2,7 @@
     <id>8cca9dfc-0db7-477f-9bc7-712885373f04</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.171Z</timestamp>
+    <timestamp>2016-05-06T22:33:14.708Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,12 +47,12 @@
         <string name="displayName">Besseggen</string>
         <string name="type">com.enonic.app.onepager:gallery-img</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-03T00:00:55.292Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-06T22:33:14.707Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-05-02T23:39:46.049Z</dateTime>
         <property-set name="data">
-            <reference name="image">3f7ddb6b-c018-4b7c-bf82-5e356829145d</reference>
+            <reference name="image">41128a54-5928-47ea-914b-226f5bcc1ca2</reference>
             <string name="caption">Hiking in Norway.</string>
             <string name="category">Europe</string>
             <string name="category">Travel</string>

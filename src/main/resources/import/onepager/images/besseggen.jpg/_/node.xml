@@ -1,8 +1,8 @@
 <node>
-    <id>3f7ddb6b-c018-4b7c-bf82-5e356829145d</id>
+    <id>41128a54-5928-47ea-914b-226f5bcc1ca2</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.226Z</timestamp>
+    <timestamp>2016-05-06T22:25:03.766Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -44,87 +44,43 @@
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
-        <string name="displayName">besseggen.JPG</string>
+        <string name="displayName">besseggen.jpg</string>
         <string name="type">media:image</string>
-        <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-02T23:42:39.942Z</dateTime>
-        <string name="modifier">user:system:su</string>
+        <dateTime name="createdTime">2016-05-06T22:25:03.760Z</dateTime>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-05-02T23:24:01.461Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <dateTime name="modifiedTime">2016-05-06T22:25:03.760Z</dateTime>
+        <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">
-                <string name="attachment">IMG_2329.JPG</string>
+                <string name="attachment">besseggen.jpg</string>
                 <property-set name="focalPoint">
                     <double name="x">0.5</double>
                     <double name="y">0.5</double>
                 </property-set>
-                <property-set name="cropPosition">
-                    <double name="left">0.0</double>
-                    <double name="top">0.0</double>
-                    <double name="right">1.0</double>
-                    <double name="bottom">0.8514721074380165</double>
-                    <double name="zoom">1.0</double>
-                </property-set>
-                <property-set name="zoomPosition">
-                    <double name="left">0.0</double>
-                    <double name="top">0.0</double>
-                    <double name="right">1.0</double>
-                    <double name="bottom">1.0</double>
-                </property-set>
             </property-set>
-            <string isNull="true" name="caption"/>
-            <string isNull="true" name="artist"/>
-            <string isNull="true" name="copyright"/>
-            <string isNull="true" name="tags"/>
+            <string name="caption"/>
+            <string name="artist"/>
+            <string name="copyright"/>
+            <string name="tags"/>
         </property-set>
         <property-set name="x">
             <property-set name="media">
                 <property-set name="imageInfo">
-                    <long name="imageHeight">1648</long>
-                    <string name="colorSpace">sRGB</string>
+                    <long name="imageHeight">467</long>
+                    <long name="imageWidth">736</long>
                     <string name="contentType">image/jpeg</string>
-                    <long name="imageWidth">2592</long>
-                    <long name="pixelSize">4271616</long>
-                    <long name="byteSize">2369622</long>
-                    <string isNull="true" name="description"/>
-                    <string isNull="true" name="fileSource"/>
-                </property-set>
-                <property-set name="cameraInfo">
-                    <localDateTime name="date">2013-08-24T16:03:15.000Z</localDateTime>
-                    <string name="focalLength">3.85 mm</string>
-                    <string name="aperture">F2.8</string>
-                    <string name="focalLength35">35mm</string>
-                    <string name="exposureProgram">Program normal</string>
-                    <string name="shutterTime">1/862 sec</string>
-                    <string name="iso">80</string>
-                    <string name="make">Apple</string>
-                    <string name="meteringMode">Multi-segment</string>
-                    <string name="orientation">Top, left side (Horizontal / normal)</string>
-                    <string name="flash">Flash did not fire, auto</string>
-                    <string name="exposureMode">Auto exposure</string>
-                    <string name="model">iPhone 4</string>
-                    <string name="whiteBalance">Auto white balance</string>
-                    <string isNull="true" name="lens"/>
-                    <string isNull="true" name="exposureBias"/>
-                    <string isNull="true" name="autoFlashCompensation"/>
-                    <string isNull="true" name="shootingMode"/>
-                    <string isNull="true" name="focusDistance"/>
-                </property-set>
-            </property-set>
-            <property-set name="base">
-                <property-set name="gpsInfo">
-                    <geoPoint isNull="true" name="geoPoint"/>
-                    <string isNull="true" name="altitude"/>
-                    <string isNull="true" name="direction"/>
+                    <long name="pixelSize">343712</long>
+                    <long name="byteSize">92414</long>
                 </property-set>
             </property-set>
         </property-set>
         <property-set name="attachment">
-            <string name="name">IMG_2329.JPG</string>
+            <string name="name">besseggen.jpg</string>
             <string name="label">source</string>
-            <binaryReference name="binary">IMG_2329.JPG</binaryReference>
+            <binaryReference name="binary">besseggen.jpg</binaryReference>
             <string name="mimeType">image/jpeg</string>
-            <long name="size">2369622</long>
+            <long name="size">92414</long>
         </property-set>
     </data>
     <indexConfigs>
@@ -159,36 +115,6 @@
                     </indexValueProcessors>
                 </indexConfig>
                 <path>data.htmlarea_text</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>creator</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>createdTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifiedTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -269,6 +195,36 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>creator</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
             </pathIndexConfig>
         </pathIndexConfigs>
     </indexConfigs>

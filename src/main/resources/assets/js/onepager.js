@@ -41,7 +41,8 @@ jQuery(function($) {
 
 	//PrettyPhoto for the gallery
 	$("a.preview").prettyPhoto({
-		social_tools: false
+		social_tools: false,
+		allow_resize: true
 	});
 
 	//Isotope

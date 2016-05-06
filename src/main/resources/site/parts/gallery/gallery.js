@@ -84,24 +84,27 @@ function handleGet(req) {
             var img = contentLib.get( {
                 key: galleryItem.image
             });
-            var scale = 736;
-            if(img.x.media.imageInfo.imageWidth < 736) {
-                scale = img.x.media.imageInfo.imageWidth;
+
+            if(img) {
+                var scale = 736;
+                if(img.x.media.imageInfo.imageWidth < 736) {
+                    scale = img.x.media.imageInfo.imageWidth;
+                }
+
+                //small picture URL 370 250
+                galleryItem.thumb = portal.imageUrl( {
+                    id: galleryItem.image,
+                    scale: 'block(235, 159)'
+                });
+                // large image 736 wide
+                galleryItem.imgUrl = portal.imageUrl( {
+                    id: galleryItem.image,
+                    scale: 'width(' + scale + ')'
+                });
+
+                galleryItems.push(galleryItem);
             }
 
-            //small picture URL 370 250
-            galleryItem.thumb = portal.imageUrl( {
-                id: galleryItem.image,
-                //scale: 'block(370, 250)'
-                scale: 'block(235, 159)'
-            });
-            // large image 736 wide
-            galleryItem.imgUrl = portal.imageUrl( {
-                id: galleryItem.image,
-                scale: 'width(' + scale + ')'
-            });
-
-            galleryItems.push(galleryItem);
         }
         return galleryItems;
     }

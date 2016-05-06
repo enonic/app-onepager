@@ -2,7 +2,7 @@
     <id>040cb498-3942-4c48-8dd2-166b338a487b</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.167Z</timestamp>
+    <timestamp>2016-05-06T22:26:16.199Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,12 +47,12 @@
         <string name="displayName">Redwoods</string>
         <string name="type">com.enonic.app.onepager:gallery-img</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-03T00:01:14.837Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-06T22:26:16.196Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-05-02T23:28:29.721Z</dateTime>
         <property-set name="data">
-            <reference name="image">bb98161c-51fd-4c55-82cc-d3aa90f5857d</reference>
+            <reference name="image">ab2b6491-acba-4365-abeb-e541371cb428</reference>
             <string name="caption">Redwood and Sequoia trees in California</string>
             <string name="category">North America</string>
             <string name="category">Nature</string>

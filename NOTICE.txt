@@ -8,6 +8,13 @@ Other software licenses used by this product:
     Font license applies to fonts - SIL OFL 1.1 http://scripts.sil.org/OFL
     Code license applies to CSS, LESS, SCSS - MIT License http://opensource.org/licenses/mit-license.html
 
+    Freepik icons from Flaticon
+    Creative Commons BY 3.0
+    http://creativecommons.org/licenses/by/3.0/
+    http://www.freepik.com
+    http://www.flaticon.com
+
+
     html5shiv Copyright (c) 2014 Alexander Farkas (aFarkas).
     Dual GPLv2 or MIT
     http://www.gnu.org/licenses/gpl-2.0.html

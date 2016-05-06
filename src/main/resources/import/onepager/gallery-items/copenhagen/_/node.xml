@@ -2,7 +2,7 @@
     <id>0271e75b-29ba-4f89-9c21-af5d01b305ad</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T05:45:50.169Z</timestamp>
+    <timestamp>2016-05-06T22:33:30.399Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,12 +47,12 @@
         <string name="displayName">Copenhagen</string>
         <string name="type">com.enonic.app.onepager:gallery-img</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-02T23:38:06.747Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-06T22:33:30.398Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-05-02T23:36:49.473Z</dateTime>
         <property-set name="data">
-            <reference name="image">090118fb-602b-4716-9a61-13cbefc694a7</reference>
+            <reference name="image">0cfa5bc6-3fdd-412d-8e01-dcbf7b10df99</reference>
             <string name="caption">The capital city of Denmark.</string>
             <string name="category">Europe</string>
         </property-set>
