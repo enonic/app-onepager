@@ -91,7 +91,6 @@ function handleGet(req) {
                     scale = img.x.media.imageInfo.imageWidth;
                 }
 
-                //small picture URL 370 250
                 galleryItem.thumb = portal.imageUrl( {
                     id: galleryItem.image,
                     scale: 'block(235, 159)'

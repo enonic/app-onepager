@@ -31,6 +31,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
+.layout {
+    position: relative;
+    z-index: 3;
+}
+body.edit .layout {
+    position: inherit; /*Prevent part selector dropdown from being hidden in page editor*/
+    margin-bottom: 40px; /*Testing for edit to move layouts around.*/
+    paddong-bottom: 40px;
+}
 header#header {
     height: 80px;
     width: 100%;
@@ -83,9 +92,7 @@ body.edit header#header {
 section {
     margin-bottom: 20px;
 }
-/*.layout .xp-part {
-    margin: 50px 0;
-}*/
+
 .xp-part {
 
 }

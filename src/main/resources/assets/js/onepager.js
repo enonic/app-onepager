@@ -34,11 +34,6 @@ jQuery(function($) {
 		});
 	});
 
-	//scrollspy
-	/*$('[data-spy="scroll"]').each(function () {
-		var $spy = $(this).scrollspy('refresh');
-	});*/
-
 	//PrettyPhoto for the gallery
 	$("a.preview").prettyPhoto({
 		social_tools: false,
