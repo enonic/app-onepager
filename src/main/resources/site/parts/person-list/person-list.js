@@ -84,7 +84,7 @@ function handleGet(req) {
 
         var model = {
             title: config.heading || 'Missing Heading',
-            text: config.description || 'Missing description',
+            description: config.description || 'Missing description',
             persons: persons,
             scrollerId: scrollerId
         };

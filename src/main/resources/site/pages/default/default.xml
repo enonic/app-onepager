@@ -3,11 +3,11 @@
   <display-name>Default</display-name>
   <config>
 
-    <field-set name="banner">
-      <label>Banner</label>
+    <field-set name="menu">
+      <label>Menu offset</label>
       <items>
-        <input name="bannerTop" type="Checkbox">
-          <label>Banner on top?</label>
+        <input name="behindMenu" type="Checkbox">
+          <label>Content behind menu</label>
           <occurrences minimum="0" maximum="0"/>
         </input>
       </items>

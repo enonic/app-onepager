@@ -53,7 +53,7 @@ function handleGet(req) {
         model.addresses = addresses;
         model.addressCols = addressCols;
         model.layouts = getMenuLayouts(content);
-        model.bannerTop = page.config.bannerTop ? 'banner' : '';
+        model.behindMenu = page.config.behindMenu ? 'behind' : '';
         model.hideContactInfo = page.config.hideContactInfo;
 
 

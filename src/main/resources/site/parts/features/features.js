@@ -21,13 +21,7 @@ function handleGet(req) {
 
         var component = portal.getComponent();
         var config = component.config;
-        //var features = config.feature;
         var features = util.data.forceArray(config.feature);
-
-        // Make it an array when there is only one feature.
-        /*if(!(features instanceof Array)) {
-            features = [features];
-        }*/
 
         // Make it show the sample data when nothing is entered.
         if(!features[0] || (features[0].header == '' || features[0].header == null)) {

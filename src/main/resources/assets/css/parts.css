@@ -86,7 +86,9 @@ Person list begin
 .person {
     margin: auto 30px;
 }
-
+.person h3 {
+    margin-top: 15px;
+}
 /*
 Gallery begin
 */
@@ -108,6 +110,7 @@ Gallery begin
 }
 ul.gallery-items {
     margin-left: 20px;
+    margin-bottom: 0;
 }
 .gallery-item .item-inner {
     margin: 0 20px 20px 0;
@@ -154,9 +157,6 @@ ul.gallery-items {
 /*
 Banner begin
 */
-body.banner .p-banner {
-    margin-bottom: -40px;
-}
 .enonicarousel {
     width: 100%;
     position: relative;
@@ -183,6 +183,9 @@ body.banner .p-banner {
 .enonicarousel__list {
     list-style: none;
     padding-left: 0;
+}
+.enonicarousel ul {
+    margin-bottom: 0;
 }
 
 .enonicarousel__ctrl-btn {
@@ -227,8 +230,8 @@ body.banner .p-banner {
 .enonicarousel__ctrl-btn--next:after {
     background-image: url('../images/enonicarousel__ctrl-btn-next.svg');
 }
-body.banner .enonicarousel__nav {
-    bottom: 3em;
+body.behind .enonicarousel__nav {
+    bottom: 4em;
 }
 .enonicarousel__nav {
     position: absolute;
@@ -322,11 +325,10 @@ button {
     position: relative;
 }
 .p-banner {
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
-.layout .p-banner {
-
+.promotion-banner {
+    overflow: hidden;
 }
 
 

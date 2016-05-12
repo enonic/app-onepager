@@ -13,6 +13,12 @@
       </config>
       <default>bg-light</default>
     </input>
+    <input type="Checkbox" name="noPadding">
+      <label>No padding top</label>
+    </input>
+    <input type="Checkbox" name="fullWidth">
+      <label>Full width</label>
+    </input>
   </config>
   <regions>
     <region name="center"/>

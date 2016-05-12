@@ -4,18 +4,67 @@ body {
     background-color: #DFDFDF;
     color: #555555;
 }
-body.banner {
+[data-portal-component-type="part"], [data-portal-component-type="text"], [data-portal-component-type="image"] {
+
+    padding: 0 0 40px;
+}
+[data-portal-component-type="layout"] {
+
+}
+.layout > .row {
+
+}
+.layout-box {
+    overflow: hidden;
+    padding-top: 50px;
+}
+.layout.bg-light .layout-box {
+    background-color: #EEEEEE;
+}
+.layout.bg-dark .layout-box {
+    background-color: #CCCCCC;
+}
+.layout.bg-none .layout-box {
+    background-color: #DFDFDF;
+}
+.noPadding .layout-box {
+    padding-top: 0;
+}
+.layout {
+    position: relative;
+    z-index: 3;
+}
+body.edit .layout {
+    position: inherit; /*Prevent part selector dropdown from being hidden in page editor*/
+    /*margin-bottom: 40px; *//*Testing for edit to move layouts around.*//*
+    padding-bottom: 40px;*/
+}
+body.edit .layout-box {
+    overflow: visible;
+}
+.first-layout .layout-box {
+    border-radius: 5px 5px 0 0;
+}
+body.behind {
     padding-top: 0px;
     margin-top: -10px;
 }
-body.edit.banner {
+body.edit.behind {
     margin-top: 0;
     padding-top: 0;
 }
+  /* Make second layout or part move up into the top part when the content goes under the menu */
+body.behind .main-region > *:first-child {
+    margin-bottom: -80px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     color: #002454;
     font-weight: 300;
+}
+h1, h2, h3 {
+    margin-top: 0;
 }
 @media (min-width: 768px) {
     .lead {
@@ -31,15 +80,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-.layout {
-    position: relative;
-    z-index: 3;
-}
-body.edit .layout {
-    position: inherit; /*Prevent part selector dropdown from being hidden in page editor*/
-    margin-bottom: 40px; /*Testing for edit to move layouts around.*/
-    paddong-bottom: 40px;
-}
 header#header {
     height: 80px;
     width: 100%;
@@ -65,37 +105,11 @@ header#header {
     text-align: center;
 }
 
-.layout > .row {
-
-}
-
-.layout section {
-    background-color: #DFDFDF;
-    padding: 40px 0;
-    border-radius: 5px;
-}
-
-.layout.bg-light section {
-    background-color: #EEEEEE;
-}
-.layout.bg-dark section {
-    background-color: #CCCCCC;
-}
-.layout.bg-none section {
-    background-color: #DFDFDF;
-}
 
 body.edit header#header {
     position: relative;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-.xp-part {
-
-}
 .site-home li {
     font-size: 20px;
 }
