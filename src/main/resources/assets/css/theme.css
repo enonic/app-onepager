@@ -11,6 +11,10 @@ body {
 [data-portal-component-type="layout"] {
 
 }
+.layout .p-banner[data-portal-component-type]:last-child, .layout [data-portal-component-type="image"]:last-child {
+    padding-bottom: 0;
+}
+
 .layout > .row {
 
 }
@@ -116,4 +120,7 @@ body.edit header#header {
 
 .box {
     padding: 0 30px;
+}
+footer#footer {
+    margin-top: 20px;
 }
