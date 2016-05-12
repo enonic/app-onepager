@@ -1,8 +1,8 @@
 <node>
-    <id>14054a46-0666-44bb-9aba-c7a9f9465937</id>
+    <id>de5f80af-6f1b-4a65-b0e4-f82a80200b26</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-06T04:30:52.761Z</timestamp>
+    <timestamp>2016-05-12T05:27:10.748Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -41,12 +41,12 @@
         <string name="displayName">Onepager</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-06T04:30:52.760Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-12T05:27:10.748Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-05-05T04:16:45.621Z</dateTime>
+        <dateTime name="createdTime">2016-05-12T05:05:00.232Z</dateTime>
         <property-set name="data">
-            <string name="description">Acme Inc. one-pager site built on Enonic XP.</string>
+            <string name="description">Onepager site built with Enonic XP</string>
             <property-set name="siteConfig">
                 <string name="applicationKey">com.enonic.app.onepager</string>
                 <property-set name="config">
@@ -81,7 +81,7 @@
         </property-set>
         <property-set name="page">
             <string isNull="true" name="controller"/>
-            <reference name="template">5ef1aa7f-fdd3-4ac7-aecc-59e4529accc2</reference>
+            <reference name="template">9a4a2561-5c43-4036-8915-85d0b5a6004c</reference>
             <property-set name="region">
                 <string name="name">main</string>
                 <property-set name="component">
@@ -111,6 +111,8 @@
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">Gallery</string>
                             <string name="color">bg-light</string>
+                            <boolean name="noPadding">false</boolean>
+                            <boolean name="fullWidth">false</boolean>
                         </property-set>
                         <property-set name="region">
                             <string name="name">center</string>
@@ -125,38 +127,11 @@
                                     <reference name="galleryItems">95ed3778-be4c-454e-bfe1-fa557a69beac</reference>
                                     <reference name="galleryItems">b2c724e3-0549-486f-b284-d90c0c4d99f3</reference>
                                     <reference name="galleryItems">7e52023b-a539-4610-8c25-fd170e937109</reference>
-                                    <reference name="galleryItems">040cb498-3942-4c48-8dd2-166b338a487b</reference>
                                     <reference name="galleryItems">0271e75b-29ba-4f89-9c21-af5d01b305ad</reference>
                                     <reference name="galleryItems">8cca9dfc-0db7-477f-9bc7-712885373f04</reference>
                                     <reference name="galleryItems">03892b48-0bcb-4a8b-85d6-b3ceed9f4d1a</reference>
                                     <reference name="galleryItems">9b3c94d6-6635-427a-83b5-37237aee0a49</reference>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config">
-                            <boolean name="menuItem">true</boolean>
-                            <string name="menuName">Heading</string>
-                            <string name="color">bg-none</string>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Header</string>
-                                    <string name="template">com.enonic.app.onepager:header</string>
-                                    <property-set name="config">
-                                    <string name="heading">Heading part</string>
-                                    <string name="description">&lt;p&gt;This is a heading part. It is in a layout with no background color.&lt;/p&gt;
-&lt;p&gt;Add layouts to the page and place parts in them. Configure the layouts for background color and make them appear in the menu.&lt;/p&gt;</string>
+                                    <reference name="galleryItems">040cb498-3942-4c48-8dd2-166b338a487b</reference>
                                     </property-set>
                                 </property-set>
                             </property-set>
@@ -172,9 +147,23 @@
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">Features</string>
                             <string name="color">bg-dark</string>
+                            <boolean name="noPadding">false</boolean>
+                            <boolean name="fullWidth">false</boolean>
                         </property-set>
                         <property-set name="region">
                             <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">PartComponent</string>
+                                <property-set name="PartComponent">
+                                    <string name="name">Header</string>
+                                    <string name="template">com.enonic.app.onepager:header</string>
+                                    <property-set name="config">
+                                    <string name="heading">Heading part</string>
+                                    <string name="description">&lt;p&gt;This is a heading part. It is in a layout with no background color.&lt;/p&gt;
+&lt;p&gt;Add layouts to the page and place parts in them. Configure the layouts for background color and make them appear in the menu.&lt;/p&gt;</string>
+                                    </property-set>
+                                </property-set>
+                            </property-set>
                             <property-set name="component">
                                 <string name="type">PartComponent</string>
                                 <property-set name="PartComponent">
@@ -185,19 +174,19 @@
                                     <string name="description">&lt;p&gt;This part lets you put up a list of items with heading, description and an image icon.&lt;/p&gt;
 &lt;div&gt;These icons were made by &lt;a title="Freepik" href="http://www.freepik.com"&gt;Freepik&lt;/a&gt; from &lt;a title="Flaticon" href="http://www.flaticon.com"&gt;www.flaticon.com&lt;/a&gt;&amp;nbsp;and licensed by &lt;a title="Creative Commons BY 3.0" href="http://creativecommons.org/licenses/by/3.0/" target="_blank"&gt;CC 3.0 BY&lt;/a&gt;&lt;/div&gt;</string>
                                     <property-set name="feature">
-                                    <string name="header">Build Your Business</string>
+                                    <string name="header">Build your Business</string>
                                     <string name="description">Customer growth through your web applications</string>
                                     <reference name="image">74e48638-1634-4328-b6f6-84bc0cf8ffee</reference>
-                                    </property-set>
-                                    <property-set name="feature">
-                                    <string name="header">Save Time</string>
-                                    <string name="description">Build web applications faster with Enonic XP</string>
-                                    <reference name="image">5ca6b435-0a5b-4433-ad6f-1f30935a9f1e</reference>
                                     </property-set>
                                     <property-set name="feature">
                                     <string name="header">Learn XP</string>
                                     <string name="description">Sign up for courses and learn about Enonic XP from the documentation</string>
                                     <reference name="image">e973ddc0-3281-4bf3-b0d0-5cafaa9a76b8</reference>
+                                    </property-set>
+                                    <property-set name="feature">
+                                    <string name="header">Save Time</string>
+                                    <string name="description">Build web applications faster with Enonic XP</string>
+                                    <reference name="image">5ca6b435-0a5b-4433-ad6f-1f30935a9f1e</reference>
                                     </property-set>
                                     </property-set>
                                 </property-set>
@@ -211,9 +200,63 @@
                         <string name="name">1 column</string>
                         <string name="template">com.enonic.app.onepager:layout-1-col</string>
                         <property-set name="config">
+                            <boolean name="menuItem">false</boolean>
+                            <string isNull="true" name="menuName"/>
+                            <string isNull="true" name="color"/>
+                            <boolean name="noPadding">true</boolean>
+                            <boolean name="fullWidth">false</boolean>
+                        </property-set>
+                        <property-set name="region">
+                            <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">ImageComponent</string>
+                                <property-set name="ImageComponent">
+                                    <string name="name">shanghai.jpg</string>
+                                    <string name="image">b956bd35-d486-4477-8b19-0dbb047bbf23</string>
+                                    <property-set name="config">
+                                    <string isNull="true" name="caption"/>
+                                    </property-set>
+                                </property-set>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">LayoutComponent</string>
+                    <property-set name="LayoutComponent">
+                        <string name="name">1 column</string>
+                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
+                        <property-set name="config">
+                            <boolean name="menuItem">true</boolean>
+                            <string name="menuName">Full width</string>
+                            <string name="color">bg-light</string>
+                            <boolean name="noPadding">false</boolean>
+                            <boolean name="fullWidth">true</boolean>
+                        </property-set>
+                        <property-set name="region">
+                            <string name="name">center</string>
+                            <property-set name="component">
+                                <string name="type">TextComponent</string>
+                                <property-set name="TextComponent">
+                                    <string name="name">Text</string>
+                                    <string name="text">&lt;h2 style="text-align: center;"&gt;Text component&lt;/h2&gt;
+&lt;p class="lead" style="text-align: center;"&gt;This is a text component in a full width layout with a light&amp;nbsp;background.&lt;/p&gt;</string>
+                                </property-set>
+                            </property-set>
+                        </property-set>
+                    </property-set>
+                </property-set>
+                <property-set name="component">
+                    <string name="type">LayoutComponent</string>
+                    <property-set name="LayoutComponent">
+                        <string name="name">1 column</string>
+                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
+                        <property-set name="config">
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">People</string>
-                            <string name="color">bg-light</string>
+                            <string name="color">bg-dark</string>
+                            <boolean name="noPadding">false</boolean>
+                            <boolean name="fullWidth">false</boolean>
                         </property-set>
                         <property-set name="region">
                             <string name="name">center</string>
@@ -224,7 +267,7 @@
                                     <string name="template">com.enonic.app.onepager:person-list</string>
                                     <property-set name="config">
                                     <string name="heading">People</string>
-                                    <string name="description">&lt;p&gt;This part component lists some of the people at Enonic&lt;/p&gt;</string>
+                                    <string name="description">&lt;p&gt;This part component lists some of the people at Enonic.&lt;/p&gt;</string>
                                     <reference name="person">5f953fde-e6be-4698-a472-0b3027c80a38</reference>
                                     <reference name="person">b4292760-65ce-432f-9404-2931288b71a0</reference>
                                     <reference name="person">209d45f4-32ac-49fc-b7d2-181d13a7607e</reference>
@@ -235,37 +278,13 @@
                         </property-set>
                     </property-set>
                 </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column full width</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col-full-width</string>
-                        <property-set name="config">
-                            <boolean name="menuItem">true</boolean>
-                            <string name="menuName">Full width</string>
-                            <string name="color">bg-dark</string>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2 style="text-align: center;"&gt;Text component&lt;/h2&gt;
-&lt;p class="lead" style="text-align: center;"&gt;This is a text component in a full width layout with a dark background.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                    </property-set>
-                </property-set>
             </property-set>
             <property-set name="config">
-                <boolean name="bannerTop">true</boolean>
-                <string name="meta-keywords">Acme</string>
-                <string name="meta-keywords">Enonic</string>
-                <string name="meta-keywords">Enonic XP</string>
+                <boolean name="behindMenu">true</boolean>
                 <string name="meta-keywords">Onepager</string>
-                <string name="meta-description">Acme Inc. one-pager site built with Enonic XP.</string>
+                <string name="meta-keywords">Enonic XP</string>
+                <string name="meta-keywords">Enonic</string>
+                <string name="meta-description">Onepager site built on Enonic XP</string>
                 <boolean name="hideContactInfo">false</boolean>
             </property-set>
             <boolean name="customized">false</boolean>

@@ -1,8 +1,8 @@
 <node>
-    <id>cd880957-f092-4094-82dc-bbade2e9afc7</id>
+    <id>c442ac9f-f0ba-498d-99ba-e975856c5dde</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T04:22:39.679Z</timestamp>
+    <timestamp>2016-05-12T05:07:46.803Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -40,10 +40,10 @@
         <boolean name="valid">true</boolean>
         <string name="displayName">Templates</string>
         <string name="type">portal:template-folder</string>
-        <dateTime name="createdTime">2016-05-05T04:16:45.634Z</dateTime>
+        <dateTime name="createdTime">2016-05-12T05:05:00.249Z</dateTime>
         <string name="creator">user:system:su</string>
         <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-05T04:16:45.634Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-12T05:05:00.249Z</dateTime>
         <string name="owner">user:system:su</string>
         <property-set name="data"/>
     </data>

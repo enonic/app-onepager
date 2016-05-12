@@ -1,8 +1,8 @@
 <node>
-    <id>5ef1aa7f-fdd3-4ac7-aecc-59e4529accc2</id>
+    <id>9a4a2561-5c43-4036-8915-85d0b5a6004c</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-05T04:32:13.184Z</timestamp>
+    <timestamp>2016-05-12T05:10:59.372Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -41,10 +41,10 @@
         <string name="displayName">Default</string>
         <string name="type">portal:page-template</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-05T04:32:13.183Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-12T05:10:59.364Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-05-05T04:31:57.358Z</dateTime>
+        <dateTime name="createdTime">2016-05-12T05:08:03.302Z</dateTime>
         <property-set name="data">
             <string name="supports">portal:site</string>
         </property-set>
@@ -55,7 +55,7 @@
                 <string name="name">main</string>
             </property-set>
             <property-set name="config">
-                <boolean name="bannerTop">false</boolean>
+                <boolean name="behindMenu">false</boolean>
                 <string isNull="true" name="meta-keywords"/>
                 <string isNull="true" name="meta-description"/>
                 <boolean name="hideContactInfo">false</boolean>
@@ -95,6 +95,36 @@
                     </indexValueProcessors>
                 </indexConfig>
                 <path>data.htmlarea_text</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>creator</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -175,36 +205,6 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>type</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>creator</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>createdTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifiedTime</path>
             </pathIndexConfig>
         </pathIndexConfigs>
     </indexConfigs>
