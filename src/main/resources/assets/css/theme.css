@@ -8,6 +8,10 @@ body {
 
     padding: 0 0 40px;
 }
+[data-portal-component-type="text"] {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 [data-portal-component-type="layout"] {
 
 }
