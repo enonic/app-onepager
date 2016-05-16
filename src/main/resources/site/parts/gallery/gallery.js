@@ -42,7 +42,7 @@ function handleGet(req) {
         });
         var contents = result.hits;
 
-        model.galleryItems = getGalleryItems(contents);
+        model.galleryItems = getGalleryItems(config.galleryItems);
         model.categories = getCategories(result);
         model.heading = config.heading || 'Missing heading';
         model.description = config.description || 'Missing description';
@@ -65,43 +65,53 @@ function handleGet(req) {
         return query + ')';
     }
 
-    function getGalleryItems(contents) {
+    function getGalleryItems(galleryItemIDs) {
         var galleryItems = [];
+        var idArray = util.data.forceArray(galleryItemIDs);
 
-        for (var i = 0; i < contents.length; i++) {
-            var galleryItem = contents[i].data;
+        if(!galleryItemIDs || !idArray[0]) {
+            return null;
+        }
 
-            //Make categories array if there is only one
-            galleryItem.category = util.data.forceArray(galleryItem.category);
+        for (var i = 0; i < idArray.length; i++) {
 
-            //Make the class for the list items.
-            var liClass = 'gallery-item ';
-            for (var j = 0; j < galleryItem.category.length; j++) {
-                liClass += ' ' + galleryItem.category[j].replace(/\s+/g, '-').toLowerCase();
-            }
-            galleryItem.liClass = liClass;
+            var galleryItem = contentLib.get({key: idArray[i]});
 
-            var img = contentLib.get( {
-                key: galleryItem.image
-            });
+            if(galleryItem)  {
+                galleryItem = galleryItem.data;
 
-            if(img) {
-                var scale = 736;
-                if(img.x.media.imageInfo.imageWidth < 736) {
-                    scale = img.x.media.imageInfo.imageWidth;
+                //Make categories array if there is only one
+                galleryItem.category = util.data.forceArray(galleryItem.category);
+
+                //Make the class for the list items.
+                var liClass = 'gallery-item ';
+                for (var j = 0; j < galleryItem.category.length; j++) {
+                    liClass += ' ' + galleryItem.category[j].replace(/\s+/g, '-').toLowerCase();
                 }
+                galleryItem.liClass = liClass;
 
-                galleryItem.thumb = portal.imageUrl( {
-                    id: galleryItem.image,
-                    scale: 'block(235, 159)'
-                });
-                // large image 736 wide
-                galleryItem.imgUrl = portal.imageUrl( {
-                    id: galleryItem.image,
-                    scale: 'width(' + scale + ')'
+                var img = contentLib.get( {
+                    key: galleryItem.image
                 });
 
-                galleryItems.push(galleryItem);
+                if(img) {
+                    var scale = 736;
+                    if(img.x.media.imageInfo.imageWidth < 736) {
+                        scale = img.x.media.imageInfo.imageWidth;
+                    }
+
+                    galleryItem.thumb = portal.imageUrl( {
+                        id: galleryItem.image,
+                        scale: 'block(235, 159)'
+                    });
+                    // large image 736 wide
+                    galleryItem.imgUrl = portal.imageUrl( {
+                        id: galleryItem.image,
+                        scale: 'width(' + scale + ')'
+                    });
+
+                    galleryItems.push(galleryItem);
+                }
             }
 
         }
