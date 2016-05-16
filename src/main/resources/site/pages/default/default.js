@@ -108,7 +108,7 @@ function handleGet(req) {
             });
         } else {
             return portalLib.assetUrl( {
-                path: 'images/logo.png'
+                path: 'images/acme-logo.png'
             });
         }
     }
