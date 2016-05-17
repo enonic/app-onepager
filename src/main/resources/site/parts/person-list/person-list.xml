@@ -8,6 +8,7 @@
       <occurrences minimum="0" maximum="0"/>
       <config>
         <allowType>person</allowType>
+        <allowPath>${site}/*</allowPath>
       </config>
     </input>
   </config>

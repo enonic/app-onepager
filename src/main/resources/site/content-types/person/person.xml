@@ -22,6 +22,9 @@
         <input type="ImageSelector" name="image">
           <label>Photo</label>
           <occurrences minimum="1" maximum="1"/>
+          <config>
+            <allowPath>${site}/*</allowPath>
+          </config>
         </input>
         <input type="TextLine" name="jobTitle">
           <label>Job title</label>

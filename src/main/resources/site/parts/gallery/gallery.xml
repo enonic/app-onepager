@@ -9,6 +9,7 @@
       <config>
         <relationshipType>system:reference</relationshipType>
         <allowType>gallery-img</allowType>
+        <allowPath>${site}/*</allowPath>
       </config>
     </input>
   </config>

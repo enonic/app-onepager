@@ -5,7 +5,6 @@ body {
     color: #555555;
 }
 [data-portal-component-type="part"], [data-portal-component-type="text"], [data-portal-component-type="image"] {
-
     padding: 0 0 40px;
 }
 [data-portal-component-type="text"] {
