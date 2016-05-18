@@ -1,8 +1,8 @@
 <node>
-    <id>209d45f4-32ac-49fc-b7d2-181d13a7607e</id>
+    <id>73d5ae19-6801-4189-8bd1-ef0c5551ea21</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.266Z</timestamp>
+    <timestamp>2016-05-18T02:25:08.728Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,28 +35,21 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">Michael Lazell</string>
         <string name="type">com.enonic.app.onepager:person</string>
         <string name="owner">user:system:su</string>
-        <string name="language">en-US</string>
-        <dateTime name="modifiedTime">2016-04-27T20:14:42.684Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:25:08.721Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-27T20:13:26.027Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:24:37.014Z</dateTime>
         <property-set name="data">
             <string name="firstName">Michael</string>
-            <string name="middleName">J.</string>
+            <string isNull="true" name="middleName"/>
             <string name="lastName">Lazell</string>
-            <reference name="image">71018898-4ccb-4730-8834-b16e81dbc371</reference>
+            <reference name="image">d382b984-2422-4891-ac2f-f7504e9355dd</reference>
             <string name="jobTitle">Services Manager Americas</string>
         </property-set>
     </data>

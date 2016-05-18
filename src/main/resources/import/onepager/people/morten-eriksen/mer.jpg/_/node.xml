@@ -1,8 +1,8 @@
 <node>
-    <id>fac3be98-2e38-4a68-8b48-91505a216dfc</id>
+    <id>bc5db320-1b63-4e25-af59-903d6ded36e6</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.259Z</timestamp>
+    <timestamp>2016-05-18T02:22:56.947Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,21 +35,15 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">mer.jpg</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-04-27T20:18:05.637Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:22:45.244Z</dateTime>
         <string name="creator">user:system:su</string>
         <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T20:18:05.637Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:22:45.244Z</dateTime>
         <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">

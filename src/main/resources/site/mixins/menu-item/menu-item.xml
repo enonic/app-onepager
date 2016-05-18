@@ -7,12 +7,12 @@
       <items>
         <input type="Checkbox" name="menuItem">
           <label>Menu item</label>
-          <help-text>Check this to include this Page in the menu</help-text>
+          <helpText>Check this to include this Page in the menu</helpText>
           <occurrences minimum="0" maximum="1"/>
         </input>
         <input type="TextLine" name="menuName">
           <label>Name in menu</label>
-          <help-text>Name to be used in menu. Optional</help-text>
+          <helpText>Name to be used in menu. Optional</helpText>
           <occurrences minimum="0" maximum="1"/>
         </input>
       </items>

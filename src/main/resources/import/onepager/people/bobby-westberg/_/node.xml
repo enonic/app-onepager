@@ -1,8 +1,8 @@
 <node>
-    <id>e513cbd3-8718-4090-acb9-6ce973bd2430</id>
+    <id>6df9cbc6-7658-4e45-a3a6-73bef5f34201</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.253Z</timestamp>
+    <timestamp>2016-05-18T02:25:56.373Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,27 +35,21 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">Bobby Westberg</string>
         <string name="type">com.enonic.app.onepager:person</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T20:45:37.148Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:25:56.365Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-27T20:42:05.853Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:25:15.759Z</dateTime>
         <property-set name="data">
             <string name="firstName">Bobby</string>
             <string isNull="true" name="middleName"/>
             <string name="lastName">Westberg</string>
-            <reference name="image">7e0652fd-25db-497f-b0f6-fec8a6b141c8</reference>
+            <reference name="image">3f5db022-cb50-4154-bcdc-f785f4c8401b</reference>
             <string name="jobTitle">Services Manager Europe</string>
         </property-set>
     </data>

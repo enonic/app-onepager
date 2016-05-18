@@ -8,8 +8,6 @@
       <items>
         <item-set name="feature">
           <label>Feature</label>
-          <custom-text/>
-          <help-text/>
           <occurrences minimum="0" maximum="0"/>
           <items>
             <input type="TextLine" name="header">

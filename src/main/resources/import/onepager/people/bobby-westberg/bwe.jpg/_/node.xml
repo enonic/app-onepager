@@ -1,8 +1,8 @@
 <node>
-    <id>7e0652fd-25db-497f-b0f6-fec8a6b141c8</id>
+    <id>3f5db022-cb50-4154-bcdc-f785f4c8401b</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.254Z</timestamp>
+    <timestamp>2016-05-18T02:25:56.376Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,28 +35,22 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">bwe.jpg</string>
         <string name="type">media:image</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T20:59:41.648Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:25:44.485Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-27T20:45:06.770Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:25:30.990Z</dateTime>
         <property-set name="data">
             <property-set name="media">
                 <string name="attachment">bwe.jpg</string>
                 <property-set name="focalPoint">
-                    <double name="x">0.5484375</double>
-                    <double name="y">0.37963050842285156</double>
+                    <double name="x">0.5296875</double>
+                    <double name="y">0.42953613281249997</double>
                 </property-set>
                 <property-set name="cropPosition">
                     <double name="left">0.0</double>

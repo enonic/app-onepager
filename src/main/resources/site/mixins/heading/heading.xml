@@ -12,7 +12,7 @@
         </input>
         <input type="HtmlArea" name="description">
           <label>Description</label>
-          <help-text>Optional text below the part heading.</help-text>
+          <helpText>Optional text below the part heading.</helpText>
           <occurrences minimum="0" maximum="1"/>
         </input>
       </items>

@@ -6,7 +6,6 @@
       <items>
         <input type="ImageSelector" name="logo">
           <label>Logo</label>
-          <help-text/>
           <config>
             <allowPath>${site}/*</allowPath>
           </config>
@@ -19,8 +18,6 @@
       <items>
         <item-set name="location">
           <label>Location</label>
-          <custom-text/>
-          <help-text/>
           <occurrences minimum="0" maximum="0"/>
           <items>
             <input type="TextLine" name="label">
@@ -38,8 +35,6 @@
             <input type="TextLine" name="state">
               <label>State</label>
               <indexed>true</indexed>
-              <custom-text/>
-              <help-text/>
               <occurrences minimum="0" maximum="1"/>
             </input>
             <input type="TextLine" name="zip">

@@ -1,9 +1,9 @@
 <node>
-    <id>86e52c7e-51c9-47b4-8ad9-99982467b3e7</id>
+    <id>bc5c6cd3-d02d-4d90-a217-47cb17a33b52</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.249Z</timestamp>
-    <inheritPermissions>false</inheritPermissions>
+    <timestamp>2016-05-18T02:22:00.617Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,22 +35,16 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">People</string>
         <string name="type">base:folder</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T20:12:08.773Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:22:00.603Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2016-04-27T20:12:00.491Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:21:54.273Z</dateTime>
         <property-set name="data"/>
     </data>
     <indexConfigs>

@@ -1,8 +1,8 @@
 <node>
-    <id>71018898-4ccb-4730-8834-b16e81dbc371</id>
+    <id>d382b984-2422-4891-ac2f-f7504e9355dd</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-12T05:28:23.268Z</timestamp>
+    <timestamp>2016-05-18T02:25:08.732Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,21 +35,15 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">headshot-square.png</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-04-27T20:14:15.174Z</dateTime>
+        <dateTime name="createdTime">2016-05-18T02:24:49.197Z</dateTime>
         <string name="creator">user:system:su</string>
         <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-04-27T20:14:15.174Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-18T02:24:49.197Z</dateTime>
         <string name="owner">user:system:su</string>
         <property-set name="data">
             <property-set name="media">
