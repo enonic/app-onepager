@@ -5,7 +5,7 @@ body {
     color: #555555;
 }
 [data-portal-component-type="part"], [data-portal-component-type="text"], [data-portal-component-type="image"] {
-    padding: 0 0 40px;
+    padding: 0 0 55px;
 }
 [data-portal-component-type="text"] {
     padding-left: 30px;
@@ -23,7 +23,7 @@ body {
 }
 .layout-box {
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 65px;
 }
 .layout.bg-light .layout-box {
     background-color: #EEEEEE;
@@ -62,7 +62,7 @@ body.edit.behind {
 }
   /* Make second layout or part move up into the top part when the content goes under the menu */
 body.behind .main-region > *:first-child {
-    margin-bottom: -80px;
+    margin-bottom: -90px;
 }
 
 
