@@ -2,7 +2,7 @@
 <layout>
   <display-name>1 column</display-name>
   <config>
-    <!--<inline mixin="menu-item"/>-->
+    <inline mixin="menu-item"/>
     <input type="RadioButton" name="color">
       <label>Background color</label>
       <occurrences minimum="1" maximum="1"/>
