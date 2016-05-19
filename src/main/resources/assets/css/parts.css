@@ -154,6 +154,12 @@ ul.gallery-items {
 /*
 Banner begin
 */
+.p-banner .placeholder {
+    height: 200px;
+    padding: 70px;
+    text-align: center;
+    background-color: #B1D7FE;
+}
 .enonicarousel {
     width: 100%;
     position: relative;

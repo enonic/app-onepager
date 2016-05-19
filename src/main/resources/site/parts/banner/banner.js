@@ -22,15 +22,13 @@ function handleGet(req) {
     }
 
     function getBanners() {
-        var bannerArr = [];
 
         var banners = component.config.banner;
 
-        if (banners) {
-            bannerArr = util.data.forceArray(banners);
+        if (!banners) {
+            return null;
         }
-
-        return bannerArr;
+        return util.data.forceArray(banners);
     }
 
     function ulClass() {

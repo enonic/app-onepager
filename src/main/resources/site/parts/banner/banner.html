@@ -1,6 +1,10 @@
 <section class="xp-part p-banner">
     <div class="promotion-banner">
-        <div class="enonicarousel">
+        <div data-th-if="${!banners}" class="placeholder">
+            <h2>Add image content in banner config</h2>
+        </div>
+
+        <div data-th-if="${banners}" class="enonicarousel">
             <ul class="enonicarousel__list promotion-banner__list parallax" data-th-class="${ulClass}">
                 <li class="enonicarousel__slide" data-th-each="banner : ${banners}">
                     <img data-th-src="${portal.imageUrl({'_id=' + banner.image, '_scale=block(1024,400)'})}" alt=""/>
