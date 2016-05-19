@@ -35,7 +35,6 @@ dependencies {
     webjar "org.webjars:html5shiv:3.7.3"
     webjar "org.webjars:respond:1.4.2"
     webjar "org.webjars:font-awesome:4.5.0"
-    webjar "org.webjars:isotope:2.2.2" //1.5.26
 }
 
 repositories {

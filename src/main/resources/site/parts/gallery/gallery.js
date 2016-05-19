@@ -83,12 +83,20 @@ function handleGet(req) {
                 //Make categories array if there is only one
                 galleryItem.category = util.data.forceArray(galleryItem.category);
 
-                //Make the class for the list items.
-                var liClass = 'gallery-item ';
+                //Make the category classes and groups for the items
+                var liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
+                var groups = '[';
                 for (var j = 0; j < galleryItem.category.length; j++) {
-                    liClass += ' ' + galleryItem.category[j].replace(/\s+/g, '-').toLowerCase();
+                    var catGroup = '"' + galleryItem.category[j].replace(/\s+/g, '-').toLowerCase() + '"';
+                    liClass += ' ' + catGroup;
+                    groups += catGroup;
+                    if(j != galleryItem.category.length - 1) {
+                        groups += ',';
+                    }
                 }
+                groups += ']';
                 galleryItem.liClass = liClass;
+                galleryItem.groups = groups;
 
                 var img = contentLib.get( {
                     key: galleryItem.image

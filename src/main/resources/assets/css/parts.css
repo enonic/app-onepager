@@ -89,10 +89,10 @@ Person list begin
 .person h3 {
     margin-top: 15px;
 }
+
 /*
 Gallery begin
 */
-
 .p-gallery ul {
     list-style: none;
     padding: 0;
@@ -104,9 +104,6 @@ Gallery begin
 .gallery-filter li {
     display: inline-block;
     margin-bottom: 10px;
-}
-.gallery-items.col-4 li {
-    width: 25%;
 }
 ul.gallery-items {
     margin-left: 20px;

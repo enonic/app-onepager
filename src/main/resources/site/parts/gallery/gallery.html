@@ -1,4 +1,4 @@
-<section class="p-gallery xp-part"><!-- Uses PrettyPhoto for lightbox effect and Isotope for arrangement -->
+<section class="p-gallery xp-part"><!-- Uses PrettyPhoto for lightbox effect and Shuffle for arrangement -->
     <div class="box">
         <div class="center gap">
             <h2 data-th-text="${heading}">Gallery</h2>
@@ -8,15 +8,13 @@
         <div data-th-if="${galleryItems}" data-th-remove="tag">
 
             <ul class="gallery-filter">
-                <li><a class="btn btn-primary active" href="#" data-filter="*">All</a></li>
+                <li class="btn btn-primary active" data-filter="*">All</li>
 
-                <li data-th-each="category : ${categories}">
-                    <a class="btn btn-primary" href="#" data-th-attr="data-filter='.' + ${category.key}" data-th-text="${category.tag}"></a>
-                </li>
+                <li data-th-each="category : ${categories}" class="btn btn-primary" data-th-attr="data-group=${category.key}" data-th-text="${category.tag}"></li>
             </ul>
 
-            <ul class="gallery-items col-4">
-                <li data-th-each="galleryItem : ${galleryItems}" data-th-class="${galleryItem.liClass}">
+            <ul class="gallery-items" id="p-gallery">
+                <li data-th-each="galleryItem : ${galleryItems}" data-th-class="${galleryItem.liClass}" data-th-attr="data-groups=${galleryItem.groups}">
                     <div class="item-inner">
                         <div class="gallery-image">
                             <a data-th-href="${galleryItem.imgUrl}" rel="prettyPhoto[gallery]"  class="preview" data-th-title="${galleryItem.caption}">
