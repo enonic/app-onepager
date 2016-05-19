@@ -11,7 +11,7 @@
           <occurrences minimum="0" maximum="1"/>
         </input>
         <input type="HtmlArea" name="description">
-          <label>Description</label>
+          <label>Text block</label>
           <helpText>Optional text below the part heading.</helpText>
           <occurrences minimum="0" maximum="1"/>
         </input>
