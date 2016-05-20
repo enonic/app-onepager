@@ -4,7 +4,7 @@ body {
     background-color: #DFDFDF;
     color: #555555;
 }
-[data-portal-component-type="part"], [data-portal-component-type="text"], [data-portal-component-type="image"] {
+[data-portal-component-type="part"], [data-portal-component-type="text"], .layout [data-portal-component-type="image"] {
     padding: 0 0 55px;
 }
 [data-portal-component-type="text"] {
