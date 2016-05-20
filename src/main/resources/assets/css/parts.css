@@ -1,13 +1,3 @@
-.social {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social li {
-    display: inline-block;
-    margin: 5px 15px;
-    font-size: 40px;
-}
 /*
 Contact footer begin
 */
@@ -21,7 +11,17 @@ Contact footer begin
 #contact h1, #contact h2, #contact h3 {
     color: #FFFFFF;
 }
-.social .icon-social {
+#contact .social {
+     list-style-type: none;
+     padding: 10px 0 0;
+ }
+
+#contact .social li {
+    display: inline-block;
+    margin: 5px 15px;
+    font-size: 40px;
+}
+#contact .social .icon-social {
     color: #FFFFFF;
     border-radius: 100px;
     width: 60px;
@@ -29,22 +29,22 @@ Contact footer begin
     padding: 10px;
 }
 
-.social .fa-facebook {
+#contact .social .fa-facebook {
     background-color: #43609C;
 }
-.social .fa-youtube {
+#contact .social .fa-youtube {
     background-color: #CC181E;
 }
-.social .fa-google-plus {
+#contact .social .fa-google-plus {
     background-color: #03A9F4;
 }
-.social .fa-pinterest {
+#contact .social .fa-pinterest {
     background-color: #BB232C;
 }
-.social .fa-linkedin {
+#contact .social .fa-linkedin {
     background-color: #1B86BC;
 }
-.social .fa-twitter {
+#contact .social .fa-twitter {
     background-color: #1DA1BC;
 }
 section#contact {
@@ -73,20 +73,20 @@ Features begin
 /*
 Person list begin
 */
-.carousel.scale .left-arrow, .carousel.scale .right-arrow {
+.p-about-us .carousel.scale .left-arrow, .p-about-us .carousel.scale .right-arrow {
     top: 30%;
     position: absolute;
 }
-.carousel.scale .right-arrow {
+.p-about-us .carousel.scale .right-arrow {
     right: -5px;
 }
-.carousel.scale .left-arrow {
+.p-about-us .carousel.scale .left-arrow {
     left: -5px;
 }
-.person {
+.p-about-us .person {
     margin: auto 30px;
 }
-.person h3 {
+.p-about-us .person h3 {
     margin-top: 15px;
 }
 

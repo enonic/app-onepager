@@ -72,8 +72,8 @@
                 <!--/.col-sm-12-->
                 <div class="col-sm-12 text-center">
 
-                    <h2>Locations</h2>
                     <div class="row">
+                        <h2>Locations</h2>
                         <div data-th-class="'col-md-' + ${addressCols}" data-th-each="address, iterStat : ${addresses}">
                             <address>
                                 <strong><span data-th-text="${address.label}">Twitter, Inc.</span></strong><br/>
@@ -98,8 +98,8 @@
                         </div>
                     </div>
 
-                    <h2>Follow us</h2>
-                    <div class="row">
+                    <div class="row" data-th-if="${social.facebook or social.google or social.pinterest or social.linkedin or social.twitter or social.youtube}">
+                        <h2>Follow us</h2>
                         <div class="col-md-12">
                             <ul class="social">
                                 <li data-th-if="${social.facebook}"><a data-th-href="${social.facebook}" href="#"><i class="fa fa-facebook icon-social"></i></a></li>

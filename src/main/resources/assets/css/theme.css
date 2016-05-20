@@ -17,10 +17,6 @@ body {
 .layout .p-banner[data-portal-component-type]:last-child, .layout [data-portal-component-type="image"]:last-child {
     padding-bottom: 0;
 }
-
-.layout > .row {
-
-}
 .layout-box {
     overflow: hidden;
     padding-top: 65px;
@@ -64,7 +60,6 @@ body.edit.behind {
 body.behind .main-region > *:first-child {
     margin-bottom: -90px;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     color: #002454;
