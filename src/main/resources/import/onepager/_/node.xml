@@ -2,8 +2,8 @@
     <id>37367a59-a1d0-448e-95e3-880af1aaf7ba</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-18T02:32:08.134Z</timestamp>
-    <inheritPermissions>true</inheritPermissions>
+    <timestamp>2016-05-20T20:52:06.662Z</timestamp>
+    <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,13 +35,19 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">Onepager</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-18T02:32:08.134Z</dateTime>
+        <dateTime name="modifiedTime">2016-05-20T20:52:06.661Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-05-18T01:34:08.412Z</dateTime>
@@ -121,7 +127,7 @@
                                 <property-set name="TextComponent">
                                     <string name="name">Text</string>
                                     <string name="text">&lt;h2 style="text-align: center;"&gt;Text component&lt;/h2&gt;
-&lt;p class="lead" style="text-align: center;"&gt;Add layouts to the page. The one-column layout for this app has&amp;nbsp;various configuration settings, including the menu names, background color, and more. Add component parts inside the layout regions.&lt;/p&gt;</string>
+&lt;p class="lead" style="text-align: center;"&gt;Add layouts to the page. The one-column layout for this app has&amp;nbsp;various configuration settings, including the menu names, background color, and more. Add component parts inside the layout regions. Read the&amp;nbsp;&lt;a title="Documentation" href="https://github.com/enonic/app-onepager" target="_blank"&gt;documentation&lt;/a&gt; for more information.&lt;/p&gt;</string>
                                 </property-set>
                             </property-set>
                             <property-set name="component">
