@@ -54,15 +54,15 @@ $(window).load(function() {
             itemSelector: '.gallery-item'
         });
 
-        this.addFilterButtons();
+        this.addFilterButtons(element.id);
     }
 
     S.prototype.toArray = function (arrayLike) {
         return Array.prototype.slice.call(arrayLike);
     };
 
-    S.prototype.addFilterButtons = function () {
-        var options = document.querySelector('.gallery-filter');
+    S.prototype.addFilterButtons = function (id) {
+        var options = document.querySelector('#g-part-' + id + ' .gallery-filter');
 
         if (!options) {
             return;
@@ -103,6 +103,14 @@ $(window).load(function() {
         }
     }
 
-    window.demo = new S(document.getElementById('p-gallery'));
+    var galleryList = document.querySelectorAll('.p-gallery');
+
+    window.demo = [];
+    for(var i = 0; i < galleryList.length; i++) {
+        window.demo[i] = new S(document.getElementById(galleryList[i].getAttribute('data-gallery-id')))
+    }
+    console.log(window.demo);
+
+    //window.demo = new S(document.getElementById('p-gallery'));
 });
 

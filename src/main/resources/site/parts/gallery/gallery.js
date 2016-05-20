@@ -46,6 +46,7 @@ function handleGet(req) {
         model.categories = getCategories(result);
         model.heading = config.heading || 'Missing heading';
         model.description = config.description || 'Missing description';
+        model.shuffleID = 'gallery-' + component.path.replace(/\/+/g, '-');
 
         return model;
     }

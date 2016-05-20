@@ -1,4 +1,4 @@
-<section class="p-gallery xp-part"><!-- Uses PrettyPhoto for lightbox effect and Shuffle for arrangement -->
+<section class="p-gallery xp-part" data-th-id="'g-part-' + ${shuffleID}" data-th-attr="data-gallery-id=${shuffleID}"><!-- Uses PrettyPhoto for lightbox effect and Shuffle for arrangement -->
     <div class="box">
         <div class="center gap">
             <h2 data-th-text="${heading}">Gallery</h2>
@@ -13,11 +13,11 @@
                 <li data-th-each="category : ${categories}" class="btn btn-primary" data-th-attr="data-group=${category.key}" data-th-text="${category.tag}"></li>
             </ul>
 
-            <ul class="gallery-items" id="p-gallery">
+            <ul class="gallery-items" id="p-gallery" data-th-id="${shuffleID}">
                 <li data-th-each="galleryItem : ${galleryItems}" data-th-class="${galleryItem.liClass}" data-th-attr="data-groups=${galleryItem.groups}">
                     <div class="item-inner">
                         <div class="gallery-image">
-                            <a data-th-href="${galleryItem.imgUrl}" rel="prettyPhoto[gallery]"  class="preview" data-th-title="${galleryItem.caption}">
+                            <a data-th-href="${galleryItem.imgUrl}" rel="prettyPhoto[gallery]" data-th-rel="'prettyPhoto[' + ${shuffleID} + ']'" class="preview" data-th-title="${galleryItem.caption}">
                                 <img data-th-src="${galleryItem.thumb}"/>
                             </a>
                         </div>
