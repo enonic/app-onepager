@@ -14,7 +14,10 @@ body {
 [data-portal-component-type="layout"] {
 
 }
-.layout .p-banner[data-portal-component-type]:last-child, .layout [data-portal-component-type="image"]:last-child {
+.layout .p-banner[data-portal-component-type]:last-child,
+.edit .layout .p-banner[data-portal-component-type]:nth-last-child(2),
+.layout [data-portal-component-type="image"]:last-child,
+.edit .layout [data-portal-component-type="image"]:nth-last-child(2) {
     padding-bottom: 0;
 }
 .layout-box {
