@@ -2,7 +2,7 @@
     <id>62093f1e-0c8a-447c-8f1f-56d0b1ce86ad</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-20T20:49:25.600Z</timestamp>
+    <timestamp>2016-05-27T06:35:42.884Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -46,11 +46,11 @@
         <boolean name="valid">true</boolean>
         <string name="displayName">apartments.jpg</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-05-18T01:50:25.868Z</dateTime>
-        <string name="creator">user:system:su</string>
-        <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-18T01:50:25.868Z</dateTime>
         <string name="owner">user:system:su</string>
+        <dateTime name="modifiedTime">2016-05-27T06:35:42.883Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2016-05-18T01:50:25.868Z</dateTime>
         <property-set name="data">
             <property-set name="media">
                 <string name="attachment">apartments.jpg</string>
@@ -59,10 +59,10 @@
                     <double name="y">0.5</double>
                 </property-set>
             </property-set>
-            <string name="caption"/>
-            <string name="artist"/>
-            <string name="copyright"/>
-            <string name="tags"/>
+            <string name="caption">An apartment building in San Francisco</string>
+            <string isNull="true" name="artist"/>
+            <string isNull="true" name="copyright"/>
+            <string name="tags">North America</string>
         </property-set>
         <property-set name="x">
             <property-set name="media">
@@ -72,6 +72,37 @@
                     <string name="contentType">image/jpeg</string>
                     <long name="pixelSize">406272</long>
                     <long name="byteSize">113012</long>
+                    <string isNull="true" name="description"/>
+                    <string isNull="true" name="colorSpace"/>
+                    <string isNull="true" name="fileSource"/>
+                </property-set>
+                <property-set name="cameraInfo">
+                    <localDateTime isNull="true" name="date"/>
+                    <string isNull="true" name="make"/>
+                    <string isNull="true" name="model"/>
+                    <string isNull="true" name="lens"/>
+                    <string isNull="true" name="iso"/>
+                    <string isNull="true" name="focalLength"/>
+                    <string isNull="true" name="focalLength35"/>
+                    <string isNull="true" name="exposureBias"/>
+                    <string isNull="true" name="aperture"/>
+                    <string isNull="true" name="shutterTime"/>
+                    <string isNull="true" name="flash"/>
+                    <string isNull="true" name="autoFlashCompensation"/>
+                    <string isNull="true" name="whiteBalance"/>
+                    <string isNull="true" name="exposureProgram"/>
+                    <string isNull="true" name="shootingMode"/>
+                    <string isNull="true" name="meteringMode"/>
+                    <string isNull="true" name="exposureMode"/>
+                    <string isNull="true" name="focusDistance"/>
+                    <string isNull="true" name="orientation"/>
+                </property-set>
+            </property-set>
+            <property-set name="base">
+                <property-set name="gpsInfo">
+                    <geoPoint isNull="true" name="geoPoint"/>
+                    <string isNull="true" name="altitude"/>
+                    <string isNull="true" name="direction"/>
                 </property-set>
             </property-set>
         </property-set>

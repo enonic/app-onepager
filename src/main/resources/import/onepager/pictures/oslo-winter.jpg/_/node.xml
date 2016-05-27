@@ -2,7 +2,7 @@
     <id>12f869e2-de16-4fb1-b821-112aa7f4ca94</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-20T20:49:25.576Z</timestamp>
+    <timestamp>2016-05-27T06:33:36.532Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -46,11 +46,11 @@
         <boolean name="valid">true</boolean>
         <string name="displayName">oslo-winter.jpg</string>
         <string name="type">media:image</string>
-        <dateTime name="createdTime">2016-05-18T01:50:28.200Z</dateTime>
-        <string name="creator">user:system:su</string>
-        <string name="modifier">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-18T01:50:28.200Z</dateTime>
         <string name="owner">user:system:su</string>
+        <dateTime name="modifiedTime">2016-05-27T06:33:36.531Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2016-05-18T01:50:28.200Z</dateTime>
         <property-set name="data">
             <property-set name="media">
                 <string name="attachment">oslo-winter.jpg</string>
@@ -59,10 +59,11 @@
                     <double name="y">0.5</double>
                 </property-set>
             </property-set>
-            <string name="caption"/>
-            <string name="artist"/>
-            <string name="copyright"/>
-            <string name="tags"/>
+            <string name="caption">Winter in Oslo is cold.</string>
+            <string isNull="true" name="artist"/>
+            <string isNull="true" name="copyright"/>
+            <string name="tags">Europe</string>
+            <string name="tags">Nature</string>
         </property-set>
         <property-set name="x">
             <property-set name="media">
@@ -72,6 +73,37 @@
                     <string name="contentType">image/jpeg</string>
                     <long name="pixelSize">406272</long>
                     <long name="byteSize">119427</long>
+                    <string isNull="true" name="description"/>
+                    <string isNull="true" name="colorSpace"/>
+                    <string isNull="true" name="fileSource"/>
+                </property-set>
+                <property-set name="cameraInfo">
+                    <localDateTime isNull="true" name="date"/>
+                    <string isNull="true" name="make"/>
+                    <string isNull="true" name="model"/>
+                    <string isNull="true" name="lens"/>
+                    <string isNull="true" name="iso"/>
+                    <string isNull="true" name="focalLength"/>
+                    <string isNull="true" name="focalLength35"/>
+                    <string isNull="true" name="exposureBias"/>
+                    <string isNull="true" name="aperture"/>
+                    <string isNull="true" name="shutterTime"/>
+                    <string isNull="true" name="flash"/>
+                    <string isNull="true" name="autoFlashCompensation"/>
+                    <string isNull="true" name="whiteBalance"/>
+                    <string isNull="true" name="exposureProgram"/>
+                    <string isNull="true" name="shootingMode"/>
+                    <string isNull="true" name="meteringMode"/>
+                    <string isNull="true" name="exposureMode"/>
+                    <string isNull="true" name="focusDistance"/>
+                    <string isNull="true" name="orientation"/>
+                </property-set>
+            </property-set>
+            <property-set name="base">
+                <property-set name="gpsInfo">
+                    <geoPoint isNull="true" name="geoPoint"/>
+                    <string isNull="true" name="altitude"/>
+                    <string isNull="true" name="direction"/>
                 </property-set>
             </property-set>
         </property-set>
