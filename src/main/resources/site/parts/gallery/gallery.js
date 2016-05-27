@@ -21,11 +21,34 @@ function handleGet(req) {
 
         var component = portal.getComponent();
         var config = component.config;
+        var imageIDs = config.images ? util.data.forceArray(config.images) : null;
+        var contents = imageIDs? getImagesInOrder(imageIDs) : null;
 
+        model.heading = config.heading || 'Missing heading';
+        model.description = config.description || 'Missing description';
+        model.shuffleID = 'gallery-' + component.path.replace(/\/+/g, '-');
+        model.galleryItems = contents? getGalleryItems(contents) : null;
+        model.categories = contents? getCategories(contents, imageIDs) : null;
+
+        return model;
+    }
+
+    function getImagesInOrder(imageIDs) {
+        var images = [];
+        imageIDs.map(function(imageID) {
+            var img = contentLib.get({key: imageID});
+            if(img) {
+                images.push(img);
+            }
+        });
+        return images;
+    }
+
+    // Get the buckets from config.images
+    function getBuckets(imageIDs) {
         var result = contentLib.query( {
-            start: 0,
-            count: 100,
-            query: getImagesQuery(config.images),
+            count: 0,
+            query: '_id IN (' + JSON.stringify(imageIDs).replace('[','').replace(']','') + ')',
             contentTypes: [
                 'media:image'
             ],
@@ -40,26 +63,10 @@ function handleGet(req) {
                 }
             }
         });
-
-        var contents = result.hits;
-
-        model.galleryItems = contents? getGalleryItems(contents) : null;
-        model.categories = getCategories(result);
-        model.heading = config.heading || 'Missing heading';
-        model.description = config.description || 'Missing description';
-        model.shuffleID = 'gallery-' + component.path.replace(/\/+/g, '-');
-
-        return model;
+        return result? result.aggregations.tags.buckets : null;
     }
 
-    function getImagesQuery(imageIDs) {
-        var imageIdArray = util.data.forceArray(imageIDs);
-
-        var query = '_id IN (' + JSON.stringify(imageIdArray).replace('[','').replace(']','') + ')';
-
-        return query;
-    }
-
+    // Create array of objects with required info about each image
     function getGalleryItems(contents) {
         var galleryItems = [];
 
@@ -102,10 +109,10 @@ function handleGet(req) {
     }
 
     // Get the categories with tag and key
-    function getCategories(result) {
+    function getCategories(contents, imageIDs) {
 
-        var cats = getCategoriesArray(result.hits);
-        var buckets = result.aggregations.tags.buckets;
+        var cats = getCategoriesArray(contents);
+        var buckets = getBuckets(imageIDs);
 
         var categories = [];
         for (var n = 0; n < buckets.length; n++) {
@@ -123,10 +130,10 @@ function handleGet(req) {
         return categories;
     }
 
-    function getCategoriesArray(hits) {
+    function getCategoriesArray(contents) {
         var cats = [];
-        for (var i = 0; i < hits.length; i++) {
-            var tags = util.data.forceArray(hits[i].data.tags);
+        for (var i = 0; i < contents.length; i++) {
+            var tags = util.data.forceArray(contents[i].data.tags);
             for(var j = 0; j < tags.length; j++) {
                 cats.push(tags[j]);
             }

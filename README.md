@@ -59,7 +59,7 @@ The gallery part has a heading and text and displays thumbnail images with a cap
 navigation controls to see the next and previous image.
 
 Images for the gallery are added in the part configuration. Upload images or select previously uploaded images. The buttons for filtering images are created from the image tags, so be sure to tag 
-each image. Add a caption to each image content. 
+each image. Add a caption to each image content. The order of the images can be controlled with drag-and-drop in the part config.
 
 ### Header
 
