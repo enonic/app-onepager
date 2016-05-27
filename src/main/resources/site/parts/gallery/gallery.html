@@ -7,7 +7,7 @@
 
         <div data-th-if="${galleryItems}" data-th-remove="tag">
 
-            <ul class="gallery-filter">
+            <ul data-th-if="${categories}" class="gallery-filter">
                 <li class="btn btn-primary active" data-filter="*">All</li>
 
                 <li data-th-each="category : ${categories}" class="btn btn-primary" data-th-attr="data-group=${category.key}" data-th-text="${category.tag}"></li>

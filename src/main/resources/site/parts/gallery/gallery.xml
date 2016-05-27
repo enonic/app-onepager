@@ -3,12 +3,10 @@
   <display-name>Gallery</display-name>
   <config>
     <inline mixin="heading"/>
-    <input type="ContentSelector" name="galleryItems">
-      <label>Gallery images</label>
-      <occurrences minimum="0" maximum="0"/>
+    <input type="ImageSelector" name="images">
+      <label>Image</label>
+      <occurrences minimum="1" maximum="0"/>
       <config>
-        <relationshipType>system:reference</relationshipType>
-        <allowType>gallery-img</allowType>
         <allowPath>${site}/*</allowPath>
       </config>
     </input>

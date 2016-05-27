@@ -109,7 +109,7 @@ $(window).load(function() {
     for(var i = 0; i < galleryList.length; i++) {
         window.demo[i] = new S(document.getElementById(galleryList[i].getAttribute('data-gallery-id')))
     }
-    console.log(window.demo);
+    //console.log(window.demo);
 
     //window.demo = new S(document.getElementById('p-gallery'));
 });

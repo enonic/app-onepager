@@ -25,14 +25,14 @@ function handleGet(req) {
         var result = contentLib.query( {
             start: 0,
             count: 100,
-            query: getGalleryItemQuery(config),
+            query: getImagesQuery(config.images),
             contentTypes: [
-                app.name + ':gallery-img'
+                'media:image'
             ],
             aggregations: {
                 tags: {
                     terms: {
-                        field: 'data.category',
+                        field: 'data.tags',
                         order: '_term asc',
                         size: 100
                     }
@@ -40,9 +40,10 @@ function handleGet(req) {
                 }
             }
         });
+
         var contents = result.hits;
 
-        model.galleryItems = getGalleryItems(config.galleryItems);
+        model.galleryItems = contents? getGalleryItems(contents) : null;
         model.categories = getCategories(result);
         model.heading = config.heading || 'Missing heading';
         model.description = config.description || 'Missing description';
@@ -51,79 +52,52 @@ function handleGet(req) {
         return model;
     }
 
-    function getGalleryItemQuery(config) {
-        var galleryItems = config.galleryItems;
-        galleryItems = util.data.forceArray(galleryItems);
+    function getImagesQuery(imageIDs) {
+        var imageIdArray = util.data.forceArray(imageIDs);
 
-        var query = '_id IN (';
+        var query = '_id IN (' + JSON.stringify(imageIdArray).replace('[','').replace(']','') + ')';
 
-        for (var i = 0; i < galleryItems.length; i++) {
-            query += '"' + galleryItems[i] + '"';
-            if(i + 1 != galleryItems.length) {
-                query += ', ';
-            }
-        }
-        return query + ')';
+        return query;
     }
 
-    function getGalleryItems(galleryItemIDs) {
+    function getGalleryItems(contents) {
         var galleryItems = [];
-        var idArray = util.data.forceArray(galleryItemIDs);
 
-        if(!galleryItemIDs || !idArray[0]) {
-            return null;
-        }
+        contents.map(function(imageContent) {
+            var galleryItem = {};
+            galleryItem.caption = imageContent.data.caption;
 
-        for (var i = 0; i < idArray.length; i++) {
+            var categories = util.data.forceArray(imageContent.data.tags);
+            var liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
+            var groups = '[';
 
-            var galleryItem = contentLib.get({key: idArray[i]});
-
-            if(galleryItem)  {
-                galleryItem = galleryItem.data;
-
-                //Make categories array if there is only one
-                galleryItem.category = util.data.forceArray(galleryItem.category);
-
-                //Make the category classes and groups for the items
-                var liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
-                var groups = '[';
-                for (var j = 0; j < galleryItem.category.length; j++) {
-                    var catGroup = '"' + galleryItem.category[j].replace(/\s+/g, '-').toLowerCase() + '"';
-                    liClass += ' ' + catGroup;
-                    groups += catGroup;
-                    if(j != galleryItem.category.length - 1) {
-                        groups += ',';
-                    }
-                }
-                groups += ']';
-                galleryItem.liClass = liClass;
-                galleryItem.groups = groups;
-
-                var img = contentLib.get( {
-                    key: galleryItem.image
-                });
-
-                if(img) {
-                    var scale = 736;
-                    if(img.x.media.imageInfo.imageWidth < 736) {
-                        scale = img.x.media.imageInfo.imageWidth;
-                    }
-
-                    galleryItem.thumb = portal.imageUrl( {
-                        id: galleryItem.image,
-                        scale: 'block(235, 159)'
-                    });
-                    // large image 736 wide
-                    galleryItem.imgUrl = portal.imageUrl( {
-                        id: galleryItem.image,
-                        scale: 'width(' + scale + ')'
-                    });
-
-                    galleryItems.push(galleryItem);
+            for (var i = 0; i < categories.length; i++) {
+                var catGroup = '"' + categories[i].replace(/\s+/g, '-').toLowerCase() + '"';
+                liClass += ' ' + catGroup;
+                groups += catGroup;
+                if(i != categories.length - 1) {
+                    groups += ',';
                 }
             }
+            groups += ']';
+            galleryItem.liClass = liClass;
+            galleryItem.groups = groups;
 
-        }
+            var scale = 736;
+            if(imageContent.x.media.imageInfo.imageWidth < scale) {
+                scale = imageContent.x.media.imageInfo.imageWidth;
+            }
+            galleryItem.thumb = portal.imageUrl({
+                id: imageContent._id,
+                scale: 'block(235,159)'
+            });
+            galleryItem.imgUrl = portal.imageUrl( {
+                id: imageContent._id,
+                scale: 'width(' + scale + ')'
+            });
+            galleryItems.push(galleryItem);
+        });
+
         return galleryItems;
     }
 
@@ -131,7 +105,6 @@ function handleGet(req) {
     function getCategories(result) {
 
         var cats = getCategoriesArray(result.hits);
-
         var buckets = result.aggregations.tags.buckets;
 
         var categories = [];
@@ -153,8 +126,9 @@ function handleGet(req) {
     function getCategoriesArray(hits) {
         var cats = [];
         for (var i = 0; i < hits.length; i++) {
-            for(var j = 0; j < hits[i].data.category.length; j++) {
-                cats.push(hits[i].data.category[j]);
+            var tags = util.data.forceArray(hits[i].data.tags);
+            for(var j = 0; j < tags.length; j++) {
+                cats.push(tags[j]);
             }
         }
         return cats;
@@ -162,4 +136,3 @@ function handleGet(req) {
 
     return renderView();
 }
-

@@ -9,7 +9,7 @@
 ## Features
 
 This app demos some Enonic XP features including reusable and configurable parts and layout components. Use the page editor to add and remove components and move them around the page with drag and drop.
-Add your own images and create content for the person list, image gallery, and scrolling banner. Configure menu sections with layouts and add text components where you like.
+Upload your own images and add them to the gallery. Create content for the person list and scrolling banner. Configure menu sections with layouts and add text components where you like.
 
 ## Site configuration
 
@@ -58,9 +58,8 @@ drop in the configuration form.
 The gallery part has a heading and text and displays thumbnail images with a caption. A row of buttons above the images will filter them by category. Clicking on an image will open a larger version with 
 navigation controls to see the next and previous image.
 
-The gallery requires "Gallery image" contents to be created and it is these contents that are added to the gallery part in the configuration. Make a folder content to store your gallery images. Create a new 
-"Gallery image" type content. Upload an image or select a previously uploaded image content. Add a caption and category tags and save. Make as many image gallery items as you like. Then add the gallery part
-to the page and add the desired Gallery image items. Change the order with drag and drop in the part configuration.
+Images for the gallery are added in the part configuration. Upload images or select previously uploaded images. The buttons for filtering images are created from the image tags, so be sure to tag 
+each image. Add a caption to each image content. 
 
 ### Header
 
