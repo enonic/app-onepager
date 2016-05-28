@@ -4,7 +4,10 @@
 
 | Version       | XP version |
 | ------------- | ---------- |
+| 2.0.0         | 6.5.3      |
 | 1.0.0         | 6.5.3      |
+
+The Gallery in version 2.0.0 is not compatible with version 1.0.0. See the upgrade notes section below.
 
 ## Features
 
@@ -87,3 +90,20 @@ All photos by Michael Lazell except for those in the "Person list" part. These p
 ## Icons
 
 The "features" part demo content contains icons by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) which are leseased under the [Creative Commons BY 3.0 license](http://creativecommons.org/licenses/by/3.0/). 
+
+## Changelog
+
+Version 2.0.0
+
+* Images are now added directly to the gallery image part.
+* Removed the Gallery-image content type.
+
+Version 1.0.0
+
+* First public release
+
+## Upgrading
+
+The gallery for version 2.0.0 works differently from the gallery in version 1.0.0. Before upgrading, remove any Gallery parts from your page and delete all Gallery-image contents. Then install the new Onepager app 
+version 2.0.0 and recreate the galleries on the page. Now images can be added directly to the gallery in the part config. The image content must be tagged for the category filter buttons to appear. The image 
+captions now come from the caption field in the image content.
