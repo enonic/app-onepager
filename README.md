@@ -93,6 +93,10 @@ The "features" part demo content contains icons by [Freepik](http://www.freepik.
 
 ## Changelog
 
+Version 2.1.0
+
+* Prevent error handling for 403 errors to make it compatible with ID Providers.
+
 Version 2.0.0
 
 * Images are now added directly to the gallery image part.
