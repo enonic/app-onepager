@@ -1,15 +1,14 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var util = require('/lib/enonic/util');
+var portal = require('/lib/xp/portal'),
+    thymeleaf = require('/lib/xp/thymeleaf'),
+    util = require('/lib/enonic/util');
 
 // Handle GET request
 exports.get = handleGet;
 
 function handleGet(req) {
-    var component = portal.getComponent();
-    var view = resolve('banner.html');
-
-    var model = createModel();
+    var component = portal.getComponent(),
+        view = resolve('banner.html'),
+        model = createModel();
 
     function createModel() {
         var model = {
@@ -32,8 +31,8 @@ function handleGet(req) {
     }
 
     function ulClass() {
-        var path = component.path;
-        var classVal = 'enonicarousel__list promotion-banner__list';
+        var path = component.path,
+            classVal = 'enonicarousel__list promotion-banner__list';
 
         // Only use parallax if the banner is on the top of the page.
         if(path == 'main/0' || path == 'main/0/center/0') {

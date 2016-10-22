@@ -55,7 +55,7 @@ $(window).load(function() {
         });
 
         this.addFilterButtons(element.id);
-    }
+    };
 
     S.prototype.toArray = function (arrayLike) {
         return Array.prototype.slice.call(arrayLike);
@@ -97,16 +97,19 @@ $(window).load(function() {
     };
 
     S.prototype._removeActiveClassFromChildren = function (parent) {
-        var children = parent.children;
-        for (var i = children.length - 1; i >= 0; i--) {
+        var children = parent.children,
+            i;
+
+        for (i = children.length - 1; i >= 0; i--) {
             children[i].classList.remove('active');
         }
-    }
+    };
 
-    var galleryList = document.querySelectorAll('.p-gallery');
+    var galleryList = document.querySelectorAll('.p-gallery'),
+        i;
 
     window.demo = [];
-    for(var i = 0; i < galleryList.length; i++) {
+    for(i = 0; i < galleryList.length; i++) {
         window.demo[i] = new S(document.getElementById(galleryList[i].getAttribute('data-gallery-id')))
     }
     //console.log(window.demo);

@@ -8,10 +8,11 @@ var libs = {
  * @returns {Array}
  */
 exports.getRegionsWithColumnInfo = function(defaultColumnConfig) {
-    var regions = libs.util.region.get();
-    var columnClasses = exports.getColumnClasses(defaultColumnConfig);
+    var regions = libs.util.region.get(),
+        columnClasses = exports.getColumnClasses(defaultColumnConfig),
+        i, len;
 
-    for (var i = 0, len = regions.length; i < len; i++) {
+    for (i = 0, len = regions.length; i < len; i++) {
         regions[i].columnClass = columnClasses[i];
     }
 
@@ -23,10 +24,12 @@ exports.getRegionsWithColumnInfo = function(defaultColumnConfig) {
  * @returns {Array}
  */
 exports.getColumnClasses = function(defaultColumnConfig) {
-    var columnConfig = getColumnConfig(defaultColumnConfig);
-    var columnPercentages = columnConfig.split('-');
-    var columnClasses = [];
-    for (var i = 0, len = columnPercentages.length; i < len; i++) {
+    var columnConfig = getColumnConfig(defaultColumnConfig),
+        columnPercentages = columnConfig.split('-'),
+        columnClasses = [],
+        i, len;
+
+    for (i = 0, len = columnPercentages.length; i < len; i++) {
         var columnClass = Math.round((columnPercentages[i] / 100) * 12);
         columnClasses.push('col-md-' + columnClass);
     }
@@ -39,8 +42,9 @@ exports.getColumnClasses = function(defaultColumnConfig) {
  * @returns {string}
  */
 function getColumnConfig(defaultColumnConfig) {
-    var columnConfig = defaultColumnConfig;
-    var component = libs.portal.getComponent(); // Current component
+    var columnConfig = defaultColumnConfig,
+        component = libs.portal.getComponent(); // Current component
+
     if (component.config.columnConfig) {
         columnConfig = component.config.columnConfig;
     }

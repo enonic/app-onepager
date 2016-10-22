@@ -1,34 +1,32 @@
-var portalLib = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var contentLib = require('/lib/xp/content');
-var util = require('/lib/enonic/util');
+var portalLib = require('/lib/xp/portal'),
+    thymeleaf = require('/lib/xp/thymeleaf'),
+    contentLib = require('/lib/xp/content'),
+    util = require('/lib/enonic/util');
 
 // Handle GET request
 exports.get = handleGet;
 
 function handleGet(req) {
-    var site = portalLib.getSite(); // Current site
-    var siteConfig = portalLib.getSiteConfig(); //'com.enonic.app.onepager'
-    var content = portalLib.getContent(); // Current content
-    var view = resolve('default.html'); // The view to render
-
-    var model = createModel(); // The model to send to the view
+    var site = portalLib.getSite(), // Current site
+        siteConfig = portalLib.getSiteConfig(), //'com.enonic.app.onepager'
+        content = portalLib.getContent(), // Current content
+        view = resolve('default.html'), // The view to render
+        model = createModel(); // The model to send to the view
 
     function createModel() {
 
-        var page = content.page;
+        var page = content.page,
+            social = {
+                facebook: siteConfig.facebook,
+                twitter: siteConfig.twitter,
+                linkedin: siteConfig.linkedin,
+                google: siteConfig.google,
+                pinterest: siteConfig.pinterest,
+                youtube: siteConfig.youtube
+            },
+            addresses = util.data.forceArray(siteConfig.location),
+            addressCols = getAddressCols(addresses);
 
-        var social = {
-            facebook: siteConfig.facebook,
-            twitter: siteConfig.twitter,
-            linkedin: siteConfig.linkedin,
-            google: siteConfig.google,
-            pinterest: siteConfig.pinterest,
-            youtube: siteConfig.youtube
-        };
-
-        var addresses = util.data.forceArray(siteConfig.location);
-        var addressCols = getAddressCols(addresses);
         for (var i = 0; i < addresses.length; i++) {
             if(addresses[i]) {
                 addresses[i].usAddress = (!addresses[i].state || addresses[i].state == '') ? false : true;
@@ -61,11 +59,11 @@ function handleGet(req) {
     }
 
     function getMenuLayouts(content) {
-        var components = content.page.regions.main.components;
-        components = util.data.forceArray(components);
+        var components = util.data.forceArray( content.page.regions.main.components ),
+            layouts = [],
+            i, componentsLength = components.length;
 
-        var layouts = [];
-        for (var i = 0; i < components.length; i++) {
+        for (i = 0; i < componentsLength; i++) {
             if(components[i].type == 'layout') {
                 var layout = getMenuNames(components[i]);
                 if(layout) layouts.push(layout);
@@ -79,15 +77,18 @@ function handleGet(req) {
     }
 
     function getMetaKeywords(page) {
-        var config = page.config;
-        var metaKeywords = config['meta-keywords'];
-        metaKeywords = util.data.forceArray(metaKeywords);
-        for (var i = 0; i < metaKeywords.length; i++) {
+        var config = page.config,
+            metaKeywords = util.data.forceArray( config['meta-keywords'] ),
+            i, metaLength = metaKeywords.length;
+
+        for (i = 0; i < metaLength; i++) {
             if(metaKeywords[i]) metaKeywords[i] = metaKeywords[i].trim();
         }
+
         metaKeywords = metaKeywords.join(',');
+
         //Remove trailing comma if it ends in a comma.
-        while(metaKeywords.charAt(metaKeywords.length -1) == ',') {
+        while(metaKeywords.charAt(metaKeywords.length -1) === ',') {
             metaKeywords = metaKeywords.substring(0, metaKeywords.length -1);
         }
         return metaKeywords;
@@ -121,8 +122,10 @@ function handleGet(req) {
 
     function getMenuNames(layout, siteUrl) {
         siteUrl = siteUrl || '';
-        var obj = {};
-        var config = layout.config;
+
+        var obj = {},
+            config = layout.config;
+
         if(!config || !config.menuItem || !config.menuName || config.menuName.trim() == '') {
             return null;
         }

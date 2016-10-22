@@ -4,6 +4,7 @@
 
 | Version       | XP version |
 | ------------- | ---------- |
+| 2.1.0         | 6.7.0      |
 | 2.0.0         | 6.5.3      |
 | 1.0.0         | 6.5.3      |
 
@@ -96,6 +97,9 @@ The "features" part demo content contains icons by [Freepik](http://www.freepik.
 Version 2.1.0
 
 * Prevent error handling for 403 errors to make it compatible with ID Providers.
+* Performance improvements.
+* Added app icon
+* Added app description
 
 Version 2.0.0
 

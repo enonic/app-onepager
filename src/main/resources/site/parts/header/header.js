@@ -1,13 +1,13 @@
-var thymeleaf = require('/lib/xp/thymeleaf');
-var portal = require('/lib/xp/portal');
+var thymeleaf = require('/lib/xp/thymeleaf'),
+    portal = require('/lib/xp/portal');
 
 exports.get = handleGet;
 
 function handleGet(req) {
 
     function renderView() {
-        var view = resolve('header.html');
-        var model = createModel();
+        var view = resolve('header.html'),
+            model = createModel();
 
         return {
             contentType: 'text/html',
@@ -16,9 +16,9 @@ function handleGet(req) {
     }
 
     function createModel() {
-        var model = {};
-        var component = portal.getComponent();
-        var config = component.config;
+        var model = {},
+            component = portal.getComponent(),
+            config = component.config;
 
         model.heading = config.heading || 'Configure heading';
         model.description = config.description || 'Configure description';

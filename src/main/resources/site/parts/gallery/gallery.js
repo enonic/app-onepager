@@ -1,7 +1,7 @@
-var contentLib = require('/lib/xp/content');
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var util = require('/lib/enonic/util');
+var contentLib = require('/lib/xp/content'),
+    portal = require('/lib/xp/portal'),
+    thymeleaf = require('/lib/xp/thymeleaf'),
+    util = require('/lib/enonic/util');
 
 exports.get = handleGet;
 
@@ -19,10 +19,10 @@ function handleGet(req) {
     function createModel() {
         var model = {};
 
-        var component = portal.getComponent();
-        var config = component.config;
-        var imageIDs = config.images ? util.data.forceArray(config.images) : null;
-        var contents = imageIDs? getImagesInOrder(imageIDs) : null;
+        var component = portal.getComponent(),
+            config = component.config,
+            imageIDs = config.images ? util.data.forceArray(config.images) : null,
+            contents = imageIDs? getImagesInOrder(imageIDs) : null;
 
         model.heading = config.heading || 'Missing heading';
         model.description = config.description || 'Missing description';
@@ -34,9 +34,9 @@ function handleGet(req) {
     }
 
     function getImagesInOrder(imageIDs) {
-        var images = [];
+        var images = [], img;
         imageIDs.map(function(imageID) {
-            var img = contentLib.get({key: imageID});
+            img = contentLib.get({key: imageID});
             if(img) {
                 images.push(img);
             }
@@ -68,18 +68,26 @@ function handleGet(req) {
 
     // Create array of objects with required info about each image
     function getGalleryItems(contents) {
-        var galleryItems = [];
+        var galleryItems = [],
+            galleryItem,
+            categories,
+            liClass,
+            groups,
+            catGroup,
+            scale,
+            i,
+            catLength;
 
         contents.map(function(imageContent) {
-            var galleryItem = {};
+            galleryItem = {};
             galleryItem.caption = imageContent.data.caption;
 
-            var categories = util.data.forceArray(imageContent.data.tags);
-            var liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
-            var groups = '[';
+            categories = util.data.forceArray(imageContent.data.tags);
+            liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
+            groups = '[';
 
-            for (var i = 0; i < categories.length; i++) {
-                var catGroup = '"' + categories[i].replace(/\s+/g, '-').toLowerCase() + '"';
+            for (i = 0, catLength = categories.length; i < catLength; i++) {
+                catGroup = '"' + categories[i].replace(/\s+/g, '-').toLowerCase() + '"';
                 liClass += ' ' + catGroup;
                 groups += catGroup;
                 if(i != categories.length - 1) {
@@ -90,7 +98,7 @@ function handleGet(req) {
             galleryItem.liClass = liClass;
             galleryItem.groups = groups;
 
-            var scale = 736;
+            scale = 736;
             if(imageContent.x.media.imageInfo.imageWidth < scale) {
                 scale = imageContent.x.media.imageInfo.imageWidth;
             }
@@ -111,14 +119,17 @@ function handleGet(req) {
     // Get the categories with tag and key
     function getCategories(contents, imageIDs) {
 
-        var cats = getCategoriesArray(contents);
-        var buckets = getBuckets(imageIDs);
+        var cats = getCategoriesArray(contents),
+            buckets = getBuckets(imageIDs),
+            categories = [],
+            n, l,
+            bucketLength,
+            catLength;
 
-        var categories = [];
-        for (var n = 0; n < buckets.length; n++) {
+        for (n = 0, bucketLength = buckets.length; n < bucketLength; n++) {
             if(buckets[n].docCount > 0) {
 
-                for (var l = 0; l < cats.length; l++) {
+                for (l = 0, catLength = cats.length; l < catLength; l++) {
                     if(buckets[n].key == cats[l].toLowerCase()) {
                         categories.push({tag: cats[l], key: buckets[n].key.replace(/\s+/g, '-')});
                         l = cats.length;
@@ -131,10 +142,15 @@ function handleGet(req) {
     }
 
     function getCategoriesArray(contents) {
-        var cats = [];
-        for (var i = 0; i < contents.length; i++) {
-            var tags = util.data.forceArray(contents[i].data.tags);
-            for(var j = 0; j < tags.length; j++) {
+        var cats = [],
+            i, j,
+            contentLength,
+            tagsLength,
+            tags;
+
+        for (i = 0, contentLength = contents.length; i < contentLength; i++) {
+            tags = util.data.forceArray(contents[i].data.tags);
+            for(j = 0, tagsLength = tags.length; j < tagsLength; j++) {
                 cats.push(tags[j]);
             }
         }
