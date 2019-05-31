@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <page>
   <display-name>Default</display-name>
-  <config>
+  <form>
 
     <field-set name="menu">
       <label>Menu offset</label>
@@ -36,7 +36,7 @@
         </input>
       </items>
     </field-set>
-  </config>
+  </form>
   <regions>
     <region name="main"/>
   </regions>

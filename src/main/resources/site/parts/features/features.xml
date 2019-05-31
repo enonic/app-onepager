@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <part>
   <display-name>Features</display-name>
-  <config>
-    <inline mixin="heading"/>
+  <form>
+    <mixin name="heading"/>
     <field-set name="features">
       <label>Features</label>
       <items>
@@ -29,5 +29,5 @@
         </item-set>
       </items>
     </field-set>
-  </config>
+  </form>
 </part>

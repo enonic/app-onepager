@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <layout>
   <display-name>1 column</display-name>
-  <config>
-    <inline mixin="menu-item"/>
+  <form>
+    <mixin name="menu-item"/>
     <input type="RadioButton" name="color">
       <label>Background color</label>
       <occurrences minimum="1" maximum="1"/>
@@ -19,7 +19,7 @@
     <input type="Checkbox" name="fullWidth">
       <label>Full width</label>
     </input>
-  </config>
+  </form>
   <regions>
     <region name="center"/>
   </regions>

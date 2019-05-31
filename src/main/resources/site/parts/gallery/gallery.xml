@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <part>
   <display-name>Gallery</display-name>
-  <config>
-    <inline mixin="heading"/>
+  <form>
+    <mixin name="heading"/>
     <input type="ImageSelector" name="images">
       <label>Image</label>
       <occurrences minimum="1" maximum="0"/>
@@ -10,5 +10,5 @@
         <allowPath>${site}/*</allowPath>
       </config>
     </input>
-  </config>
+  </form>
 </part>
