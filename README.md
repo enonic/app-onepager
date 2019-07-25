@@ -98,6 +98,7 @@ The "features" part demo content contains icons by [Freepik](http://www.freepik.
 Version 3.0.0
 
 * App upgraded to be compatible with XP 7.0
+* Bootstrap, FontAwesome and jQuery are upgraded to latest versions
 
 Version 2.1.0
 
