@@ -83,7 +83,7 @@ function handleGet(req) {
             galleryItem.caption = imageContent.data.caption;
 
             categories = util.data.forceArray(imageContent.data.tags);
-            liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
+            liClass = 'gallery-item col-md-4 ';
             groups = '[';
 
             for (i = 0, catLength = categories.length; i < catLength; i++) {

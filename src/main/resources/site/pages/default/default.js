@@ -1,6 +1,5 @@
 var portalLib = require('/lib/xp/portal'),
     thymeleaf = require('/lib/thymeleaf'),
-    contentLib = require('/lib/xp/content'),
     util = require('/lib/util');
 
 // Handle GET request

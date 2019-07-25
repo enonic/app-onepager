@@ -2,7 +2,7 @@
     <id>62093f1e-0c8a-447c-8f1f-56d0b1ce86ad</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2019-05-30T13:58:02.715Z</timestamp>
+    <timestamp>2019-07-24T13:42:21.833Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -115,7 +115,6 @@
         </property-set>
     </data>
     <indexConfigs>
-        <analyzer>document_index_default</analyzer>
         <defaultConfig>
             <decideByType>true</decideByType>
             <enabled>true</enabled>
@@ -124,16 +123,6 @@
             <includeInAllText>false</includeInAllText>
         </defaultConfig>
         <pathIndexConfigs>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>false</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.regions</path>
-            </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
                     <decideByType>false</decideByType>
@@ -176,16 +165,6 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>site</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>

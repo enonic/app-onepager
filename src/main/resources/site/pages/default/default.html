@@ -13,9 +13,10 @@
     <title data-th-text="${pageTitle}">One Pager Responsive Theme</title>
 
     <!-- Bootstrap core CSS, theme CSS and Font Awesome-->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap-theme.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet"/>
-    <link data-th-href="${portal.assetUrl({'_path=font-awesome/4.5.0/css/font-awesome.min.css'})}" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.3.1/css/bootstrap.min.css'})}" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=font-awesome/5.9.0/css/fontawesome.min.css'})}" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.9.0/css/fontawesome.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=font-awesome/5.9.0/css/solid.min.css'})}" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.9.0/css/solid.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=font-awesome/5.9.0/css/brands.min.css'})}" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.9.0/css/brands.min.css" rel="stylesheet"/>
     <link data-th-href="${portal.assetUrl({'_path=css/prettyPhoto.css'})}" href="../css/prettyPhoto.css" rel="stylesheet"/>
 
 
@@ -33,30 +34,24 @@
 <body role="document" data-spy="scroll" data-th-class="${behindMenu + ' ' + editMode}">
 
 <!-- Fixed header and navbar -->
-<header id="header" role="banner">
-    <div class="container">
-        <div id="navbar" class="navbar navbar-default">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">
-                    <img data-th-src="${logoUrl}" src="../images/acme-logo.png"/>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav site-home">
-                    <li data-th-each="layout : ${layouts}">
-                        <a data-th-href="${layout.hash}" data-th-text="${layout.name}">Page</a>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</header>
+<nav id="header" role="banner" class="bg-light navbar navbar-default navbar-expand fixed-top">
+    <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">
+        <img data-th-src="${logoUrl}" src="../images/acme-logo.png"/>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav nav-pills site-home">
+            <li class="nav-item" data-th-each="layout : ${layouts}">
+                <a class="nav-link" data-th-href="${layout.hash}" data-th-text="${layout.name}">Page</a>
+            </li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</nav>
 
 <!-- main region -->
 <div class="region main-region" role="main" data-portal-region="main">
@@ -72,8 +67,8 @@
                 <!--/.col-sm-12-->
                 <div class="col-sm-12 text-center">
 
+                    <h2>Locations</h2>
                     <div class="row">
-                        <h2>Locations</h2>
                         <div data-th-class="'col-md-' + ${addressCols}" data-th-each="address, iterStat : ${addresses}">
                             <address>
                                 <strong><span data-th-text="${address.label}">Twitter, Inc.</span></strong><br/>
@@ -98,16 +93,16 @@
                         </div>
                     </div>
 
+                    <h2>Follow us</h2>
                     <div class="row" data-th-if="${social.facebook or social.google or social.pinterest or social.linkedin or social.twitter or social.youtube}">
-                        <h2>Follow us</h2>
                         <div class="col-md-12">
                             <ul class="social">
-                                <li data-th-if="${social.facebook}"><a data-th-href="${social.facebook}" href="#"><i class="fa fa-facebook icon-social"></i></a></li>
-                                <li data-th-if="${social.google}"><a data-th-href="${social.google}" href="#"><i class="fa fa-google-plus icon-social"></i></a></li>
-                                <li data-th-if="${social.pinterest}"><a data-th-href="${social.pinterest}" href="#"><i class="fa fa-pinterest icon-social"></i></a></li>
-                                <li data-th-if="${social.linkedin}"><a data-th-href="${social.linkedin}" href="#"><i class="fa fa-linkedin icon-social"></i></a></li>
-                                <li data-th-if="${social.twitter}"><a data-th-href="${social.twitter}" href="#"><i class="fa fa-twitter icon-social"></i></a></li>
-                                <li data-th-if="${social.youtube}"><a data-th-href="${social.youtube}" href="#"><i class="fa fa-youtube icon-social"></i></a></li>
+                                <li data-th-if="${social.facebook}"><a data-th-href="${social.facebook}" href="#"><i class="fab fa-facebook icon-social"></i></a></li>
+                                <li data-th-if="${social.google}"><a data-th-href="${social.google}" href="#"><i class="fab fa-google-plus icon-social"></i></a></li>
+                                <li data-th-if="${social.pinterest}"><a data-th-href="${social.pinterest}" href="#"><i class="fab fa-pinterest icon-social"></i></a></li>
+                                <li data-th-if="${social.linkedin}"><a data-th-href="${social.linkedin}" href="#"><i class="fab fa-linkedin icon-social"></i></a></li>
+                                <li data-th-if="${social.twitter}"><a data-th-href="${social.twitter}" href="#"><i class="fab fa-twitter icon-social"></i></a></li>
+                                <li data-th-if="${social.youtube}"><a data-th-href="${social.youtube}" href="#"><i class="fab fa-youtube icon-social"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -134,8 +129,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script data-th-src="${portal.assetUrl({'_path=jquery/2.2.2/jquery.min.js'})}" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script data-th-src="${portal.assetUrl({'_path=bootstrap/3.3.6/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=jquery/3.4.1/jquery.min.js'})}" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=bootstrap/4.3.1/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
 <script data-th-src="${portal.assetUrl({'_path=js/jquery.prettyPhoto.js'})}" src="../js/jquery.prettyPhoto.js"></script>
 <script data-th-src="${portal.assetUrl({'_path=js/shuffle.min.js'})}" src="../public/js/shuffle.min.js"></script>
 <script data-th-src="${portal.assetUrl({'_path=js/onepager.js'})}" src="../public/js/main.js"></script>

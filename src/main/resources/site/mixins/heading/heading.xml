@@ -2,7 +2,7 @@
 <mixin>
   <display-name>Heading</display-name>
   <items>
-    <field-set name="heading">
+    <field-set>
       <label>Heading</label>
       <items>
         <input type="TextLine" name="heading">
