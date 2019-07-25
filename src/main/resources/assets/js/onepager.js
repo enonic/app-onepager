@@ -44,7 +44,7 @@ jQuery(function($) {
 });
 
 //For the gallery
-$(window).load(function() {
+$(document).ready(function() {
     var Shuffle = window.shuffle;
 
     var S = function(element) {

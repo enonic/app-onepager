@@ -4,6 +4,7 @@
 
 | Version       | XP version |
 | ------------- | ---------- |
+| 3.0.0         | 7.0.0      |
 | 2.1.0         | 6.7.0      |
 | 2.0.0         | 6.5.3      |
 | 1.0.0         | 6.5.3      |
@@ -93,6 +94,10 @@ All photos by Michael Lazell except for those in the "Person list" part. These p
 The "features" part demo content contains icons by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) which are leseased under the [Creative Commons BY 3.0 license](http://creativecommons.org/licenses/by/3.0/). 
 
 ## Changelog
+
+Version 3.0.0
+
+* App upgraded to be compatible with XP 7.0
 
 Version 2.1.0
 

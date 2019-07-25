@@ -73,21 +73,29 @@ Features begin
 /*
 Person list begin
 */
-.p-about-us .carousel.scale .left-arrow, .p-about-us .carousel.scale .right-arrow {
+.p-about-us .carousel.slide .left-arrow, .p-about-us .carousel.slide .right-arrow {
     top: 30%;
     position: absolute;
 }
-.p-about-us .carousel.scale .right-arrow {
+.p-about-us .carousel.slide .right-arrow {
     right: -5px;
 }
-.p-about-us .carousel.scale .left-arrow {
+.p-about-us .carousel.slide .left-arrow {
     left: -5px;
 }
-.p-about-us .person {
-    margin: auto 30px;
+
+.p-about-us .carousel-inner {
+    margin: 0 15px;
 }
-.p-about-us .person h3 {
+
+.p-about-us .person h4 {
     margin-top: 15px;
+}
+
+.p-about-us .person h6 {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
 }
 
 /*
@@ -142,11 +150,11 @@ ul.gallery-items {
     width: 100%;
     height: 100%;
 }
-.p-gallery h5 {
+.p-gallery h6 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    line-height: 16px;
+    line-height: 18px;
 }
 
 

@@ -1,7 +1,7 @@
 var contentLib = require('/lib/xp/content'),
     portal = require('/lib/xp/portal'),
-    thymeleaf = require('/lib/xp/thymeleaf'),
-    util = require('/lib/enonic/util');
+    thymeleaf = require('/lib/thymeleaf'),
+    util = require('/lib/util');
 
 exports.get = handleGet;
 

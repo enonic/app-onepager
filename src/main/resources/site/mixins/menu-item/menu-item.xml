@@ -2,7 +2,7 @@
 <mixin>
   <display-name>Menu</display-name>
   <items>
-    <field-set name="menu">
+    <field-set>
       <label>Menu</label>
       <items>
         <input type="Checkbox" name="menuItem">

@@ -1,25 +1,15 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            url 'http://repo.enonic.com/public'
-        }
-    }
-
-    dependencies {
-        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
-    }
+plugins {
+    id 'com.enonic.xp.app' version '2.0.0'
+    id 'com.enonic.defaults' version '2.0.1'
+    id 'maven-publish'
 }
-
-apply plugin: 'com.enonic.xp.app'
-apply plugin: 'maven-publish'
 
 app {
     name = project.appName
-    displayName = project.displayName
+    displayName = 'One-pager'
     vendorName = 'Enonic USA'
-    vendorUrl = 'http://enonic.com'
+    vendorUrl = 'https://enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 dependencies {
@@ -27,32 +17,17 @@ dependencies {
     compile "com.enonic.xp:portal-api:${xpVersion}"
     include "com.enonic.xp:lib-content:${xpVersion}"
     include "com.enonic.xp:lib-portal:${xpVersion}"
-    include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
-    include "com.enonic.lib:util:1.1.1"
-    webjar "org.webjars:bootstrap:3.3.6"
-    webjar "org.webjars:jquery:2.2.2"
+    include "com.enonic.lib:lib-thymeleaf:2.0.0"
+    include 'com.enonic.lib:lib-util:2.2.1'
+    webjar "org.webjars:bootstrap:4.3.1"
+    webjar "org.webjars:jquery:3.4.1"
     webjar "org.webjars:html5shiv:3.7.3"
     webjar "org.webjars:respond:1.4.2"
-    webjar "org.webjars:font-awesome:4.5.0"
+    webjar "org.webjars:font-awesome:5.9.0"
 }
 
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url 'http://repo.enonic.com/public'
-    }
-}
-
-publishing {
-    publications {
-        mavenJava( MavenPublication ) {
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url 'http://repo.enonic.net/artifactory/public'
-        }
-    }
+    xp.enonicRepo()
 }

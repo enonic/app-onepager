@@ -1,7 +1,7 @@
 var contentLib = require('/lib/xp/content'),
     portal = require('/lib/xp/portal'),
-    thymeleaf = require('/lib/xp/thymeleaf'),
-    util = require('/lib/enonic/util');
+    thymeleaf = require('/lib/thymeleaf'),
+    util = require('/lib/util');
 
 exports.get = handleGet;
 
@@ -83,7 +83,7 @@ function handleGet(req) {
             galleryItem.caption = imageContent.data.caption;
 
             categories = util.data.forceArray(imageContent.data.tags);
-            liClass = 'gallery-item col-sm-6 col-md-4 col-lg-3 ';
+            liClass = 'gallery-item col-md-4 ';
             groups = '[';
 
             for (i = 0, catLength = categories.length; i < catLength; i++) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <part>
   <display-name>Header</display-name>
-  <config>
-    <inline mixin="heading"/>
+  <form>
+    <mixin name="heading"/>
     <!--<input type="TextLine" name="heading">
       <label>Heading</label>
       <occurrences minimum="0" maximum="1"/>
@@ -11,5 +11,5 @@
       <label>Description</label>
       <occurrences minimum="0" maximum="1"/>
     </input>-->
-  </config>
+  </form>
 </part>

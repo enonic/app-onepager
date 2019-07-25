@@ -2,7 +2,7 @@
     <id>37367a59-a1d0-448e-95e3-880af1aaf7ba</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-05-27T09:20:40.825Z</timestamp>
+    <timestamp>2019-07-24T13:42:21.568Z</timestamp>
     <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,8 +47,8 @@
         <string name="displayName">Onepager</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-05-27T09:20:40.824Z</dateTime>
-        <string name="modifier">user:system:su</string>
+        <dateTime name="modifiedTime">2019-07-24T13:42:21.524Z</dateTime>
+        <string name="modifier">user:system:anonymous</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-05-18T01:34:08.412Z</dateTime>
         <property-set name="data">
@@ -85,17 +85,32 @@
                 </property-set>
             </property-set>
         </property-set>
-        <property-set name="page">
-            <string isNull="true" name="controller"/>
-            <reference name="template">de3f41d3-4d98-4eaa-9cb9-30d3c16280b6</reference>
-            <property-set name="region">
-                <string name="name">main</string>
-                <property-set name="component">
-                    <string name="type">PartComponent</string>
-                    <property-set name="PartComponent">
-                        <string name="name">Banner</string>
-                        <string name="template">com.enonic.app.onepager:banner</string>
-                        <property-set name="config">
+        <property-set name="components">
+            <string name="type">page</string>
+            <string name="path">/</string>
+            <property-set name="page">
+                <string name="descriptor">com.enonic.app.onepager:default</string>
+                <boolean name="customized">true</boolean>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="default">
+                            <boolean name="behindMenu">true</boolean>
+                            <string isNull="true" name="meta-keywords"/>
+                            <string isNull="true" name="meta-description"/>
+                            <boolean name="hideContactInfo">false</boolean>
+                        </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/0</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.app.onepager:banner</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="banner">
                             <property-set name="banner">
                                 <reference name="image">255b0e39-a2cd-4738-afa9-0a8a5f25a1c0</reference>
                             </property-set>
@@ -108,165 +123,177 @@
                         </property-set>
                     </property-set>
                 </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config">
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/1</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.app.onepager:layout-1-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="layout-1-col">
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">Features</string>
                             <string name="color">bg-light</string>
                             <boolean name="noPadding">false</boolean>
                             <boolean name="fullWidth">false</boolean>
                         </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2 style="text-align: center;"&gt;Text component&lt;/h2&gt;
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">text</string>
+            <string name="path">/main/1/center/0</string>
+            <property-set name="text">
+                <string name="value">&lt;h2 style="text-align: center;"&gt;Text component&lt;/h2&gt;
 &lt;p class="lead" style="text-align: center;"&gt;Add layouts to the page. The one-column layout for this app has&amp;nbsp;various configuration settings, including the menu names, background color, and more. Add component parts inside the layout regions. Read the&amp;nbsp;&lt;a title="Documentation" href="https://github.com/enonic/app-onepager" target="_blank"&gt;documentation&lt;/a&gt; for more information.&lt;/p&gt;</string>
-                                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/1/center/1</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.app.onepager:features</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="features">
+                            <string name="heading">Features</string>
+                            <string name="description">&lt;p&gt;This part allows image icons to be added with text.&lt;/p&gt;</string>
+                            <property-set name="feature">
+                                <string name="header">Build your business</string>
+                                <string name="description">Customer growth through your web applications</string>
+                                <reference name="image">47b0ca3e-742d-4e1b-9cea-885a9d9fb3aa</reference>
                             </property-set>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Features</string>
-                                    <string name="template">com.enonic.app.onepager:features</string>
-                                    <property-set name="config">
-                                    <string name="heading">Features</string>
-                                    <string name="description">&lt;p&gt;This part allows image icons to be added with text.&lt;/p&gt;</string>
-                                    <property-set name="feature">
-                                    <string name="header">Build your business</string>
-                                    <string name="description">Customer growth through your web applications</string>
-                                    <reference name="image">47b0ca3e-742d-4e1b-9cea-885a9d9fb3aa</reference>
-                                    </property-set>
-                                    <property-set name="feature">
-                                    <string name="header">Save time</string>
-                                    <string name="description">Build your web applications faster with Enonic XP.</string>
-                                    <reference name="image">fb2e2377-9940-432c-b699-19924b1b0cbc</reference>
-                                    </property-set>
-                                    <property-set name="feature">
-                                    <string name="header">Learn XP</string>
-                                    <string name="description">Signup for Enonic XP courses, watch our videos, or read the documentation.</string>
-                                    <reference name="image">fad23e28-f74f-46c5-b125-19b3c7b94659</reference>
-                                    </property-set>
-                                    </property-set>
-                                </property-set>
+                            <property-set name="feature">
+                                <string name="header">Save time</string>
+                                <string name="description">Build your web applications faster with Enonic XP.</string>
+                                <reference name="image">fb2e2377-9940-432c-b699-19924b1b0cbc</reference>
+                            </property-set>
+                            <property-set name="feature">
+                                <string name="header">Learn XP</string>
+                                <string name="description">Signup for Enonic XP courses, watch our videos, or read the documentation.</string>
+                                <reference name="image">fad23e28-f74f-46c5-b125-19b3c7b94659</reference>
                             </property-set>
                         </property-set>
                     </property-set>
                 </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config">
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/2</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.app.onepager:layout-1-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="layout-1-col">
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">Gallery</string>
                             <string name="color">bg-dark</string>
                             <boolean name="noPadding">false</boolean>
                             <boolean name="fullWidth">false</boolean>
                         </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Gallery</string>
-                                    <string name="template">com.enonic.app.onepager:gallery</string>
-                                    <property-set name="config">
-                                    <string name="heading">Gallery</string>
-                                    <string name="description">&lt;p&gt;Add tags to&amp;nbsp;each image content&amp;nbsp;for filter groups. Add images with the Gallery&amp;nbsp;part configuration.&lt;/p&gt;</string>
-                                    <reference name="images">c300beed-3777-4a5d-87a7-4a8ee743ea76</reference>
-                                    <reference name="images">c24b955e-008c-4a5b-bebb-cc022b77d33d</reference>
-                                    <reference name="images">d04c31e5-eb63-4921-bec5-1672b4a80bd5</reference>
-                                    <reference name="images">f829f834-1b51-42a8-bd27-252891137962</reference>
-                                    <reference name="images">8e48c392-7cbc-4123-a1ec-d22dc03e502b</reference>
-                                    <reference name="images">d9eaef92-79a3-4367-a5c4-001819f761ec</reference>
-                                    <reference name="images">12f869e2-de16-4fb1-b821-112aa7f4ca94</reference>
-                                    <reference name="images">62093f1e-0c8a-447c-8f1f-56d0b1ce86ad</reference>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/2/center/0</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.app.onepager:gallery</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="gallery">
+                            <string name="heading">Gallery</string>
+                            <string name="description">&lt;p&gt;Add tags to&amp;nbsp;each image content&amp;nbsp;for filter groups. Add images with the Gallery&amp;nbsp;part configuration.&lt;/p&gt;</string>
+                            <reference name="images">c300beed-3777-4a5d-87a7-4a8ee743ea76</reference>
+                            <reference name="images">c24b955e-008c-4a5b-bebb-cc022b77d33d</reference>
+                            <reference name="images">d04c31e5-eb63-4921-bec5-1672b4a80bd5</reference>
+                            <reference name="images">f829f834-1b51-42a8-bd27-252891137962</reference>
+                            <reference name="images">8e48c392-7cbc-4123-a1ec-d22dc03e502b</reference>
+                            <reference name="images">d9eaef92-79a3-4367-a5c4-001819f761ec</reference>
+                            <reference name="images">12f869e2-de16-4fb1-b821-112aa7f4ca94</reference>
+                            <reference name="images">62093f1e-0c8a-447c-8f1f-56d0b1ce86ad</reference>
                         </property-set>
                     </property-set>
                 </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config">
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/3</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.app.onepager:layout-1-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="layout-1-col">
                             <boolean name="menuItem">false</boolean>
                             <string isNull="true" name="menuName"/>
                             <string name="color">bg-light</string>
                             <boolean name="noPadding">false</boolean>
                             <boolean name="fullWidth">true</boolean>
                         </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Header</string>
-                                    <string name="template">com.enonic.app.onepager:header</string>
-                                    <property-set name="config">
-                                    <string name="heading">Heading part</string>
-                                    <string name="description">&lt;p&gt;This is a heading part with configuration settings for a heading and some text. This text can be formatted.&lt;/p&gt;</string>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/3/center/0</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.app.onepager:header</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="header">
+                            <string name="heading">Heading part</string>
+                            <string name="description">&lt;p&gt;This is a heading part with configuration settings for a heading and some text. This text can be formatted.&lt;/p&gt;</string>
                         </property-set>
                     </property-set>
                 </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">1 column</string>
-                        <string name="template">com.enonic.app.onepager:layout-1-col</string>
-                        <property-set name="config">
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/4</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.app.onepager:layout-1-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="layout-1-col">
                             <boolean name="menuItem">true</boolean>
                             <string name="menuName">People</string>
                             <string name="color">bg-dark</string>
                             <boolean name="noPadding">false</boolean>
                             <boolean name="fullWidth">false</boolean>
                         </property-set>
-                        <property-set name="region">
-                            <string name="name">center</string>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Person list</string>
-                                    <string name="template">com.enonic.app.onepager:person-list</string>
-                                    <property-set name="config">
-                                    <string name="heading">People</string>
-                                    <string name="description">&lt;p&gt;This part allows content for people to be added through its configuration.&lt;/p&gt;</string>
-                                    <reference name="person">cebbe8c7-6964-405b-84ea-3f80bb9198a0</reference>
-                                    <reference name="person">889fc991-b1ca-4382-b14d-987a2b9b750b</reference>
-                                    <reference name="person">73d5ae19-6801-4189-8bd1-ef0c5551ea21</reference>
-                                    <reference name="person">6df9cbc6-7658-4e45-a3a6-73bef5f34201</reference>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/4/center/0</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.app.onepager:person-list</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-app-onepager">
+                        <property-set name="person-list">
+                            <string name="heading">People</string>
+                            <string name="description">&lt;p&gt;This part allows content for people to be added through its configuration.&lt;/p&gt;</string>
+                            <reference name="person">cebbe8c7-6964-405b-84ea-3f80bb9198a0</reference>
+                            <reference name="person">889fc991-b1ca-4382-b14d-987a2b9b750b</reference>
+                            <reference name="person">73d5ae19-6801-4189-8bd1-ef0c5551ea21</reference>
+                            <reference name="person">6df9cbc6-7658-4e45-a3a6-73bef5f34201</reference>
                         </property-set>
                     </property-set>
                 </property-set>
             </property-set>
-            <property-set name="config">
-                <boolean name="behindMenu">true</boolean>
-                <string isNull="true" name="meta-keywords"/>
-                <string isNull="true" name="meta-description"/>
-                <boolean name="hideContactInfo">false</boolean>
-            </property-set>
-            <boolean name="customized">false</boolean>
         </property-set>
     </data>
     <indexConfigs>
-        <analyzer>document_index_default</analyzer>
         <defaultConfig>
             <decideByType>true</decideByType>
             <enabled>true</enabled>
@@ -278,12 +305,25 @@
             <pathIndexConfig>
                 <indexConfig>
                     <decideByType>false</decideByType>
-                    <enabled>false</enabled>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.person-list.description</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
                     <nGram>false</nGram>
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page.regions</path>
+                <path>components.part.config.com-enonic-app-onepager.person-list.*</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -296,47 +336,7 @@
                         <indexValueProcessor>htmlStripper</indexValueProcessor>
                     </indexValueProcessors>
                 </indexConfig>
-                <path>data.htmlarea_text</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifier</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>owner</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>attachment</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>x</path>
+                <path>components.part.config.com-enonic-app-onepager.header.description</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -346,7 +346,96 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>data</path>
+                <path>components.part.config.com-enonic-app-onepager.header.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.gallery.description</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.gallery.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.features.description</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.features.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.part.config.com-enonic-app-onepager.banner.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.config.com-enonic-app-onepager.default.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.layout.config.com-enonic-app-onepager.layout-1-col.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>data.siteConfig.config.copyrightMessage</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -356,7 +445,120 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page</path>
+                <path>data.siteConfig.applicationkey</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>components.text.value</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.part.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.template</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.customized</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.layout.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.image.id</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.fragment.id</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment.text</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -376,7 +578,37 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>type</path>
+                <path>owner</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifier</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -401,13 +633,24 @@
             <pathIndexConfig>
                 <indexConfig>
                     <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
                     <enabled>true</enabled>
                     <nGram>false</nGram>
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>modifiedTime</path>
+                <path>attachment</path>
             </pathIndexConfig>
         </pathIndexConfigs>
+        <allTextIndexConfig/>
     </indexConfigs>
 </node>

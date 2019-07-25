@@ -1,40 +1,33 @@
 <section class="p-about-us xp-part">
-    <div class="box">
+    <div class="container text-center my-3">
         <div class="center">
             <h2 data-th-text="${title}">Designer Title</h2>
             <div data-th-utext="${portal.processHtml({'_value=' + description})}" class="lead">Designer dummy text. This is the dummy text and it goes on and on and on until you don't want to read it no more.</div>
         </div>
         <div class="gap"></div>
-        <div class="carousel scale people-scroller" data-th-id="${scrollerId}">
-            <div class="carousel-inner">
+            <div class="carousel slide people-scroller w-100" data-ride="carousel" data-interval="false" data-th-id="${scrollerId}">
+                <div class="carousel-inner w-100" role="listbox">
 
-                <div class="item active" data-th-each="group, iterStat : ${persons}" data-th-class="${iterStat.first}? 'item active' : 'item'">
-                    <div class="row text-center">
+                    <div class="carousel-item row active" data-th-each="group, iterStat : ${persons}" data-th-class="${iterStat.first}? 'carousel-item row active' : 'carousel-item row'">
 
-                        <div data-th-each="person : ${group}" class="col-sm-4">
-                            <div class="person">
-                                <img class="img-responsive img-thumbnail img-circle" data-th-src="${person.imageUrl}" src="../../assets/images/team1.jpg" alt=""/>
+                            <div data-th-each="person : ${group}" data-th-remove="tag">
+                                <div class="person col-4 float-left">
+                                    <img class="img-fluid img-thumbnail rounded-circle" data-th-src="${person.imageUrl}" src="../../assets/images/team1.jpg" alt=""/>
 
-                                <h3>
-                                    <div data-th-text="${person.name}">Person 1</div>
-
-                                    <small data-th-text="${person.title}" class="designation">Dummy Work Title</small>
-                                </h3>
+                                    <h4 data-th-text="${person.name}">Person 1</h4>
+                                    <h6 data-th-text="${person.title}" class="designation">Dummy Work Title</h6>
+                                </div>
                             </div>
                         </div>
-                    </div><!-- End .row -->
-                </div>
+                    </div>
 
+                <a class="left-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="prev">
+                    <i class="fas fa-angle-left fa-4x"></i>
+                </a>
+                <a class="right-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="next">
+                    <i class="fas fa-angle-right fa-4x"></i>
+                </a>
             </div>
 
-            <a class="left-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="prev">
-                <i class="fa fa-angle-left fa-4x"></i>
-            </a>
-            <a class="right-arrow" data-th-href="'#' + ${scrollerId}" href="#people-scroller" data-slide="next">
-                <i class="fa fa-angle-right fa-4x"></i>
-            </a>
-        </div>
-        <!--/.carousel-->
     </div>
-    <!--/.box-->
 </section><!--/#about-us-->

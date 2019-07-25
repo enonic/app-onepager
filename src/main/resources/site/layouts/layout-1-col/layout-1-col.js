@@ -1,4 +1,4 @@
-var thymeleaf = require('/lib/xp/thymeleaf'),
+var thymeleaf = require('/lib/thymeleaf'),
     portal = require('/lib/xp/portal');
 
 exports.get = function (req) {
