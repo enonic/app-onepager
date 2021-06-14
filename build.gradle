@@ -23,7 +23,7 @@ dependencies {
     webjar "org.webjars:jquery:3.4.1"
     webjar "org.webjars:html5shiv:3.7.3-1"
     webjar "org.webjars:respond:1.4.2-1"
-    webjar "org.webjars:font-awesome:5.15.2"
+    webjar "org.webjars:font-awesome:5.15.3"
 }
 
 repositories {
