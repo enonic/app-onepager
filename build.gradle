@@ -1,5 +1,5 @@
 plugins {
-    id 'com.enonic.xp.app' version '3.0.0'
+    id 'com.enonic.xp.app' version '3.1.0'
     id 'com.enonic.defaults' version '2.0.1'
     id 'maven-publish'
 }
@@ -7,7 +7,7 @@ plugins {
 app {
     name = project.appName
     displayName = 'One-pager'
-    vendorName = 'Enonic USA'
+    vendorName = 'Enonic'
     vendorUrl = 'https://enonic.com'
     systemVersion = "${xpVersion}"
 }
@@ -31,5 +31,5 @@ dependencies {
 
 repositories {
     mavenCentral()
-    xp.enonicRepo("dev")
+    xp.enonicRepo()
 }
