@@ -7,7 +7,7 @@ plugins {
 app {
     name = project.appName
     displayName = 'One-pager'
-    vendorName = 'Enonic USA'
+    vendorName = 'Enonic'
     vendorUrl = 'https://enonic.com'
     systemVersion = "${xpVersion}"
 }
@@ -31,5 +31,5 @@ dependencies {
 
 repositories {
     mavenCentral()
-    xp.enonicRepo("dev")
+    xp.enonicRepo()
 }
