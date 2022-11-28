@@ -22,7 +22,7 @@ dependencies {
     include "com.enonic.xp:lib-cluster:${xpVersion}"
     include "com.enonic.lib:lib-thymeleaf:2.0.2"
     include 'com.enonic.lib:lib-util:2.2.1'
-    webjar "org.webjars:bootstrap:5.2.2"
+    webjar "org.webjars:bootstrap:5.2.3"
     webjar "org.webjars:jquery:3.6.1"
     webjar "org.webjars:html5shiv:3.7.3-1"
     webjar "org.webjars:respond:1.4.2-1"
