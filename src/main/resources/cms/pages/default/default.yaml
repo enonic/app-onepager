@@ -1,0 +1,38 @@
+kind: "Page"
+title: "Default"
+form:
+  - type: "FieldSet"
+    label: "Menu offset"
+    items:
+      - type: "CheckBox"
+        name: "behindMenu"
+        label: "Content behind menu"
+        occurrences:
+          min: 0
+          max: 0
+  - type: "FieldSet"
+    label: "Meta"
+    items:
+      - type: "TextLine"
+        name: "meta-keywords"
+        label: "Meta Keywords"
+        occurrences:
+          min: 0
+          max: 0
+      - type: "TextLine"
+        name: "meta-description"
+        label: "Meta description"
+        occurrences:
+          min: 0
+          max: 1
+  - type: "FieldSet"
+    label: "Contact info"
+    items:
+      - type: "CheckBox"
+        name: "hideContactInfo"
+        label: "Hide contact footer"
+        occurrences:
+          min: 0
+          max: 1
+regions:
+  - "main"

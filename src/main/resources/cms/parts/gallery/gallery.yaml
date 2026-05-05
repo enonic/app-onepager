@@ -1,0 +1,13 @@
+kind: "Part"
+title: "Gallery"
+form:
+  - type: "FormFragment"
+    name: "heading"
+  - type: "ImageSelector"
+    name: "images"
+    label: "Image"
+    occurrences:
+      min: 1
+      max: 0
+    allowPath:
+      - "${site}/*"

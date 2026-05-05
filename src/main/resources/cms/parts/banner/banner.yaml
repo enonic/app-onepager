@@ -1,0 +1,18 @@
+kind: "Part"
+title: "Banner"
+form:
+  - type: "ItemSet"
+    name: "banner"
+    label: "Banner"
+    occurrences:
+      min: 1
+      max: 5
+    items:
+      - type: "ImageSelector"
+        name: "image"
+        label: "Image"
+        occurrences:
+          min: 1
+          max: 1
+        allowPath:
+          - "${site}/*"

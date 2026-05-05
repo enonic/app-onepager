@@ -1,0 +1,110 @@
+kind: "CMS"
+form:
+  - type: "FieldSet"
+    label: "Info"
+    items:
+      - type: "ImageSelector"
+        name: "logo"
+        label: "Logo"
+        occurrences:
+          min: 1
+          max: 1
+        allowPath:
+          - "${site}/*"
+  - type: "FieldSet"
+    label: "Locations"
+    items:
+      - type: "ItemSet"
+        name: "location"
+        label: "Location"
+        occurrences:
+          min: 0
+          max: 0
+        items:
+          - type: "TextLine"
+            name: "label"
+            label: "Label"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextLine"
+            name: "street"
+            label: "Street"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextLine"
+            name: "city"
+            label: "City"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextLine"
+            name: "state"
+            label: "State"
+            occurrences:
+              min: 0
+              max: 1
+          - type: "TextLine"
+            name: "zip"
+            label: "Zip code"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextLine"
+            name: "country"
+            label: "Country"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextLine"
+            name: "phone"
+            label: "Phone"
+            occurrences:
+              min: 1
+              max: 1
+  - type: "FieldSet"
+    label: "Social"
+    items:
+      - type: "TextLine"
+        name: "twitter"
+        label: "Twitter"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "facebook"
+        label: "Facebook"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "linkedin"
+        label: "LinkedIn"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "google"
+        label: "Google +"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "pinterest"
+        label: "Pinterest"
+        occurrences:
+          min: 0
+          max: 1
+      - type: "TextLine"
+        name: "youtube"
+        label: "Youtube"
+        occurrences:
+          min: 0
+          max: 1
+  - type: "HtmlArea"
+    name: "copyrightMessage"
+    label: "Copyright message"
+    occurrences:
+      min: 0
+      max: 1

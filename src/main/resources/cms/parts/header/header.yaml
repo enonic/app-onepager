@@ -1,0 +1,5 @@
+kind: "Part"
+title: "Header"
+form:
+  - type: "FormFragment"
+    name: "heading"
