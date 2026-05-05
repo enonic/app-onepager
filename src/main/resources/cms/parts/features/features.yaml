@@ -1,0 +1,35 @@
+kind: "Part"
+title: "Features"
+form:
+  - type: "FormFragment"
+    name: "heading"
+  - type: "FieldSet"
+    label: "Features"
+    items:
+      - type: "ItemSet"
+        name: "feature"
+        label: "Feature"
+        occurrences:
+          min: 0
+          max: 0
+        items:
+          - type: "TextLine"
+            name: "header"
+            label: "Header"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "TextArea"
+            name: "description"
+            label: "Text"
+            occurrences:
+              min: 1
+              max: 1
+          - type: "ImageSelector"
+            name: "image"
+            label: "Icon image"
+            occurrences:
+              min: 1
+              max: 1
+            allowPath:
+              - "${site}/*"

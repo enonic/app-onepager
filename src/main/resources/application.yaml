@@ -1,0 +1,5 @@
+kind: "Application"
+title: "One-pager"
+description: "One-pager demo website"
+vendorName: "Enonic"
+vendorUrl: "https://enonic.com"
