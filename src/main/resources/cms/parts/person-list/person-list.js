@@ -1,5 +1,6 @@
 var contentLib = require('/lib/xp/content'),
     portal = require('/lib/xp/portal'),
+    assetLib = require('/lib/enonic/asset'),
     thymeleaf = require('/lib/thymeleaf');
 
 exports.get = handleGet;
@@ -63,7 +64,7 @@ function handleGet(req) {
                 persons[j].push({
                     name: personName || 'Missing Name',
                     title: personTitle || 'Missing Title',
-                    imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/mer.jpg'}),
+                    imageUrl: imageContentUrl || assetLib.assetUrl( {path: 'images/mer.jpg'}),
                     pageUrl: pageUrl
                 });
             } else {
@@ -72,7 +73,7 @@ function handleGet(req) {
                 persons[j].push({
                     name: personName || 'Missing Name',
                     title: personTitle || 'Missing Title',
-                    imageUrl: imageContentUrl || portal.assetUrl( {path: 'images/mer.jpg'}),
+                    imageUrl: imageContentUrl || assetLib.assetUrl( {path: 'images/mer.jpg'}),
                     pageUrl: pageUrl
                 });
             }
