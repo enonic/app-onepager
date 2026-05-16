@@ -1,4 +1,5 @@
 var portalLib = require('/lib/xp/portal'),
+    assetLib = require('/lib/enonic/asset'),
     thymeleaf = require('/lib/thymeleaf');
 
 // Handle GET request
@@ -108,7 +109,7 @@ function handleGet(req) {
                 scale: 'height(25)'
             });
         } else {
-            return portalLib.assetUrl( {
+            return assetLib.assetUrl( {
                 path: 'images/acme-logo.png'
             });
         }
