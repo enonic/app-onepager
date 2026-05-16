@@ -58,7 +58,6 @@ function handleGet(req) {
 
     function getMenuLayouts(content) {
         var mainComponents = content.page.regions.main.components,
-        var mainComponents = content.page.regions.main.components,
             components = (Array.isArray(mainComponents) ? mainComponents : [mainComponents]),
             layouts = [],
             i, componentsLength = components.length;
