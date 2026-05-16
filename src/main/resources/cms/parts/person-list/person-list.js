@@ -1,7 +1,7 @@
 var contentLib = require('/lib/xp/content'),
     portal = require('/lib/xp/portal'),
     thymeleaf = require('/lib/thymeleaf'),
-    util = require('/lib/util');
+    util = require('/lib/util/data');
 
 exports.get = handleGet;
 
@@ -23,7 +23,7 @@ function handleGet(req) {
             config = component.config,
             scrollerId = getId('people-scroller-', component),
             persons = [],
-            personContent = util.data.forceArray(config.person),
+            personContent = util.forceArray(config.person),
             i, j, x,
             person;
 

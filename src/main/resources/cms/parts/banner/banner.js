@@ -1,6 +1,6 @@
 var portal = require('/lib/xp/portal'),
     thymeleaf = require('/lib/thymeleaf'),
-    util = require('/lib/util');
+    util = require('/lib/util/data');
 
 // Handle GET request
 exports.get = handleGet;
@@ -27,7 +27,7 @@ function handleGet(req) {
         if (!banners) {
             return null;
         }
-        return util.data.forceArray(banners);
+        return util.forceArray(banners);
     }
 
     function ulClass() {
