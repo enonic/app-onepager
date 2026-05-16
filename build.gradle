@@ -9,6 +9,7 @@ dependencies {
     implementation xplibs.api.portal
     include xplibs.content
     include xplibs.portal
+    include xplibs.context
     include xplibs.export
     include xplibs.project
     include xplibs.cluster
