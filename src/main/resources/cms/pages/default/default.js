@@ -1,6 +1,6 @@
 var portalLib = require('/lib/xp/portal'),
     thymeleaf = require('/lib/thymeleaf'),
-    util = require('/lib/util');
+    util = require('/lib/util/data');
 
 // Handle GET request
 exports.get = handleGet;
@@ -23,7 +23,7 @@ function handleGet(req) {
                 pinterest: siteConfig.pinterest,
                 youtube: siteConfig.youtube
             },
-            addresses = util.data.forceArray(siteConfig.location),
+            addresses = util.forceArray(siteConfig.location),
             addressCols = getAddressCols(addresses);
 
         for (var i = 0; i < addresses.length; i++) {
@@ -58,7 +58,7 @@ function handleGet(req) {
     }
 
     function getMenuLayouts(content) {
-        var components = util.data.forceArray( content.page.regions.main.components ),
+        var components = util.forceArray( content.page.regions.main.components ),
             layouts = [],
             i, componentsLength = components.length;
 
@@ -77,7 +77,7 @@ function handleGet(req) {
 
     function getMetaKeywords(page) {
         var config = page.config,
-            metaKeywords = util.data.forceArray( config['meta-keywords'] ),
+            metaKeywords = util.forceArray( config['meta-keywords'] ),
             i, metaLength = metaKeywords.length;
 
         for (i = 0; i < metaLength; i++) {

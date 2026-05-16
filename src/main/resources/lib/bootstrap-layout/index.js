@@ -1,6 +1,6 @@
 var libs = {
     portal: require('/lib/xp/portal'),
-    util: require('/lib/util')
+    util: require('/lib/util/region')
 };
 
 /**
@@ -8,7 +8,7 @@ var libs = {
  * @returns {Array}
  */
 exports.getRegionsWithColumnInfo = function(defaultColumnConfig) {
-    var regions = libs.util.region.get(),
+    var regions = libs.util.get(),
         columnClasses = exports.getColumnClasses(defaultColumnConfig),
         i, len;
 
