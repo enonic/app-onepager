@@ -1,6 +1,5 @@
 var portal = require('/lib/xp/portal'),
-    thymeleaf = require('/lib/thymeleaf'),
-    util = require('/lib/util/data');
+    thymeleaf = require('/lib/thymeleaf');
 
 exports.get = handleGet;
 
@@ -20,7 +19,8 @@ function handleGet(req) {
         var model = {},
             component = portal.getComponent(),
             config = component.config,
-            features = util.forceArray(config.feature);
+            rawFeatures = config.feature,
+            features = (Array.isArray(rawFeatures) ? rawFeatures : [rawFeatures]);
 
         // Make it show the sample data when nothing is entered.
         if(!features[0] || (features[0].header == '' || features[0].header == null)) {

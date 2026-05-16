@@ -1,14 +1,21 @@
 var libs = {
-    portal: require('/lib/xp/portal'),
-    util: require('/lib/util/region')
+    portal: require('/lib/xp/portal')
 };
+
+function getRegionsAsArray() {
+    var regions = libs.portal.getComponent().regions;
+    var keys = Object.keys(regions);
+    var result = [];
+    for (var i = 0; i < keys.length; i++) { result.push(regions[keys[i]]); }
+    return result;
+}
 
 /**
  * Get all defined regions with proper Bootstrap column CSS class
  * @returns {Array}
  */
 exports.getRegionsWithColumnInfo = function(defaultColumnConfig) {
-    var regions = libs.util.get(),
+    var regions = getRegionsAsArray(),
         columnClasses = exports.getColumnClasses(defaultColumnConfig),
         i, len;
 
