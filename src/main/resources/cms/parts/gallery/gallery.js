@@ -1,7 +1,6 @@
 var contentLib = require('/lib/xp/content'),
     portal = require('/lib/xp/portal'),
-    thymeleaf = require('/lib/thymeleaf'),
-    util = require('/lib/util');
+    thymeleaf = require('/lib/thymeleaf');
 
 exports.get = handleGet;
 
@@ -21,7 +20,7 @@ function handleGet(req) {
 
         var component = portal.getComponent(),
             config = component.config,
-            imageIDs = config.images ? util.data.forceArray(config.images) : null,
+            imageIDs = config.images ? (Array.isArray(config.images) ? config.images : [config.images]) : null,
             contents = imageIDs? getImagesInOrder(imageIDs) : null;
 
         model.heading = config.heading || 'Missing heading';
@@ -82,7 +81,7 @@ function handleGet(req) {
             galleryItem = {};
             galleryItem.caption = imageContent.data.caption;
 
-            categories = util.data.forceArray(imageContent.data.tags);
+            categories = (Array.isArray(imageContent.data.tags) ? imageContent.data.tags : [imageContent.data.tags]);
             liClass = 'gallery-item col-md-4 ';
             groups = '[';
 
@@ -149,7 +148,7 @@ function handleGet(req) {
             tags;
 
         for (i = 0, contentLength = contents.length; i < contentLength; i++) {
-            tags = util.data.forceArray(contents[i].data.tags);
+            tags = (Array.isArray(contents[i].data.tags) ? contents[i].data.tags : [contents[i].data.tags]);
             for(j = 0, tagsLength = tags.length; j < tagsLength; j++) {
                 cats.push(tags[j]);
             }
