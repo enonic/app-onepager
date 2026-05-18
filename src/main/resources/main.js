@@ -8,9 +8,7 @@ const projectData = {
     displayName: 'One pager',
     description: 'Demo Enonic XP features',
     language: 'en',
-    readAccess: {
-        public: true
-    }
+    publicRead: true
 }
 
 function runInContext(callback) {
