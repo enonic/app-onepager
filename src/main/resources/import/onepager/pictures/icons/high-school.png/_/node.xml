@@ -2,10 +2,9 @@
     <id>47b0ca3e-742d-4e1b-9cea-885a9d9fb3aa</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2019-07-24T13:42:21.955Z</timestamp>
-    <inheritPermissions>true</inheritPermissions>
+    <timestamp>2026-05-29T13:10:01.555Z</timestamp>
     <permissions>
-        <principal key="role:cms.cm.app">
+        <principal key="role:system.everyone">
             <allow type="array">
                 <value>READ</value>
             </allow>
@@ -35,7 +34,46 @@
             </allow>
             <deny type="array"/>
         </principal>
-        <principal key="role:system.everyone">
+        <principal key="role:cms.project.onepager.owner">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.project.onepager.editor">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.project.onepager.author">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.project.onepager.contributor">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.project.onepager.viewer">
             <allow type="array">
                 <value>READ</value>
             </allow>
@@ -81,6 +119,13 @@
             <binaryReference name="binary">high-school.png</binaryReference>
             <string name="mimeType">image/png</string>
             <long name="size">2729</long>
+            <string name="sha512">6e2ca1a54c3ff73c7de0aeb3ce3495fb05b12c97fab6e1b013d9e173de31367637675f53de85ffc7dd1cb2610a7a31c227c1245edd9a8d29867c506d6f4ca18c</string>
+            <string name="text"/>
+        </property-set>
+        <property-set name="publish">
+            <dateTime name="time">2026-05-29T13:07:09.211Z</dateTime>
+            <dateTime name="from">2026-05-29T13:07:08.485Z</dateTime>
+            <dateTime name="first">2026-05-29T13:07:08.485Z</dateTime>
         </property-set>
     </data>
     <indexConfigs>
@@ -163,7 +208,20 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>modifiedTime</path>
+                <path>modifiedtime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <languages>
+                        <language>en</language>
+                    </languages>
+                </indexConfig>
+                <path>displayname</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -193,7 +251,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>createdTime</path>
+                <path>createdtime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -205,20 +263,11 @@
                 </indexConfig>
                 <path>attachment</path>
             </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>true</nGram>
-                    <fulltext>true</fulltext>
-                    <includeInAllText>true</includeInAllText>
-                    <languages>
-                        <language>en</language>
-                    </languages>
-                </indexConfig>
-                <path>displayName</path>
-            </pathIndexConfig>
         </pathIndexConfigs>
-        <allTextIndexConfig/>
+        <allTextIndexConfig>
+            <enabled>true</enabled>
+            <nGram>true</nGram>
+            <fulltext>true</fulltext>
+        </allTextIndexConfig>
     </indexConfigs>
 </node>

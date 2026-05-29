@@ -13,6 +13,7 @@ dependencies {
     include xplibs.export
     include xplibs.project
     include xplibs.cluster
+    include xplibs.task
     include libs.lib.thymeleaf
     include "com.enonic.lib:lib-asset:2.0.0-SNAPSHOT"
     webjar "org.webjars:bootstrap:5.3.8"
